@@ -84,6 +84,8 @@
 
   </div>
 
+
+
 </template>
 
 <script>
@@ -172,6 +174,11 @@
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: 800px) {
+      margin: .5em;
+      width: 10rem;
+      height: 10rem;
+    }
   }
   .orinoco { background-image: url(../assets/orinoco.jpg);}
   .groupomania { background-image: url(../assets/groupomania.jpg); }
@@ -200,11 +207,12 @@
     transition: all .3s ease;
   }
   .slide-fade-leave-active {
-    transition: all .3s;
+    transition: all 0s;
   }
   .slide-fade-enter, .slide-fade-leave-to {
   //transform: translateX(-10em);
   opacity: 0;
 }
+
 
 </style>

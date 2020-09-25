@@ -126,10 +126,14 @@ export default {
     justify-content: space-around;
   }
   .screenshot {
-    max-width: 40%;
+    @media (min-width: 800px) {
+      max-width: 40%;
+    }
   }
   .textBox {
-    max-width: 30%;
+    @media (min-width: 800px) {
+      max-width: 30%;
+    }
     li {
       margin-left: 2em;
       list-style-type: square;
@@ -142,6 +146,32 @@ export default {
     img {
       width: 5rem;
       height: 5rem;
+    }
+  }
+  @media (max-width: 800px) {
+    .overlay {
+      display: none;
+    }
+    .modaleBox {
+      overflow: scroll;
+      position: fixed;
+      width: 100%;
+      max-height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      //right: 0;
+    }
+    .content {
+      flex-direction: column;
+    }
+    .screenshot, .textBox {
+      width: 100%;
+    }
+    .btn {
+      font-size: 1.5em;
+      position: fixed;
+      right: 0;
     }
   }
 </style>
