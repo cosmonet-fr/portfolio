@@ -1,7 +1,7 @@
 <template>
   <div class="allProjects">
-
-    <div class="oneProject orinoco" @mouseover="orinoco = true" @mouseleave="orinoco = false">
+    <modale v-bind:revele="revele" v-bind:toggleModale="toggleModale"></modale>
+    <div class="oneProject orinoco"  @click="toggleModale" @mouseover="orinoco = true" @mouseleave="orinoco = false">
       <transition name="slide-fade">
         <div class="text" v-show="orinoco">
           <h2>Orinoco</h2>
@@ -79,6 +79,7 @@
 </template>
 
 <script>
+  import Modale from './Modale.vue'
   export default {
     data: function () {
       return {
@@ -90,10 +91,18 @@
         chouette: false,
         cv: false,
         michelin: false,
-        test: true
+        revele: false
       }
     },
     name: 'AllProjects',
+    components: {
+      'modale': Modale
+    },
+    methods: {
+      toggleModale: function() {
+        this.revele = !this.revele
+      }
+    }
   }
 </script>
 
@@ -134,10 +143,6 @@
     }
     h2 {
       font-size: 2.5em;
-      //margin-top: 1em;
-    }
-    p {
-      //margin-bottom: 5em;
     }
   }
   .slide-fade-enter-active {
@@ -146,8 +151,7 @@
   .slide-fade-leave-active {
     transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   }
-  .slide-fade-enter, .slide-fade-leave-to
-  /* .slide-fade-leave-active below version 2.1.8 */ {
+  .slide-fade-enter, .slide-fade-leave-to {
   //transform: translateX(-10em);
   opacity: 0;
 }
