@@ -29,8 +29,11 @@
           </div>
         </div>
         <div class="ModaleFooter">
-          <a href="https://github.com/cosmonet-fr/P5_billois_stephane/">
+          <a href="https://github.com/cosmonet-fr/P3_billois_stephane/">
             <img src="../assets/github-brands.svg" alt="Code sur GitHub">
+          </a>
+          <a href="https://cosmonet-fr.github.io/P3_billois_stephane/">
+            <img src="../assets/link-solid.svg" alt="Lien du site">
           </a>
         </div>
 

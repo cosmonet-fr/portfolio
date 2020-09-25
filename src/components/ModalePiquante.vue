@@ -21,7 +21,7 @@
             </p>
 
             <p>
-              Parmis les fonctionnalitées à developpées, il y avais:
+              Parmis les fonctionnalités à développées, il y avais:
               <ul>
                 <li>La création et suppression de comptes</li>
                 <li>ajout suppretion modification de produits (Sauces) avec images</li>
@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="ModaleFooter">
-          <a href="https://github.com/cosmonet-fr/P5_billois_stephane/">
+          <a href="https://github.com/cosmonet-fr/P6_billois_stephane/">
             <img src="../assets/github-brands.svg" alt="Code sur GitHub">
           </a>
         </div>

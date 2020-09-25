@@ -5,7 +5,7 @@
     </div>
     <div class="modaleBox">
       <div class="menuBtn">
-        <h2>Cv</h2>
+        <h2>Curriculum vitæ</h2>
         <div class="btn" @click="toggleModaleCv">X</div>
       </div>
 
@@ -29,8 +29,11 @@
           </div>
         </div>
         <div class="ModaleFooter">
-          <a href="https://github.com/cosmonet-fr/P5_billois_stephane/">
+          <a href="https://github.com/cosmonet-fr/cv/">
             <img src="../assets/github-brands.svg" alt="Code sur GitHub">
+          </a>
+          <a href="https://cv.billois.org/">
+            <img src="../assets/link-solid.svg" alt="Lien du site">
           </a>
         </div>
 

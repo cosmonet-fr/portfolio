@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="ModaleFooter">
-          <a href="https://github.com/cosmonet-fr/P5_billois_stephane/">
+          <a href="https://github.com/cosmonet-fr/michelin/">
             <img src="../assets/github-brands.svg" alt="Code sur GitHub">
           </a>
         </div>
@@ -116,7 +116,7 @@ export default {
   }
   .screenshot {
     @media (min-width: 800px) {
-      max-width: 40%;
+      max-width: 20%;
     }
   }
   .textBox {

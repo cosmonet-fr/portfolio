@@ -9,6 +9,10 @@
           <p>Réalisation d'un site de e-commerce.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>Orinoco</h2>
+        <p>Réalisation d'un site de e-commerce.</p>
+      </div>
     </div>
 
     <modale_groupomania v-bind:reveleGroupomania="reveleGroupomania" v-bind:toggleModaleGroupomania="toggleModaleGroupomania"></modale_groupomania>
@@ -19,6 +23,10 @@
           <p>Réalisation d'un réseau social d'entreprise.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>Groupomania</h2>
+        <p>Réalisation d'un réseau social d'entreprise.</p>
+      </div>
     </div>
 
     <modale_piquante v-bind:revelePiquante="revelePiquante" v-bind:toggleModalePiquante="toggleModalePiquante"></modale_piquante>
@@ -29,6 +37,10 @@
           <p>Réalisation d'une API de notation de sauces.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>Piquante</h2>
+        <p>Réalisation d'une API de notation de sauces.</p>
+      </div>
     </div>
 
     <modale_ohmyfood v-bind:reveleOhmyfood="reveleOhmyfood" v-bind:toggleModaleOhmyfood="toggleModaleOhmyfood"></modale_ohmyfood>
@@ -39,6 +51,10 @@
           <p>Réalisation d'un site référençant les menus de restaurants.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>ohmyfood</h2>
+        <p>Réalisation d'un site référençant les menus de restaurants.</p>
+      </div>
     </div>
 
     <modale_babm v-bind:reveleBabm="reveleBabm" v-bind:toggleModaleBabm="toggleModaleBabm"></modale_babm>
@@ -49,6 +65,10 @@
           <p>Réalisation d'un site de présentation d'un événement.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>Belles Autos, belles motos</h2>
+        <p>Réalisation d'un site de présentation d'un événement.</p>
+      </div>
     </div>
 
     <modale_chouette v-bind:reveleChouette="reveleChouette" v-bind:toggleModaleChouette="toggleModaleChouette"></modale_chouette>
@@ -59,6 +79,10 @@
           <p>Obtimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>La chouette agence</h2>
+        <p>Obtimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
+      </div>
     </div>
 
     <modale_cv v-bind:reveleCv="reveleCv" v-bind:toggleModaleCv="toggleModaleCv"></modale_cv>
@@ -69,6 +93,10 @@
           <p>Réalisation de mon CV en ligne.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>Curriculum vitae</h2>
+        <p>Réalisation de mon CV en ligne.</p>
+      </div>
     </div>
 
     <modale_michelin v-bind:reveleMichelin="reveleMichelin" v-bind:toggleModaleMichelin="toggleModaleMichelin"></modale_michelin>
@@ -79,6 +107,10 @@
           <p>Réalisation d'un prototype d'une web app pour un musée.</p>
         </div>
       </transition>
+      <div class="menuGsm">
+        <h2>Michelin</h2>
+        <p>Réalisation d'un prototype d'une web app pour un musée.</p>
+      </div>
     </div>
 
 
@@ -101,6 +133,7 @@
     data: function () {
       return {
         orinoco: false,
+        orinocoGsm: false,
         groupomania: false,
         sauce: false,
         ohmyfood: false,
@@ -165,6 +198,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    @media (max-width: 800px) {
+      margin: 3em 2em;
+    }
   }
   .oneProject {
     cursor: pointer;
@@ -176,8 +212,8 @@
     background-size: cover;
     @media (max-width: 800px) {
       margin: .5em;
-      width: 10rem;
-      height: 10rem;
+      width: 15rem;
+      height: 15rem;
     }
   }
   .orinoco { background-image: url(../assets/orinoco.jpg);}
@@ -188,6 +224,25 @@
   .chouette { background-image: url(../assets/chouette.jpg); }
   .cv { background-image: url(../assets/moi.png); }
   .michelin { background-image: url(../assets/michelin.jpg); }
+
+  .menuGsm {
+    @media (min-width: 800px) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff55;
+    * {
+      text-align: center;
+    }
+    h2 {
+      //color: white;
+      font-size: 1.5em;
+    }
+  }
 
   .text {
     display: flex;
@@ -200,6 +255,7 @@
       text-align: center;
     }
     h2 {
+      //color: white;
       font-size: 2.5em;
     }
   }

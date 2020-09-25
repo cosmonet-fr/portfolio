@@ -31,8 +31,8 @@
           </div>
         </div>
         <div class="ModaleFooter">
-          <a href="https://github.com/cosmonet-fr/P5_billois_stephane/">
-            <img src="../assets/github-brands.svg" alt="Code sur GitHub">
+          <a href="https://www.babm.fr/">
+            <img src="../assets/link-solid.svg" alt="Lien du site">
           </a>
         </div>
 
