@@ -1,33 +1,30 @@
 <template>
-  <div class="modaleScreen" v-if="revele">
-    <div class="overlay" @click="toggleModale">
+  <div class="modaleScreen" v-if="reveleMichelin">
+    <div class="overlay" @click="toggleModaleMichelin">
 
     </div>
     <div class="modaleBox">
       <div class="menuBtn">
-        <h2>Orinoco</h2>
-        <div class="btn" @click="toggleModale">X</div>
+        <h2>Michelin</h2>
+        <div class="btn" @click="toggleModaleMichelin">X</div>
       </div>
 
       <div class="page">
         <div class="content">
           <div class="screenshot">
-            <img src="../assets/orinoco_screenshot.jpg" alt="">
+            <img src="../assets/michelin_screenshot.png" alt="">
           </div>
           <div class="textBox">
             <h3>Mission:</h3>
             <p>
-              Le projet “Orinoco” d’Openclassrooms consistait à réaliser la partie front-end d’un site de e-commerce pour la vente d’appareils photos vintage. Il fallait interagir avec une API Rest codée pour node.js.
+              Pour ce projet, il m’a été demandé de réaliser un prototype d’une web app basée sur les technologies web pour contrôler le lancement de vidéos dans le musée “L’Aventure Michelin”. L’application devait tourner sur un IPad avec le navigateur Google Chrome.
             </p>
-            <p>
-              Le site web devait avoir un system de panier développé en JavaScript Vanilla, il fallait également contrôler les entrées du formulair de commande (Regex).
-            </p>
+
             <h3>Technologies utilisées:</h3>
             <p>
               <ul>
                 <li>HTML</li>
-                <li>CSS / Sass</li>
-                <li>JavaScript</li>
+                <li>CSS</li>
               </ul>
             </p>
           </div>
@@ -47,8 +44,8 @@
 
 <script>
 export default {
-  name: 'Modale',
-  props: ['revele', 'toggleModale']
+  name: 'ModaleMichelin',
+  props: ['reveleMichelin', 'toggleModaleMichelin']
 }
 </script>
 
@@ -57,7 +54,7 @@ export default {
     color: white;
   }
   h2 {
-    margin: .2em 1em;
+    margin: .5em 1em;
   }
   h3 {
     margin: 1em 0 .2em 0;
@@ -118,7 +115,7 @@ export default {
     justify-content: space-around;
   }
   .screenshot {
-    max-width: 40%;
+    max-width: 20%;
   }
   .textBox {
     max-width: 30%;

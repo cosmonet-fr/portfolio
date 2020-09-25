@@ -1,0 +1,147 @@
+<template>
+  <div class="modaleScreen" v-if="revelePiquante">
+    <div class="overlay" @click="toggleModalePiquante">
+
+    </div>
+    <div class="modaleBox">
+      <div class="menuBtn">
+        <h2>Piquante</h2>
+        <div class="btn" @click="toggleModalePiquante">X</div>
+      </div>
+
+      <div class="page">
+        <div class="content">
+          <div class="screenshot">
+            <img src="../assets/piquante_screenshot.png" alt="">
+          </div>
+          <div class="textBox">
+            <h3>Mission:</h3>
+            <p>
+              Le projet « Piquante » d’Openclassrooms consistait à réaliser une API Rest de notation de sauces. Le développement devait interagir avec une application web Angular.
+            </p>
+
+            <p>
+              Parmis les fonctionnalitées à developpées, il y avais:
+              <ul>
+                <li>La création et suppression de comptes</li>
+                <li>ajout suppretion modification de produits (Sauces) avec images</li>
+                <li>un system de likes/Dislikes</li>
+                <li>Le stockage des données devait respecter les règles de l’OWASP</li>
+              </ul>
+            </p>
+
+            <h3>Technologies utilisées:</h3>
+            <p>
+              <ul>
+                <li>Node.Js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <div class="ModaleFooter">
+          <a href="https://github.com/cosmonet-fr/P5_billois_stephane/">
+            <img src="../assets/github-brands.svg" alt="Code sur GitHub">
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</template>
+
+<script>
+export default {
+  name: 'ModalePiquante',
+  props: ['revelePiquante', 'toggleModalePiquante']
+}
+</script>
+
+<style scoped lang="scss">
+  * {
+    color: white;
+  }
+  h2 {
+    margin: .5em 1em;
+  }
+  h3 {
+    margin: 1em 0 .2em 0;
+  }
+  p {
+    margin: .5em 0;
+    text-align: justify;
+  }
+  .modaleScreen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .modaleBox {
+    position: fixed;
+    top: 10%;
+    z-index: 2;
+    width: 80%;
+    background-color: #000000cc;
+    color: #333;
+    //border-left: solid .5rem #519183;
+  }
+  .menuBtn {
+    display: flex;
+    justify-content: space-between;
+    //background-color: #999;
+    //color: white;
+  }
+  .btn {
+    padding: .5em;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    //background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+  }
+  .page {
+    margin: 1em;
+  }
+  .content {
+    display: flex;
+    justify-content: space-around;
+  }
+  .screenshot {
+    max-width: 40%;
+  }
+  .textBox {
+    max-width: 30%;
+    li {
+      margin-left: 2em;
+      list-style-type: square;
+    }
+  }
+  .ModaleFooter {
+    margin: 2em;
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+</style>
