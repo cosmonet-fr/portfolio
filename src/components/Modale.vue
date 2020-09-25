@@ -17,7 +17,10 @@
           <div class="textBox">
             <h3>Mission:</h3>
             <p>
-              Le projet “Orinoco” d’Openclassrooms consistait à réaliser la partie front-end d’un site de e-commerce pour la vente d’appareils photos vintage. Il fallait interagir avec une API Rest codée pour node.js. Le site web devait avoir un system de panier développé en JavaScript Vanilla, il fallait également contrôler les entrées du formulair de commande (Regex).
+              Le projet “Orinoco” d’Openclassrooms consistait à réaliser la partie front-end d’un site de e-commerce pour la vente d’appareils photos vintage. Il fallait interagir avec une API Rest codée pour node.js.
+            </p>
+            <p>
+              Le site web devait avoir un system de panier développé en JavaScript Vanilla, il fallait également contrôler les entrées du formulair de commande (Regex).
             </p>
             <h3>Technologies utilisées:</h3>
             <p>
@@ -28,6 +31,11 @@
               </ul>
             </p>
           </div>
+        </div>
+        <div class="ModaleFooter">
+          <a href="https://github.com/cosmonet-fr/P5_billois_stephane/">
+            <img src="../assets/github-brands.svg" alt="Code sur GitHub">
+          </a>
         </div>
 
       </div>
@@ -45,6 +53,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  * {
+    color: white;
+  }
   h2 {
     margin: .2em 1em;
   }
@@ -52,6 +63,7 @@ export default {
     margin: 1em 0 .2em 0;
   }
   p {
+    margin: .5em 0;
     text-align: justify;
   }
   .modaleScreen {
@@ -77,9 +89,9 @@ export default {
     top: 10%;
     z-index: 2;
     width: 80%;
-    background-color: white;
+    background-color: #000000cc;
     color: #333;
-    border-left: solid .5rem #519183;
+    //border-left: solid .5rem #519183;
   }
   .menuBtn {
     display: flex;
@@ -94,7 +106,7 @@ export default {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: #e74c3c;
+    //background-color: #e74c3c;
     color: white;
     font-weight: bold;
   }
@@ -113,6 +125,15 @@ export default {
     li {
       margin-left: 2em;
       list-style-type: square;
+    }
+  }
+  .ModaleFooter {
+    margin: 2em;
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 5rem;
+      height: 5rem;
     }
   }
 </style>
