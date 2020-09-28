@@ -19,12 +19,14 @@
     <div class="oneProject groupomania" @click="toggleModaleGroupomania" @mouseover="groupomania = true" @mouseleave="groupomania = false">
       <transition name="slide-fade">
         <div class="text" v-show="groupomania">
-          <h2>Groupomania</h2>
+          <!--<h2>Groupomania</h2>-->
+          <h2>Social<br /><span>Network</span></h2>
           <p>Réalisation d'un réseau social d'entreprise.</p>
         </div>
       </transition>
       <div class="menuGsm">
-        <h2>Groupomania</h2>
+        <!--<h2>Groupomania</h2>-->
+        <h2>Social<br /><span>Network</span></h2>
         <p>Réalisation d'un réseau social d'entreprise.</p>
       </div>
     </div>
@@ -222,7 +224,7 @@
   .ohmyfood { background-image: url(../assets/ohmyfood.jpg); }
   .babm { background-image: url(../assets/babm.jpg); /*filter: saturate(0);*/}
   .chouette { background-image: url(../assets/chouette.jpg); }
-  .cv { background-image: url(../assets/moi.png); }
+  .cv { background-image: url(../assets/moi.jpg); }
   .michelin { background-image: url(../assets/michelin.jpg); }
 
   .menuGsm {
@@ -234,13 +236,23 @@
     justify-content: space-around;
     width: 100%;
     height: 100%;
-    background-color: #ffffff55;
+    background-color: #99999955;
     * {
       text-align: center;
+      color: white;
     }
     h2 {
-      //color: white;
       font-size: 1.5em;
+      span {
+        font-weight: normal;
+        color: #fd2d01;
+        position: relative;
+        left: 25px;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      ant-caps: small-caps;
     }
   }
 
@@ -250,13 +262,22 @@
     justify-content: space-around;
     width: 100%;
     height: 100%;
-    background-color: #ffffff99;
+    background-color: #9999;
     * {
       text-align: center;
     }
     h2 {
-      //color: white;
       font-size: 2.5em;
+      color: white;
+      span {
+        font-weight: normal;
+        color: #fd2d01;
+        position: relative;
+        left: 50px;
+      }
+    }
+    p {
+      font-size: 1.5rem;
     }
   }
   .slide-fade-enter-active {
@@ -268,7 +289,7 @@
   .slide-fade-enter, .slide-fade-leave-to {
   //transform: translateX(-10em);
   opacity: 0;
-}
+  }
 
 
 </style>

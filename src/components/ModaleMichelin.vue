@@ -82,6 +82,8 @@ export default {
     right: 0;
   }
   .modaleBox {
+    overflow: auto;
+    max-height: 80%;
     position: fixed;
     top: 10%;
     z-index: 2;

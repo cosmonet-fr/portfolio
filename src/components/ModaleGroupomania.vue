@@ -12,7 +12,19 @@
       <div class="page">
         <div class="content">
           <div class="screenshot">
-            <img src="../assets/groupomania_screenshot.jpg" alt="">
+              <img v-if="indScreenshot === 0" src="../assets/apercu_roupomania.jpg" alt="">
+              <img v-if="indScreenshot === 1" src="../assets/groupomania_screenshot.jpg" alt="">
+              <img v-if="indScreenshot === 2" src="../assets/groupomania_screenshot2.png" alt="">
+              <img v-if="indScreenshot === 3" src="../assets/groupomania_screenshot3.png" alt="">
+              <img v-if="indScreenshot === 4" src="../assets/groupomania_screenshot4.jpg" alt="">
+            <div class="navScreenshot">
+              <div v-if="indScreenshot === 0" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 0" class="btnRadio" @click="indScreenshot = 0" ></div>
+              <div v-if="indScreenshot === 1" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 1" class="btnRadio" @click="indScreenshot = 1" ></div>
+              <div v-if="indScreenshot === 2" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 2" class="btnRadio" @click="indScreenshot = 2" ></div>
+              <div v-if="indScreenshot === 3" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 3" class="btnRadio" @click="indScreenshot = 3" ></div>
+              <div v-if="indScreenshot === 4" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 4" class="btnRadio" @click="indScreenshot = 4" ></div>
+              <p>></p>
+            </div>
           </div>
           <div class="textBox">
             <h3>Mission:</h3>
@@ -57,6 +69,11 @@
 
 <script>
 export default {
+  data: function () {
+    return {
+      indScreenshot: 0,
+    }
+  },
   name: 'ModaleGroupomania',
   props: ['reveleGroupomania', 'toggleModaleGroupomania']
 }
@@ -95,6 +112,8 @@ export default {
     right: 0;
   }
   .modaleBox {
+    overflow: auto;
+    max-height: 80%;
     position: fixed;
     top: 10%;
     z-index: 2;
@@ -129,7 +148,7 @@ export default {
   }
   .screenshot {
     @media (min-width: 800px) {
-      max-width: 40%;
+      max-width: 65%;
     }
   }
   .textBox {
@@ -149,6 +168,22 @@ export default {
       width: 5rem;
       height: 5rem;
     }
+  }
+  .navScreenshot {
+    display: flex;
+    justify-content: center;
+  }
+  .btnRadio {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 1rem;
+    border: solid white;
+    border-radius: 25em;
+  }
+  .btnRadioActive {
+    cursor: default;
+    background-color: white;
   }
   @media (max-width: 800px) {
     .overlay {

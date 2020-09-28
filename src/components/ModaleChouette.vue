@@ -81,6 +81,8 @@ export default {
     right: 0;
   }
   .modaleBox {
+    overflow: auto;
+    max-height: 80%;
     position: fixed;
     top: 10%;
     z-index: 2;
@@ -115,7 +117,7 @@ export default {
   }
   .screenshot {
     @media (min-width: 800px) {
-      max-width: 40%;
+      max-width: 65%;
     }
   }
   .textBox {
