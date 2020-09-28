@@ -12,7 +12,17 @@
       <div class="page">
         <div class="content">
           <div class="screenshot">
-            <img src="../assets/piquante_screenshot.png" alt="">
+            <transition name="slide-pics">
+              <img v-show="indScreenshot === 0" src="../assets/apercu_piquante.jpg" alt="">
+            </transition>
+            <transition name="slide-pics">
+              <img v-show="indScreenshot === 1" src="../assets/piquante_screenshot.png" alt="">
+            </transition>
+
+            <div class="navScreenshot">
+              <div v-if="indScreenshot === 0" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 0" class="btnRadio" @click="indScreenshot = 0" ></div>
+              <div v-if="indScreenshot === 1" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 1" class="btnRadio" @click="indScreenshot = 1" ></div>
+            </div>
           </div>
           <div class="textBox">
             <h3>Mission:</h3>
@@ -55,6 +65,11 @@
 
 <script>
 export default {
+  data: function () {
+    return {
+      indScreenshot: 0,
+    }
+  },
   name: 'ModalePiquante',
   props: ['revelePiquante', 'toggleModalePiquante']
 }
@@ -74,106 +89,5 @@ export default {
     margin: .5em 0;
     text-align: justify;
   }
-  .modaleScreen {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .overlay {
-    background-color: rgba(0, 0, 0, .5);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-  .modaleBox {
-    overflow: auto;
-    max-height: 80%;
-    position: fixed;
-    top: 10%;
-    z-index: 2;
-    width: 80%;
-    background-color: #000000cc;
-    color: #333;
-    //border-left: solid .5rem #519183;
-  }
-  .menuBtn {
-    display: flex;
-    justify-content: space-between;
-    //background-color: #999;
-    //color: white;
-  }
-  .btn {
-    padding: .5em;
-    width: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    //background-color: #e74c3c;
-    color: white;
-    font-weight: bold;
-  }
-  .page {
-    margin: 1em;
-  }
-  .content {
-    display: flex;
-    justify-content: space-around;
-  }
-  .screenshot {
-    @media (min-width: 800px) {
-      max-width: 65%;
-    }
-  }
-  .textBox {
-    @media (min-width: 800px) {
-      max-width: 30%;
-    }
-    li {
-      margin-left: 2em;
-      list-style-type: square;
-    }
-  }
-  .ModaleFooter {
-    margin: 2em;
-    display: flex;
-    justify-content: space-around;
-    img {
-      width: 5rem;
-      height: 5rem;
-    }
-  }
-  @media (max-width: 800px) {
-    .overlay {
-      display: none;
-    }
-    .modaleBox {
-      overflow: scroll;
-      position: fixed;
-      width: 100%;
-      max-height: 100%;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      //right: 0;
-    }
-    .content {
-      flex-direction: column;
-    }
-    .screenshot, .textBox {
-      width: 100%;
-    }
-    .btn {
-      font-size: 1.5em;
-      position: fixed;
-      right: 0;
-    }
-  }
+
 </style>
