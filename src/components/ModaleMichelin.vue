@@ -15,14 +15,14 @@
             <transition name="slide-pics">
               <img v-show="indScreenshot === 0" src="../assets/apercu_michelin.jpg" alt="">
             </transition>
-            <transition name="slide-pics">
+            <!--<transition name="slide-pics">
               <img v-show="indScreenshot === 1" src="../assets/michelin_screenshot.png" alt="">
-            </transition>
+            </transition>-->
 
-            <div class="navScreenshot">
+            <!--<div class="navScreenshot">
               <div v-if="indScreenshot === 0" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 0" class="btnRadio" @click="indScreenshot = 0" ></div>
               <div v-if="indScreenshot === 1" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 1" class="btnRadio" @click="indScreenshot = 1" ></div>
-            </div>
+            </div>-->
           </div>
           <div class="textBox">
             <h3>Mission:</h3>

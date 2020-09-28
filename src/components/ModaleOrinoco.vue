@@ -16,7 +16,7 @@
               <img v-show="indScreenshot === 0" src="../assets/apercu_orinoco.jpg" alt="">
             </transition>
             <transition name="slide-pics">
-              <img v-show="indScreenshot === 1" src="../assets/orinoco_screenshot.jpg" alt="">
+              <img v-show="indScreenshot === 1" src="../assets/orinoco_screenshot.png" alt="">
             </transition>
 
             <div class="navScreenshot">
@@ -81,5 +81,5 @@ export default {
     margin: .5em 0;
     text-align: justify;
   }
-  
+
 </style>

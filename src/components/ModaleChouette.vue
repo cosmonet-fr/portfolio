@@ -16,7 +16,7 @@
               <img v-show="indScreenshot === 0" src="../assets/apercu_chouette.jpg" alt="">
             </transition>
             <transition name="slide-pics">
-              <img v-show="indScreenshot === 1" src="../assets/chouette_screenshot.jpg" alt="">
+              <img v-show="indScreenshot === 1" src="../assets/chouette_screenshot.png" alt="">
             </transition>
 
             <div class="navScreenshot">

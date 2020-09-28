@@ -46,7 +46,7 @@ header {
     span {
       font-family: serif;
       font-size: .6em;
-      color: #6cf;
+      color: white;
     }
   }
 }
@@ -105,7 +105,6 @@ header {
 }
 .screenshot {
   @media (min-width: 800px) {
-    height: 596px;
     max-width: 65%;
   }
 }
