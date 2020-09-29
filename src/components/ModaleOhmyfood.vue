@@ -20,8 +20,10 @@
             </transition>
 
             <div class="navScreenshot">
+              <img class="arrow" src="../assets/arrow_left.svg" alt="Flèch" @click="goNextOrBackPicture(-1, 1)">
               <div v-if="indScreenshot === 0" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 0" class="btnRadio" @click="indScreenshot = 0" ></div>
               <div v-if="indScreenshot === 1" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 1" class="btnRadio" @click="indScreenshot = 1" ></div>
+              <img class="arrow" src="../assets/arrow_right.svg" alt="Flèch" @click="goNextOrBackPicture(1, 1)">
             </div>
 
           </div>
@@ -63,7 +65,25 @@ export default {
     }
   },
   name: 'Modale',
-  props: ['reveleOhmyfood', 'toggleModaleOhmyfood']
+  props: ['reveleOhmyfood', 'toggleModaleOhmyfood'],
+  methods: {
+    goNextOrBackPicture: function (direction, lengthPlayer) {
+      if (direction === 1) {
+        if (this.indScreenshot < lengthPlayer) {
+          this.indScreenshot = this.indScreenshot + direction;
+        } else {
+          this.indScreenshot = 0;
+        }
+      } else if (direction === -1) {
+        if (this.indScreenshot !== 0) {
+          this.indScreenshot = this.indScreenshot + direction;
+        } else {
+          this.indScreenshot = lengthPlayer;
+        }
+
+      }
+    }
+  }
 }
 </script>
 

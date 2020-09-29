@@ -1,7 +1,9 @@
 <template>
   <div class="allProjects">
 
-    <modale_orinoco v-bind:reveleOrinoco="reveleOrinoco" v-bind:toggleModaleOrinoco="toggleModaleOrinoco"></modale_orinoco>
+    <transition name="loadingModaleWindow">
+      <modale_orinoco v-if="reveleOrinoco" v-bind:reveleOrinoco="reveleOrinoco" v-bind:toggleModaleOrinoco="toggleModaleOrinoco"></modale_orinoco>
+    </transition>
     <div class="oneProject orinoco"  @click="toggleModaleOrinoco" @mouseover="orinoco = true" @mouseleave="orinoco = false">
       <transition name="slide-fade">
         <div class="text" v-show="orinoco">
@@ -15,7 +17,10 @@
       </div>
     </div>
 
-    <modale_groupomania v-bind:reveleGroupomania="reveleGroupomania" v-bind:toggleModaleGroupomania="toggleModaleGroupomania"></modale_groupomania>
+
+    <transition name="loadingModaleWindow">
+      <modale_groupomania v-if="reveleGroupomania" v-bind:reveleGroupomania="reveleGroupomania" v-bind:toggleModaleGroupomania="toggleModaleGroupomania"></modale_groupomania>
+    </transition>
     <div class="oneProject groupomania" @click="toggleModaleGroupomania" @mouseover="groupomania = true" @mouseleave="groupomania = false">
       <transition name="slide-fade">
         <div class="text" v-show="groupomania">
@@ -31,7 +36,10 @@
       </div>
     </div>
 
-    <modale_piquante v-bind:revelePiquante="revelePiquante" v-bind:toggleModalePiquante="toggleModalePiquante"></modale_piquante>
+
+    <transition name="loadingModaleWindow">
+      <modale_piquante v-if="revelePiquante" v-bind:revelePiquante="revelePiquante" v-bind:toggleModalePiquante="toggleModalePiquante"></modale_piquante>
+    </transition>
     <div class="oneProject sauce" @click="toggleModalePiquante" @mouseover="sauce = true" @mouseleave="sauce = false">
       <transition name="slide-fade">
         <div class="text pi" v-show="sauce">
@@ -45,7 +53,10 @@
       </div>
     </div>
 
-    <modale_ohmyfood v-bind:reveleOhmyfood="reveleOhmyfood" v-bind:toggleModaleOhmyfood="toggleModaleOhmyfood"></modale_ohmyfood>
+
+    <transition name="loadingModaleWindow">
+      <modale_ohmyfood v-if="reveleOhmyfood" v-bind:reveleOhmyfood="reveleOhmyfood" v-bind:toggleModaleOhmyfood="toggleModaleOhmyfood"></modale_ohmyfood>
+    </transition>
     <div class="oneProject ohmyfood" @click="toggleModaleOhmyfood" @mouseover="ohmyfood = true" @mouseleave="ohmyfood = false">
       <transition name="slide-fade">
         <div class="text oh" v-show="ohmyfood">
@@ -65,7 +76,10 @@
       </div>
     </div>
 
-    <modale_babm v-bind:reveleBabm="reveleBabm" v-bind:toggleModaleBabm="toggleModaleBabm"></modale_babm>
+
+    <transition name="loadingModaleWindow">
+      <modale_babm v-if="reveleBabm" v-bind:reveleBabm="reveleBabm" v-bind:toggleModaleBabm="toggleModaleBabm"></modale_babm>
+    </transition>
     <div class="oneProject babm" @click="toggleModaleBabm" @mouseover="babm = true" @mouseleave="babm = false">
       <transition name="slide-fade">
         <div class="text" v-show="babm">
@@ -79,7 +93,10 @@
       </div>
     </div>
 
-    <modale_chouette v-bind:reveleChouette="reveleChouette" v-bind:toggleModaleChouette="toggleModaleChouette"></modale_chouette>
+
+    <transition name="loadingModaleWindow">
+      <modale_chouette v-if="reveleChouette" v-bind:reveleChouette="reveleChouette" v-bind:toggleModaleChouette="toggleModaleChouette"></modale_chouette>
+    </transition>
     <div class="oneProject chouette" @click="toggleModaleChouette" @mouseover="chouette = true" @mouseleave="chouette = false">
       <transition name="slide-fade">
         <div class="text ch" v-show="chouette">
@@ -93,7 +110,10 @@
       </div>
     </div>
 
-    <modale_cv v-bind:reveleCv="reveleCv" v-bind:toggleModaleCv="toggleModaleCv"></modale_cv>
+
+    <transition name="loadingModaleWindow">
+      <modale_cv v-if="reveleCv" v-bind:reveleCv="reveleCv" v-bind:toggleModaleCv="toggleModaleCv"></modale_cv>
+    </transition>
     <div class="oneProject cv" @click="toggleModaleCv" @mouseover="cv = true" @mouseleave="cv = false">
       <transition name="slide-fade">
         <div class="text" v-show="cv">
@@ -107,7 +127,10 @@
       </div>
     </div>
 
-    <modale_michelin v-bind:reveleMichelin="reveleMichelin" v-bind:toggleModaleMichelin="toggleModaleMichelin"></modale_michelin>
+
+    <transition name="loadingModaleWindow">
+      <modale_michelin v-if="reveleMichelin" v-bind:reveleMichelin="reveleMichelin" v-bind:toggleModaleMichelin="toggleModaleMichelin"></modale_michelin>
+    </transition>
     <div class="oneProject michelin" @click="toggleModaleMichelin" @mouseover="michelin = true" @mouseleave="michelin = false">
       <transition name="slide-fade">
         <div class="text mi" v-show="michelin">
@@ -213,6 +236,7 @@
     }
   }
   .oneProject {
+    animation: loadingPage 800ms;
     cursor: pointer;
     margin: 1.5em;
     width: 20rem;
@@ -226,7 +250,7 @@
       height: 15rem;
     }
   }
-  .orinoco { background-image: url(../assets/orinoco.jpg);}
+  .orinoco { background-image: url(../assets/orinoco.jpg); }
   .groupomania { background-image: url(../assets/groupomania.jpg); }
   .sauce { background-image: url(../assets/piquante.jpg); }
   .ohmyfood { background-image: url(../assets/ohmyfood.jpg); }
@@ -312,5 +336,20 @@
   opacity: 0;
   }
 
+  .loadingModaleWindow-enter-active {
+    animation: loadingModaleWindow 400ms;
+  }
+  .loadingModaleWindow-leave-active {
+    animation: loadingModaleWindow 400ms reverse;
+  }
+
+  @keyframes loadingPage {
+    0% { transform: scale(0); opacity: 0;}
+    100% { transform: scale(1); opacity: 1;}
+  }
+  @keyframes loadingModaleWindow {
+    0% { transform: translateY(-100%);}
+    100% { transform: translateY(0);}
+  }
 
 </style>
