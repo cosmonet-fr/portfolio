@@ -12,12 +12,12 @@
       <div class="page">
         <div class="content">
           <div class="screenshot">
-            <transition name="slide-pics">
+            <!--<transition name="slide-pics">-->
               <img v-show="indScreenshot === 0" src="../assets/apercu_chouette.jpg" alt="">
-            </transition>
-            <transition name="slide-pics">
+            <!--</transition>-->
+            <!--<transition name="slide-pics">-->
               <img v-show="indScreenshot === 1" src="../assets/chouette_screenshot.png" alt="">
-            </transition>
+            <!--</transition>-->
 
             <div class="navScreenshot">
               <img class="arrow" src="../assets/arrow_left.svg" alt="Flèch" @click="goNextOrBackPicture(-1, 1)">

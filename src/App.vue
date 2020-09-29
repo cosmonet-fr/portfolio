@@ -69,7 +69,8 @@ header {
   right: 0;
 }
 .modaleBox {
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   max-height: 80%;
   position: fixed;
   top: 10%;
@@ -176,7 +177,7 @@ header {
   cursor: default;
   background-color: white;
 }
-.slide-pics-enter-active {
+/*.slide-pics-enter-active {
   transition: all .4s ease;
 }
 .slide-pics-leave-active {
@@ -185,5 +186,5 @@ header {
 .slide-pics-enter, .slide-pics-leave-to {
   transform: translateX(100%);
   opacity: 0
-}
+} */
 </style>

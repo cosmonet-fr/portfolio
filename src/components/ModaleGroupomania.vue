@@ -12,21 +12,21 @@
       <div class="page">
         <div class="content">
           <div class="screenshot">
-            <transition name="slide-pics">
+            <!--<transition name="slide-pics">-->
               <img v-show="indScreenshot === 0" src="../assets/apercu_roupomania.jpg" alt="">
-            </transition>
-            <transition name="slide-pics">
+            <!--</transition>-->
+            <!--<transition name="slide-pics">-->
               <img v-show="indScreenshot === 1" src="../assets/groupomania_screenshot.jpg" alt="">
-            </transition>
-            <transition name="slide-pics">
+            <!--</transition>-->
+            <!--<transition name="slide-pics">-->
               <img v-show="indScreenshot === 2" src="../assets/groupomania_screenshot2.png" alt="">
-            </transition>
-            <transition name="slide-pics">
+            <!--</transition>-->
+            <!--<transition name="slide-pics">-->
               <img v-show="indScreenshot === 3" src="../assets/groupomania_screenshot3.png" alt="">
-            </transition>
-            <transition name="slide-pics">
+            <!--</transition>-->
+            <!--<transition name="slide-pics">-->
               <img v-show="indScreenshot === 4" src="../assets/groupomania_screenshot4.jpg" alt="">
-            </transition>
+            <!--</transition>-->
 
             <div class="navScreenshot">
               <img class="arrow" src="../assets/arrow_left.svg" alt="Flèch" @click="goNextOrBackPicture(-1, 4)">

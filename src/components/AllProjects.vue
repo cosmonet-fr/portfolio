@@ -271,9 +271,9 @@
     background-color: #99999955;
     * {
       text-align: center;
+      color: white;
     }
     h2 {
-      color: white;
       font-size: 1.5em;
       span {
         font-weight: normal;
@@ -295,10 +295,10 @@
     background-color: #9999;
     * {
       text-align: center;
+      color: white;
     }
     h2 {
       font-size: 2.5em;
-      color: white;
       span {
         font-weight: normal;
         color: #fd2d01;
