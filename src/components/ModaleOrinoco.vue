@@ -27,10 +27,10 @@
           <div class="textBox">
             <h3>Mission:</h3>
             <p>
-              Le projet “Orinoco” d’Openclassrooms consistait à réaliser la partie front-end d’un site de e-commerce pour la vente d’appareils photos vintage. Il fallait interagir avec une API Rest codée pour node.js.
+              Le projet “Orinoco” d’Openclassrooms consistait à réaliser la partie front-end d’un site de e-commerce pour la vente d’appareils photos vintages. Il fallait interagir avec une API Rest codée pour Node.js.
             </p>
             <p>
-              Le site web devait avoir un system de panier développé en JavaScript Vanilla, il fallait également contrôler les entrées du formulair de commande (Regex).
+              Le site web devait avoir un système de panier développé en JavaScript Vanilla. Il fallait également contrôler les entrées du formulaire de commande (Regex).
             </p>
             <h3>Technologies utilisées:</h3>
             <p>

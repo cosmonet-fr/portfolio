@@ -29,36 +29,39 @@
             </transition>
 
             <div class="navScreenshot">
+              <img class="arrow" src="../assets/arrow_left.svg" alt="Flèch" @click="goNextOrBackPicture(-1, 4)">
               <div v-if="indScreenshot === 0" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 0" class="btnRadio" @click="indScreenshot = 0" ></div>
               <div v-if="indScreenshot === 1" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 1" class="btnRadio" @click="indScreenshot = 1" ></div>
               <div v-if="indScreenshot === 2" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 2" class="btnRadio" @click="indScreenshot = 2" ></div>
               <div v-if="indScreenshot === 3" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 3" class="btnRadio" @click="indScreenshot = 3" ></div>
               <div v-if="indScreenshot === 4" class="btnRadio btnRadioActive"></div><div v-if="indScreenshot !== 4" class="btnRadio" @click="indScreenshot = 4" ></div>
+              <img class="arrow" src="../assets/arrow_right.svg" alt="Flèch" @click="goNextOrBackPicture(1, 4)">
             </div>
           </div>
           <div class="textBox">
             <h3>Mission:</h3>
             <p>
-              Le projet “Groupomania” d’Openclassrooms consistait à réaliser un réseau social d’entreprise. L’API à été faite avec Node.Js express et MariaDB, le front-end à été réalisé avec Vue.Js
+              Le projet “Groupomania” d’Openclassrooms consistait à réaliser un réseau social d’entreprise. L’API a été faite avec Node.js, Express et MariaDB. Le front-end a été réalisé avec Vue.js
             </p>
             <p>
-              Parmis les fonctionnalités à développer il y avait :
+              Parmi les fonctionnalités à développer, il y avait :
               <ul>
-                <li>Création, suppretion et modification de compte avec photo de profile</li>
-                <li>Création de message avec ou sans partage d’images (Jpeg, Gif, PNG, SVG, Webp)</li>
-                <li>Possibilité d’ajouter des comentairs</li>
-                <li>Création suppretion et modification de compte avec photo de profile</li>
-                <li>Un panneau d’administration permetant la moderation des comptes utilisateurs et messages</li>
+                <li>la possibilité de créer, de modifier ou de supprimer un compte;</li>
+                <li>la possibilité d'ajouter ou de modifier une photo de profil;</li>
+                <li>la possibilité de créer, de modifier ou de supprimer des messages;</li>
+                <li>la possibilité de joindre un fichier média (Jpeg, Gif, PNG, SVG, Webp) à un message;</li>
+                <li>la possibilité d’ajouter, de modifier ou de supprimer des commentaires;</li>
+                <li>la création d'un panneau d’administration permettant la modération des comptes utilisateurs et des messages.</li>
               </ul>
             </p>
 
             <h3>Technologies utilisées:</h3>
             <p>
               <ul>
-                <li>Node.Js</li>
+                <li>Node.js</li>
                 <li>Express</li>
                 <li>MariaDB</li>
-                <li>Vue.Js</li>
+                <li>Vue.js</li>
                 <li>Sass</li>
               </ul>
             </p>
@@ -85,7 +88,25 @@ export default {
     }
   },
   name: 'ModaleGroupomania',
-  props: ['reveleGroupomania', 'toggleModaleGroupomania']
+  props: ['reveleGroupomania', 'toggleModaleGroupomania'],
+  methods: {
+    goNextOrBackPicture: function (direction, lengthPlayer) {
+      if (direction === 1) {
+        if (this.indScreenshot < lengthPlayer) {
+          this.indScreenshot = this.indScreenshot + direction;
+        } else {
+          this.indScreenshot = 0;
+        }
+      } else if (direction === -1) {
+        if (this.indScreenshot !== 0) {
+          this.indScreenshot = this.indScreenshot + direction;
+        } else {
+          this.indScreenshot = lengthPlayer;
+        }
+
+      }
+    }
+  }
 }
 </script>
 

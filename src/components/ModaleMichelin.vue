@@ -27,7 +27,7 @@
           <div class="textBox">
             <h3>Mission:</h3>
             <p>
-              Pour ce projet, il m’a été demandé de réaliser un prototype d’une web app basée sur les technologies web pour contrôler le lancement de vidéos dans le musée “L’Aventure Michelin”. L’application devait tourner sur un IPad avec le navigateur Google Chrome.
+              Au cours d’un stage dans l'entreprise <a href="http://www.audiosoft.fr/">Audio Soft</a>, il m’a été demandé de réaliser un prototype d’une web app basée sur les technologies web pour contrôler le lancement de vidéos dans le musée “L’Aventure Michelin”. L’application devait tourner sur un IPad avec le navigateur Google Chrome.
             </p>
 
             <h3>Technologies utilisées:</h3>

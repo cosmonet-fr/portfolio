@@ -5,7 +5,7 @@
     </div>
     <div class="modaleBox">
       <div class="menuBtn">
-        <h2>Babm</h2>
+        <h2>Belles Autos, Belles Motos</h2>
         <div class="btn" @click="toggleModaleBabm">X</div>
       </div>
 

@@ -34,12 +34,12 @@
     <modale_piquante v-bind:revelePiquante="revelePiquante" v-bind:toggleModalePiquante="toggleModalePiquante"></modale_piquante>
     <div class="oneProject sauce" @click="toggleModalePiquante" @mouseover="sauce = true" @mouseleave="sauce = false">
       <transition name="slide-fade">
-        <div class="text" v-show="sauce">
+        <div class="text pi" v-show="sauce">
           <h2>Piquante</h2>
           <p>Réalisation d'une API de notation de sauces.</p>
         </div>
       </transition>
-      <div class="menuGsm">
+      <div class="menuGsm pi">
         <h2>Piquante</h2>
         <p>Réalisation d'une API de notation de sauces.</p>
       </div>
@@ -48,13 +48,19 @@
     <modale_ohmyfood v-bind:reveleOhmyfood="reveleOhmyfood" v-bind:toggleModaleOhmyfood="toggleModaleOhmyfood"></modale_ohmyfood>
     <div class="oneProject ohmyfood" @click="toggleModaleOhmyfood" @mouseover="ohmyfood = true" @mouseleave="ohmyfood = false">
       <transition name="slide-fade">
-        <div class="text" v-show="ohmyfood">
+        <div class="text oh" v-show="ohmyfood">
           <h2>ohmyfood</h2>
+          <!--<div class="">
+            <img src="../assets/oh.png" alt="BABM">
+          </div>-->
           <p>Réalisation d'un site référençant les menus de restaurants.</p>
         </div>
       </transition>
-      <div class="menuGsm">
+      <div class="menuGsm oh">
         <h2>ohmyfood</h2>
+        <!--<div class="">
+          <img src="../assets/oh.png" alt="BABM">
+        </div>-->
         <p>Réalisation d'un site référençant les menus de restaurants.</p>
       </div>
     </div>
@@ -63,12 +69,12 @@
     <div class="oneProject babm" @click="toggleModaleBabm" @mouseover="babm = true" @mouseleave="babm = false">
       <transition name="slide-fade">
         <div class="text" v-show="babm">
-          <h2>Belles Autos, belles motos</h2>
+          <img src="../assets/logo_babm.png" alt="BABM">
           <p>Réalisation d'un site de présentation d'un événement.</p>
         </div>
       </transition>
       <div class="menuGsm">
-        <h2>Belles Autos, belles motos</h2>
+        <img src="../assets/logo_babm.png" alt="BABM">
         <p>Réalisation d'un site de présentation d'un événement.</p>
       </div>
     </div>
@@ -76,12 +82,12 @@
     <modale_chouette v-bind:reveleChouette="reveleChouette" v-bind:toggleModaleChouette="toggleModaleChouette"></modale_chouette>
     <div class="oneProject chouette" @click="toggleModaleChouette" @mouseover="chouette = true" @mouseleave="chouette = false">
       <transition name="slide-fade">
-        <div class="text" v-show="chouette">
+        <div class="text ch" v-show="chouette">
           <h2>La chouette agence</h2>
           <p>Obtimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
         </div>
       </transition>
-      <div class="menuGsm">
+      <div class="menuGsm ch">
         <h2>La chouette agence</h2>
         <p>Obtimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
       </div>
@@ -104,12 +110,12 @@
     <modale_michelin v-bind:reveleMichelin="reveleMichelin" v-bind:toggleModaleMichelin="toggleModaleMichelin"></modale_michelin>
     <div class="oneProject michelin" @click="toggleModaleMichelin" @mouseover="michelin = true" @mouseleave="michelin = false">
       <transition name="slide-fade">
-        <div class="text" v-show="michelin">
+        <div class="text mi" v-show="michelin">
           <h2>Michelin</h2>
           <p>Réalisation d'un prototype d'une web app pour un musée.</p>
         </div>
       </transition>
-      <div class="menuGsm">
+      <div class="menuGsm mi">
         <h2>Michelin</h2>
         <p>Réalisation d'un prototype d'une web app pour un musée.</p>
       </div>
@@ -194,6 +200,8 @@
 </script>
 
 <style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
+
   .allProjects {
     z-index: 0;
     margin: 5em 4em;
@@ -239,23 +247,21 @@
     background-color: #99999955;
     * {
       text-align: center;
-      color: white;
     }
     h2 {
+      color: white;
       font-size: 1.5em;
       span {
         font-weight: normal;
         color: #fd2d01;
-        position: relative;
-        left: 25px;
+        //position: relative;
+        //left: 25px;
       }
     }
     p {
-      font-size: 1.5rem;
-      ant-caps: small-caps;
+      font-size: 1.1rem;
     }
   }
-
   .text {
     display: flex;
     flex-direction: column;
@@ -272,12 +278,27 @@
       span {
         font-weight: normal;
         color: #fd2d01;
-        position: relative;
-        left: 50px;
+        //position: relative;
+        //left: 50px;
       }
     }
     p {
       font-size: 1.5rem;
+    }
+  }
+  .pi {
+    h2 {
+      color: #de0300;
+    }
+  }
+  .oh {
+    h2 {
+      color: #fdcb46;
+    }
+  }
+  .ch {
+    h2 {
+      font-family: 'Quintessential', cursive;
     }
   }
   .slide-fade-enter-active {

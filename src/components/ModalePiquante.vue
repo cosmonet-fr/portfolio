@@ -31,19 +31,19 @@
             </p>
 
             <p>
-              Parmis les fonctionnalités à développées, il y avais:
+              Parmi les fonctionnalités à développer, il y avait:
               <ul>
-                <li>La création et suppression de comptes</li>
-                <li>ajout suppretion modification de produits (Sauces) avec images</li>
-                <li>un system de likes/Dislikes</li>
-                <li>Le stockage des données devait respecter les règles de l’OWASP</li>
+                <li>la création et la suppression de comptes;</li>
+                <li>l'ajout, la modification et la suppression de produits (Sauces) avec images;</li>
+                <li>un système de likes/dislikes;</li>
+                <li>le stockage des données devait respecter les règles de l’OWASP.</li>
               </ul>
             </p>
 
             <h3>Technologies utilisées:</h3>
             <p>
               <ul>
-                <li>Node.Js</li>
+                <li>Node.js</li>
                 <li>Express</li>
                 <li>MongoDB</li>
               </ul>
