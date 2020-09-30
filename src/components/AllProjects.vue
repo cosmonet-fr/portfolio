@@ -101,12 +101,12 @@
       <transition name="slide-fade">
         <div class="text ch" v-show="chouette">
           <h2>La chouette agence</h2>
-          <p>Obtimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
+          <p>Optimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
         </div>
       </transition>
       <div class="menuGsm ch">
         <h2>La chouette agence</h2>
-        <p>Obtimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
+        <p>Optimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
       </div>
     </div>
 
