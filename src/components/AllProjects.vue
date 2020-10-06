@@ -1,6 +1,7 @@
 <template>
   <div class="allProjects">
 
+
     <transition name="loadingModaleWindow">
       <modale_orinoco v-if="reveleOrinoco" v-bind:reveleOrinoco="reveleOrinoco" v-bind:toggleModaleOrinoco="toggleModaleOrinoco"></modale_orinoco>
     </transition>

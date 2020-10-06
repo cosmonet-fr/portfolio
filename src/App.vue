@@ -6,30 +6,87 @@
         <span>Stéphane BILLOIS</span>
       </h1>
     </header>
-    <AllProjects />
-    <!--<img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+    <transition name="intro">
+      <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter" v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll" v-scroll="toggleModaleEnterScroll"></modale_enter>
+    </transition>
+    <AllProjects v-if="portfolio"></AllProjects>
+    <div class="box" v-scroll="handleScroll">
+    </div>
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+import Enter from './components/Enter.vue'
 import AllProjects from './components/AllProjects.vue'
 
 export default {
+  data: function () {
+    return {
+      reveleEnter: true,
+      portfolio: false
+    }
+  },
   name: 'App',
   components: {
-    //HelloWorld
+    'modale_enter': Enter,
     AllProjects
-  }
+  },
+  directives: {
+    //Scroll to close the modal enter window
+    scrollEnter: {
+      inserted: function (binding) {
+        let f = function (evt) {
+          if (binding.value(evt)) {
+            window.removeEventListener('scrollEnter', f)
+          }
+        }
+        window.addEventListener('scrollEnter', f)
+      }
+    },
+    //Scroll effect to portfolio
+    scroll: {
+      inserted: function (el, binding) {
+        let f = function (evt) {
+          if (binding.value(evt, el)) {
+            window.removeEventListener('scroll', f)
+          }
+        }
+        window.addEventListener('scroll', f)
+      }
+    }
+  },
+  methods: {
+    toggleModaleEnter: function() {
+      this.reveleEnter = false
+    },
+    toggleModaleEnterScroll: function() {
+      if (window.scrollY > 1) {
+        this.reveleEnter = false
+      }
+      return window.scrollY > 100;
+    },
+    handleScroll: function(evt, el) {
+      if (window.scrollY > 50) {
+        el.setAttribute("style", "opacity: 1;")
+        console.log(el);
+        this.portfolio = true;
+        //this.reveleEnter = false;
+      }
+      return window.scrollY > 100;
+    }
+  },
 }
 </script>
 
 <style lang="scss">
+.box {
+  opacity: 0;
+}
 * {
   font-family: sans-serif;
 }
 #app {
+  min-height: 2000px;
   //font-family: Avenir, Helvetica, Arial, sans-serif;
   //-webkit-font-smoothing: antialiased;
   //-moz-osx-font-smoothing: grayscale;
@@ -41,6 +98,7 @@ header {
   padding: 1em;
   background-color: #3f3f3f;
   h1 {
+    cursor: pointer;
     font-weight: normal;
     color: #519183;
     span {
@@ -187,4 +245,16 @@ header {
   transform: translateX(100%);
   opacity: 0
 } */
+
+.intro-enter-active {
+  animation: loadingEnterWindow 200ms;
+}
+.intro-leave-active {
+  animation: loadingEnterWindow 200ms reverse;
+}
+@keyframes loadingEnterWindow {
+  0% { transform: translateY(-100%);}
+  100% { transform: translateY(0);}
+}
+
 </style>
