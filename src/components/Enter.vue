@@ -24,11 +24,21 @@ h1, h2 {
   color: #519183;
 }
 h1 {
+  animation: title .6s;
   font-size: 5em;
   letter-spacing: 1.5rem;
 }
+@keyframes title {
+  0% { transform: translateX(50%); opacity: 0}
+  100% { transform: translateX(0); opacity: 1}
+}
 h2 {
+  animation: titleH2 .6s;
   font-size: 3em;
+}
+@keyframes titleH2 {
+  0% { transform: translateX(-50%); opacity: 0}
+  100% { transform: translateX(0); opacity: 1}
 }
 
 .modaleScreenEnter {
@@ -49,12 +59,11 @@ h2 {
 }
 // Mouse
 .scroll-downs {
-
-
   width :34px;
   height: 55px;
 }
 .mousey {
+  animation: mouseLoad 1s;
   width: 3px;
   padding: 10px 15px;
   height: 35px;
@@ -73,6 +82,12 @@ h2 {
   animation-timing-function: cubic-bezier(.15,.41,.69,.94);
   animation-iteration-count: infinite;
 }
+
+@keyframes mouseLoad {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes scroll {
   0% { transform: translateY(0);}
   50% { transform: translateY(8px);}
