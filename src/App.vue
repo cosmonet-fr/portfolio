@@ -17,7 +17,7 @@
         <p>Après 9 ans d'expérience dans le domaine de la sérigraphie, puis de la gravure laser, et un an en tant que photographe professionnel, je me suis réorienté dans le domaine du développement web. Ce monde m'est depuis toujours familier, car plus qu'un métier, il s'agit pour moi d'une passion dans laquelle j'ai pu acquérir par moi-même de nombreuses compétences renforcées et complétées par celles acquises durant ma formation, que vous pourrez retrouver dans mon CV ci-contre.</p>
       </div>
     </div>
-    <hardSkills v-if="hardSkills  "></hardSkills>
+    <hardSkills v-if="hardSkills"></hardSkills>
     <AllProjects v-if="portfolio"></AllProjects>
     <div class="box" v-scroll="handleScroll">
     </div>
@@ -32,7 +32,7 @@ import AllProjects from './components/AllProjects.vue'
 export default {
   data: function () {
     return {
-      reveleEnter: true,
+      reveleEnter: false,
       hardSkills: true,
       portfolio: false
     }
