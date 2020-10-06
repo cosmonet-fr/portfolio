@@ -1,14 +1,23 @@
 <template>
   <div id="app">
-    <header>
+    <!--<header>
       <h1>
         Portfolio<br />
         <span>Stéphane BILLOIS</span>
       </h1>
-    </header>
+    </header>-->
     <transition name="intro">
-      <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter" v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll" v-scroll="toggleModaleEnterScroll"></modale_enter>
+      <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter" v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll"></modale_enter>
     </transition>
+    <div class="about">
+      <div class="avatar">
+        <img src="./assets/moi.jpg" alt="Mon avatar">
+      </div>
+      <div class="aboutText">
+        <p>Après 9 ans d'expérience dans le domaine de la sérigraphie, puis de la gravure laser, et un an en tant que photographe professionnel, je me suis réorienté dans le domaine du développement web. Ce monde m'est depuis toujours familier, car plus qu'un métier, il s'agit pour moi d'une passion dans laquelle j'ai pu acquérir par moi-même de nombreuses compétences renforcées et complétées par celles acquises durant ma formation, que vous pourrez retrouver dans mon CV ci-contre.</p>
+      </div>
+    </div>
+    <hardSkills v-if="hardSkills  "></hardSkills>
     <AllProjects v-if="portfolio"></AllProjects>
     <div class="box" v-scroll="handleScroll">
     </div>
@@ -17,18 +26,21 @@
 
 <script>
 import Enter from './components/Enter.vue'
+import HardSkills from './components/HardSkills.vue'
 import AllProjects from './components/AllProjects.vue'
 
 export default {
   data: function () {
     return {
       reveleEnter: true,
+      hardSkills: true,
       portfolio: false
     }
   },
   name: 'App',
   components: {
     'modale_enter': Enter,
+    'hardSkills': HardSkills,
     AllProjects
   },
   directives: {
@@ -85,6 +97,11 @@ export default {
 * {
   font-family: sans-serif;
 }
+body {
+  background-color: #3f3f3f;
+  background-image: url(./assets/1046.jpg);
+
+}
 #app {
   min-height: 2000px;
   //font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -107,6 +124,30 @@ header {
       color: white;
     }
   }
+}
+.about {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  min-width: 20%;
+  margin: 15em 0em 0 10em ;
+  margin-top: auto;
+  margin-bottom: auto;
+  img {
+    text-align: center;
+  }
+}
+.aboutText {
+  margin: 15em 10em 10em 10em ;
+  * {
+    font-size: 2rem;
+    text-align: justify;
+    color: white;
+  }
+  padding: 3em;
 }
 .modaleScreen {
   position: fixed;

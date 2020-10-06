@@ -1,19 +1,22 @@
 <template>
-  <div class="modaleScreenEnter" v-if="reveleEnter" @click="toggleModaleEnter" >
+  <div class="modaleScreenEnter" v-if="reveleEnter" @click="toggleModaleEnter" v-scroll="toggleModaleEnterScroll" v-on:keyup.enter="toggleModaleEnter">
     <h1>Stéphane BILLOIS</h1>
     <h2>Développeur web full stack</h2>
-    <div class="scroll-downs">
+    <!--<div class="scroll-downs">
       <div class="mousey">
         <div class="scroller"></div>
       </div>
-    </div>
+    </div>-->
 
   </div>
 </template>
 
 <script>
 export default {
-  props: ['reveleEnter', 'toggleModaleEnter'],
+  props: ['reveleEnter', 'toggleModaleEnter', 'toggleModaleEnterScroll'],
+  mounted () {
+   setTimeout(this.toggleModaleEnter, 3000);
+ }
 }
 
 </script>
@@ -29,16 +32,17 @@ h1 {
   letter-spacing: 1.5rem;
 }
 @keyframes title {
-  0% { transform: translateX(50%); opacity: 0}
-  100% { transform: translateX(0); opacity: 1}
+  0% { transform: translateY(-.1em); opacity: 0}
+  100% { transform: translateY(0); opacity: 1}
 }
 h2 {
   animation: titleH2 .6s;
   font-size: 3em;
 }
 @keyframes titleH2 {
-  0% { transform: translateX(-50%); opacity: 0}
-  100% { transform: translateX(0); opacity: 1}
+  0% { transform: translateY(-.1em); opacity: 0}
+  50% { transform: translateY(-.1em); opacity: 0}
+  100% { transform: translateY(0); opacity: 1}
 }
 
 .modaleScreenEnter {
