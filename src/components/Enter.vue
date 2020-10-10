@@ -1,12 +1,12 @@
 <template>
-  <div class="modaleScreenEnter" v-if="reveleEnter" @click="toggleModaleEnter" v-scroll="toggleModaleEnterScroll" v-on:keyup.enter="toggleModaleEnter">
+  <div class="modaleScreenEnter" v-if="reveleEnter" @click="toggleModaleEnter" v-on:keyup.enter="toggleModaleEnter">
     <h1>Stéphane BILLOIS</h1>
     <h2>Développeur web full stack</h2>
-    <!--<div class="scroll-downs">
+    <div class="scroll-downs">
       <div class="mousey">
         <div class="scroller"></div>
       </div>
-    </div>-->
+    </div>
 
   </div>
 </template>
@@ -15,7 +15,7 @@
 export default {
   props: ['reveleEnter', 'toggleModaleEnter', 'toggleModaleEnterScroll'],
   mounted () {
-   setTimeout(this.toggleModaleEnter, 3000);
+   setTimeout(this.toggleModaleEnter, 6000);
  }
 }
 
@@ -24,9 +24,10 @@ export default {
 <style scoped lang="scss">
 h1, h2 {
   margin: 1em;
-  color: #519183;
+  color: #016a87;
 }
 h1 {
+  font-family: "Ubuntu Medium";
   animation: title .6s;
   font-size: 5em;
   letter-spacing: 1.5rem;

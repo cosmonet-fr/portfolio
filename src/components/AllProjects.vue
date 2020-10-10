@@ -1,68 +1,72 @@
 <template>
-  <div class="allProjects">
+  <div class="portfolio">
+    <h2 id="portfolio">Portfolio</h2>
+    <div class="allProjects">
 
 
-    <transition name="loadingModaleWindow">
-      <modale_orinoco v-if="reveleOrinoco" v-bind:reveleOrinoco="reveleOrinoco" v-bind:toggleModaleOrinoco="toggleModaleOrinoco"></modale_orinoco>
-    </transition>
-    <div class="oneProject orinoco"  @click="toggleModaleOrinoco" @mouseover="orinoco = true" @mouseleave="orinoco = false">
-      <transition name="slide-fade">
-        <div class="text" v-show="orinoco">
+
+
+      <transition name="loadingModaleWindow">
+        <modale_orinoco v-if="reveleOrinoco" v-bind:reveleOrinoco="reveleOrinoco" v-bind:toggleModaleOrinoco="toggleModaleOrinoco"></modale_orinoco>
+      </transition>
+      <div class="oneProject orinoco"  @click="toggleModaleOrinoco" @mouseover="orinoco = true" @mouseleave="orinoco = false">
+        <transition name="slide-fade">
+          <div class="text" v-show="orinoco">
+            <h2>Orinoco</h2>
+            <p>Réalisation d'un site de e-commerce.</p>
+          </div>
+        </transition>
+        <div class="menuGsm">
           <h2>Orinoco</h2>
           <p>Réalisation d'un site de e-commerce.</p>
         </div>
-      </transition>
-      <div class="menuGsm">
-        <h2>Orinoco</h2>
-        <p>Réalisation d'un site de e-commerce.</p>
       </div>
-    </div>
 
 
-    <transition name="loadingModaleWindow">
-      <modale_groupomania v-if="reveleGroupomania" v-bind:reveleGroupomania="reveleGroupomania" v-bind:toggleModaleGroupomania="toggleModaleGroupomania"></modale_groupomania>
-    </transition>
-    <div class="oneProject groupomania" @click="toggleModaleGroupomania" @mouseover="groupomania = true" @mouseleave="groupomania = false">
-      <transition name="slide-fade">
-        <div class="text" v-show="groupomania">
+      <transition name="loadingModaleWindow">
+        <modale_groupomania v-if="reveleGroupomania" v-bind:reveleGroupomania="reveleGroupomania" v-bind:toggleModaleGroupomania="toggleModaleGroupomania"></modale_groupomania>
+      </transition>
+      <div class="oneProject groupomania" @click="toggleModaleGroupomania" @mouseover="groupomania = true" @mouseleave="groupomania = false">
+        <transition name="slide-fade">
+          <div class="text" v-show="groupomania">
+            <!--<h2>Groupomania</h2>-->
+            <h2>Social<br /><span>Network</span></h2>
+            <p>Réalisation d'un réseau social d'entreprise.</p>
+          </div>
+        </transition>
+        <div class="menuGsm">
           <!--<h2>Groupomania</h2>-->
           <h2>Social<br /><span>Network</span></h2>
           <p>Réalisation d'un réseau social d'entreprise.</p>
         </div>
-      </transition>
-      <div class="menuGsm">
-        <!--<h2>Groupomania</h2>-->
-        <h2>Social<br /><span>Network</span></h2>
-        <p>Réalisation d'un réseau social d'entreprise.</p>
       </div>
-    </div>
 
 
-    <transition name="loadingModaleWindow">
-      <modale_piquante v-if="revelePiquante" v-bind:revelePiquante="revelePiquante" v-bind:toggleModalePiquante="toggleModalePiquante"></modale_piquante>
-    </transition>
-    <div class="oneProject sauce" @click="toggleModalePiquante" @mouseover="sauce = true" @mouseleave="sauce = false">
-      <transition name="slide-fade">
-        <div class="text pi" v-show="sauce">
+      <transition name="loadingModaleWindow">
+        <modale_piquante v-if="revelePiquante" v-bind:revelePiquante="revelePiquante" v-bind:toggleModalePiquante="toggleModalePiquante"></modale_piquante>
+      </transition>
+      <div class="oneProject sauce" @click="toggleModalePiquante" @mouseover="sauce = true" @mouseleave="sauce = false">
+        <transition name="slide-fade">
+          <div class="text pi" v-show="sauce">
+            <h2>Piquante</h2>
+            <p>Réalisation d'une API de notation de sauces.</p>
+          </div>
+        </transition>
+        <div class="menuGsm pi">
           <h2>Piquante</h2>
           <p>Réalisation d'une API de notation de sauces.</p>
         </div>
-      </transition>
-      <div class="menuGsm pi">
-        <h2>Piquante</h2>
-        <p>Réalisation d'une API de notation de sauces.</p>
       </div>
-    </div>
 
 
-    <transition name="loadingModaleWindow">
-      <modale_ohmyfood v-if="reveleOhmyfood" v-bind:reveleOhmyfood="reveleOhmyfood" v-bind:toggleModaleOhmyfood="toggleModaleOhmyfood"></modale_ohmyfood>
-    </transition>
-    <div class="oneProject ohmyfood" @click="toggleModaleOhmyfood" @mouseover="ohmyfood = true" @mouseleave="ohmyfood = false">
-      <transition name="slide-fade">
-        <div class="text oh" v-show="ohmyfood">
-          <h2>ohmyfood</h2>
-          <!--<div class="">
+      <transition name="loadingModaleWindow">
+        <modale_ohmyfood v-if="reveleOhmyfood" v-bind:reveleOhmyfood="reveleOhmyfood" v-bind:toggleModaleOhmyfood="toggleModaleOhmyfood"></modale_ohmyfood>
+      </transition>
+      <div class="oneProject ohmyfood" @click="toggleModaleOhmyfood" @mouseover="ohmyfood = true" @mouseleave="ohmyfood = false">
+        <transition name="slide-fade">
+          <div class="text oh" v-show="ohmyfood">
+            <h2>ohmyfood</h2>
+            <!--<div class="">
             <img src="../assets/oh.png" alt="BABM">
           </div>-->
           <p>Réalisation d'un site référençant les menus de restaurants.</p>
@@ -71,80 +75,82 @@
       <div class="menuGsm oh">
         <h2>ohmyfood</h2>
         <!--<div class="">
-          <img src="../assets/oh.png" alt="BABM">
-        </div>-->
-        <p>Réalisation d'un site référençant les menus de restaurants.</p>
-      </div>
+        <img src="../assets/oh.png" alt="BABM">
+      </div>-->
+      <p>Réalisation d'un site référençant les menus de restaurants.</p>
     </div>
+  </div>
 
 
-    <transition name="loadingModaleWindow">
-      <modale_babm v-if="reveleBabm" v-bind:reveleBabm="reveleBabm" v-bind:toggleModaleBabm="toggleModaleBabm"></modale_babm>
-    </transition>
-    <div class="oneProject babm" @click="toggleModaleBabm" @mouseover="babm = true" @mouseleave="babm = false">
-      <transition name="slide-fade">
-        <div class="text" v-show="babm">
-          <img src="../assets/logo_babm.png" alt="BABM">
-          <p>Réalisation d'un site de présentation d'un événement.</p>
-        </div>
-      </transition>
-      <div class="menuGsm">
+  <transition name="loadingModaleWindow">
+    <modale_babm v-if="reveleBabm" v-bind:reveleBabm="reveleBabm" v-bind:toggleModaleBabm="toggleModaleBabm"></modale_babm>
+  </transition>
+  <div class="oneProject babm" @click="toggleModaleBabm" @mouseover="babm = true" @mouseleave="babm = false">
+    <transition name="slide-fade">
+      <div class="text" v-show="babm">
         <img src="../assets/logo_babm.png" alt="BABM">
         <p>Réalisation d'un site de présentation d'un événement.</p>
       </div>
-    </div>
-
-
-    <transition name="loadingModaleWindow">
-      <modale_chouette v-if="reveleChouette" v-bind:reveleChouette="reveleChouette" v-bind:toggleModaleChouette="toggleModaleChouette"></modale_chouette>
     </transition>
-    <div class="oneProject chouette" @click="toggleModaleChouette" @mouseover="chouette = true" @mouseleave="chouette = false">
-      <transition name="slide-fade">
-        <div class="text ch" v-show="chouette">
-          <h2>La chouette agence</h2>
-          <p>Optimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
-        </div>
-      </transition>
-      <div class="menuGsm ch">
+    <div class="menuGsm">
+      <img src="../assets/logo_babm.png" alt="BABM">
+      <p>Réalisation d'un site de présentation d'un événement.</p>
+    </div>
+  </div>
+
+
+  <transition name="loadingModaleWindow">
+    <modale_chouette v-if="reveleChouette" v-bind:reveleChouette="reveleChouette" v-bind:toggleModaleChouette="toggleModaleChouette"></modale_chouette>
+  </transition>
+  <div class="oneProject chouette" @click="toggleModaleChouette" @mouseover="chouette = true" @mouseleave="chouette = false">
+    <transition name="slide-fade">
+      <div class="text ch" v-show="chouette">
         <h2>La chouette agence</h2>
         <p>Optimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
       </div>
-    </div>
-
-
-    <transition name="loadingModaleWindow">
-      <modale_cv v-if="reveleCv" v-bind:reveleCv="reveleCv" v-bind:toggleModaleCv="toggleModaleCv"></modale_cv>
     </transition>
-    <div class="oneProject cv" @click="toggleModaleCv" @mouseover="cv = true" @mouseleave="cv = false">
-      <transition name="slide-fade">
-        <div class="text" v-show="cv">
-          <h2>Curriculum vitae</h2>
-          <p>Réalisation de mon CV en ligne.</p>
-        </div>
-      </transition>
-      <div class="menuGsm">
+    <div class="menuGsm ch">
+      <h2>La chouette agence</h2>
+      <p>Optimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
+    </div>
+  </div>
+
+
+  <transition name="loadingModaleWindow">
+    <modale_cv v-if="reveleCv" v-bind:reveleCv="reveleCv" v-bind:toggleModaleCv="toggleModaleCv"></modale_cv>
+  </transition>
+  <div class="oneProject cv" @click="toggleModaleCv" @mouseover="cv = true" @mouseleave="cv = false">
+    <transition name="slide-fade">
+      <div class="text" v-show="cv">
         <h2>Curriculum vitae</h2>
         <p>Réalisation de mon CV en ligne.</p>
       </div>
-    </div>
-
-
-    <transition name="loadingModaleWindow">
-      <modale_michelin v-if="reveleMichelin" v-bind:reveleMichelin="reveleMichelin" v-bind:toggleModaleMichelin="toggleModaleMichelin"></modale_michelin>
     </transition>
-    <div class="oneProject michelin" @click="toggleModaleMichelin" @mouseover="michelin = true" @mouseleave="michelin = false">
-      <transition name="slide-fade">
-        <div class="text mi" v-show="michelin">
-          <h2>Michelin</h2>
-          <p>Réalisation d'un prototype d'une web app pour un musée.</p>
-        </div>
-      </transition>
-      <div class="menuGsm mi">
+    <div class="menuGsm">
+      <h2>Curriculum vitae</h2>
+      <p>Réalisation de mon CV en ligne.</p>
+    </div>
+  </div>
+
+
+  <transition name="loadingModaleWindow">
+    <modale_michelin v-if="reveleMichelin" v-bind:reveleMichelin="reveleMichelin" v-bind:toggleModaleMichelin="toggleModaleMichelin"></modale_michelin>
+  </transition>
+  <div class="oneProject michelin" @click="toggleModaleMichelin" @mouseover="michelin = true" @mouseleave="michelin = false">
+    <transition name="slide-fade">
+      <div class="text mi" v-show="michelin">
         <h2>Michelin</h2>
         <p>Réalisation d'un prototype d'une web app pour un musée.</p>
       </div>
+    </transition>
+    <div class="menuGsm mi">
+      <h2>Michelin</h2>
+      <p>Réalisation d'un prototype d'une web app pour un musée.</p>
     </div>
+  </div>
 
+
+</div>
 
   </div>
 
@@ -183,7 +189,7 @@
         reveleMichelin: false
       }
     },
-    name: 'AllProjects',
+    name: 'portfolio',
     components: {
       'modale_orinoco': ModaleOrinoco,
       'modale_groupomania': ModaleGroupomania,

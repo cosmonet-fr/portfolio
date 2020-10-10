@@ -1,23 +1,39 @@
 <template>
-  <div id="app">
-    <!--<header>
-      <h1>
-        Portfolio<br />
-        <span>Stéphane BILLOIS</span>
+  <div id="app" v-scroll="toggleModaleEnterScroll">
+    <header>
+      <h1 @click="reveleEnter = true">
+        Stéphane BILLOIS<br />
+        <span>Développeur web full stack</span>
       </h1>
-    </header>-->
+      <nav>
+        <ul>
+          <li> <a href="#hardSkills">Compétences</a> </li>
+          <li> <a href="#course">Parcours</a> </li>
+        </ul>
+      </nav>
+    </header>
     <transition name="intro">
       <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter" v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll"></modale_enter>
     </transition>
     <div class="about">
       <div class="avatar">
-        <img src="./assets/moi.jpg" alt="Mon avatar">
+        <img src="./assets/moi2.png" alt="Mon avatar">
       </div>
       <div class="aboutText">
-        <p>Après 9 ans d'expérience dans le domaine de la sérigraphie, puis de la gravure laser, et un an en tant que photographe professionnel, je me suis réorienté dans le domaine du développement web. Ce monde m'est depuis toujours familier, car plus qu'un métier, il s'agit pour moi d'une passion dans laquelle j'ai pu acquérir par moi-même de nombreuses compétences renforcées et complétées par celles acquises durant ma formation, que vous pourrez retrouver dans mon CV ci-contre.</p>
+        <p>Après plusieurs expériences
+          dans le milieu de la photographie,
+          de la sérigraphie puis de la gravure
+          laser, j’ai engagé ma reconversion
+          professionnelle dans le développement
+          web, domaine qui me passionne depuis toujours.
+          Désormais certifié au métier de développeur web, je
+          suis motivé à mettre mes compétences au service de votre
+          entreprise.</p>
       </div>
     </div>
     <hardSkills v-if="hardSkills"></hardSkills>
+    <course v-if="course"></course>
+    <softSkills></softSkills>
     <AllProjects v-if="portfolio"></AllProjects>
     <div class="box" v-scroll="handleScroll">
     </div>
@@ -27,6 +43,8 @@
 <script>
 import Enter from './components/Enter.vue'
 import HardSkills from './components/HardSkills.vue'
+import Course from './components/Course.vue'
+import SoftSkills from './components/SoftSkills.vue'
 import AllProjects from './components/AllProjects.vue'
 
 export default {
@@ -34,12 +52,15 @@ export default {
     return {
       reveleEnter: false,
       hardSkills: true,
+      course: true,
       portfolio: false
     }
   },
   name: 'App',
   components: {
     'modale_enter': Enter,
+    'course': Course,
+    'softSkills': SoftSkills,
     'hardSkills': HardSkills,
     AllProjects
   },
@@ -95,7 +116,12 @@ export default {
   opacity: 0;
 }
 * {
-  font-family: sans-serif;
+  font-family: "Ubuntu Regular";
+}
+h2 {
+  font-size: 3em;
+  color: white;
+
 }
 body {
   background-color: #3f3f3f;
@@ -112,36 +138,63 @@ body {
   //margin-top: 60px;
 }
 header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 5vh;
+  position: sticky;
+  top: 0px;
   padding: 1em;
-  background-color: #3f3f3f;
+  background-color: #333333ee;
   h1 {
+    font-family: "Ubuntu Bold";
     cursor: pointer;
     font-weight: normal;
-    color: #519183;
+    color: #016a87;
     span {
-      font-family: serif;
+      font-family: "Ubuntu Medium";
       font-size: .6em;
       color: white;
     }
   }
+  nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    ul {
+      display: flex;
+      margin: 1em;
+    }
+    li {
+      margin: 0 1em;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 1em;
+      &:hover {
+        background-color: #016a87;
+      }
+    }
+  }
 }
 .about {
-  background-color: black;
+  min-height: 95vh;
+  background-color: #00000055;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
-
+.avatar, .aboutText {
+  margin: 1em 10em;
+}
 .avatar {
+  text-align: center;
   min-width: 20%;
-  margin: 15em 0em 0 10em ;
-  margin-top: auto;
-  margin-bottom: auto;
   img {
     text-align: center;
+    border-radius: 50%;
   }
 }
 .aboutText {
-  margin: 15em 10em 10em 10em ;
   * {
     font-size: 2rem;
     text-align: justify;
