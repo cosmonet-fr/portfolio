@@ -1,7 +1,7 @@
 <template>
   <div class="boxTemplate">
 
-    <div id="allSoftSkills">
+    <div class="allSoftSkills">
       <h2>Soft skills</h2>
       <div class="softSkillsBox">
 
@@ -89,7 +89,7 @@
     justify-content: space-around;
     //background-color: #000000cc;
   }
-  #allSoftSkills, .hobbies {
+  .allSoftSkills, .hobbies {
     margin: 9em;
     width: 40%;
   }
@@ -110,6 +110,7 @@
   .menu {
     display: flex;
     justify-content: space-around;
+    margin-top: 5em;
     img {
       width: 150px;
       height: 150px;
@@ -124,14 +125,17 @@
       }
     }
     p {
-      position: absolute;
+      //position: absolute;
       font-size: 2rem;
-      text-align: center;
       color: white;
     }
   }
   .hobbiesTxt {
     width: 150px;
+    margin-left: 1em;
+    p {
+      text-align: center;
+    }
   }
   .slide-fade-enter-active {
     transition: all .3s ease;

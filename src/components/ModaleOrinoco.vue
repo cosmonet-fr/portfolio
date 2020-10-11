@@ -93,6 +93,7 @@ export default {
   }
   h2 {
     margin: .5em 1em;
+    font-size: 2em;
   }
   h3 {
     margin: 1em 0 .2em 0;

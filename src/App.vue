@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-scroll="toggleModaleEnterScroll">
     <header>
-      <h1 @click="reveleEnter = true">
+      <h1>
         Stéphane BILLOIS<br />
         <span>Développeur web full stack</span>
       </h1>
@@ -9,6 +9,9 @@
         <ul>
           <li> <a href="#hardSkills">Compétences</a> </li>
           <li> <a href="#course">Parcours</a> </li>
+          <li> <a href="#allSoftSkills">Soft skills</a> </li>
+          <li> <a href="#portfolio">Portfolio</a> </li>
+          <li> <a href="#contact">Contact</a> </li>
         </ul>
       </nav>
     </header>
@@ -31,12 +34,18 @@
           entreprise.</p>
       </div>
     </div>
-    <hardSkills v-if="hardSkills"></hardSkills>
-    <course v-if="course"></course>
-    <softSkills></softSkills>
-    <AllProjects v-if="portfolio"></AllProjects>
-    <div class="box" v-scroll="handleScroll">
-    </div>
+
+    <hardSkills id="hardSkills" ></hardSkills>
+    <course id="course" ></course>
+    <softSkills id="allSoftSkills" ></softSkills>
+    <AllProjects id="portfolio" ></AllProjects>
+    <footer>
+      <div id="contact" class="contact">
+        <p><a href="mailto:stephane.billois@hotmail.com">stephane.billois@hotmail.com</a></p>
+        <p>06 61 33 05 28</p>
+        <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg" alt="Linkdin"> </a>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -50,10 +59,7 @@ import AllProjects from './components/AllProjects.vue'
 export default {
   data: function () {
     return {
-      reveleEnter: false,
-      hardSkills: true,
-      course: true,
-      portfolio: false
+      reveleEnter: true,
     }
   },
   name: 'App',
@@ -98,23 +104,13 @@ export default {
       }
       return window.scrollY > 100;
     },
-    handleScroll: function(evt, el) {
-      if (window.scrollY > 50) {
-        el.setAttribute("style", "opacity: 1;")
-        console.log(el);
-        this.portfolio = true;
-        //this.reveleEnter = false;
-      }
-      return window.scrollY > 100;
-    }
+
   },
 }
 </script>
 
 <style lang="scss">
-.box {
-  opacity: 0;
-}
+
 * {
   font-family: "Ubuntu Regular";
 }
@@ -176,9 +172,11 @@ header {
     }
   }
 }
+.about, #allSoftSkills {
+  background-color: #00000055;
+}
 .about {
   min-height: 95vh;
-  background-color: #00000055;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -329,6 +327,29 @@ header {
   cursor: default;
   background-color: white;
 }
+
+footer {
+  background-color: #016a87;
+}
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 4em;
+  * {
+    font-size: 1.2em;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  img {
+    width: 32px;
+  }
+}
+
 /*.slide-pics-enter-active {
   transition: all .4s ease;
 }

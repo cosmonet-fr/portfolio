@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-    <h2 id="portfolio">Portfolio</h2>
+    <h2>Portfolio</h2>
     <div class="allProjects">
 
 
@@ -232,9 +232,14 @@
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
 
+  .portfolio {
+    margin: 5em 4em;
+    h2 {
+      text-align: center;
+    }
+  }
   .allProjects {
     z-index: 0;
-    margin: 5em 4em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

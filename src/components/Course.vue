@@ -1,5 +1,5 @@
 <template>
-  <div id="course" class="course">
+  <div class="course">
     <div class="menu">
       <h2 :class="{ active: course === 'experience' }" @click="course = 'experience'" >Experiences</h2>
       <h2 :class="{ active: course === 'training' }" @click="course = 'training'">Formations</h2>

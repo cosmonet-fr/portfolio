@@ -1,5 +1,5 @@
 <template>
-  <div id="hardSkills" class="hardSkills">
+  <div class="hardSkills">
     <h2>Compétences</h2>
     <div class="hardSkillsBox" >
 
