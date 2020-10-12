@@ -41,7 +41,6 @@
               <transition name="slide-fade" >
                 <p v-if="bow">Pratiqué en club.</p>
               </transition>
-              <p class="gsmTxt" >Pratiqué en club.</p>
             </div>
         </div>
 
@@ -51,7 +50,6 @@
               <transition name="slide-fade" >
                 <p v-if="game" >Jeux de stratégies et jeux d’aventures.</p>
               </transition>
-              <p class="gsmTxt" >Jeux de stratégies et jeux d’aventures.</p>
             </div>
         </div>
 
@@ -61,7 +59,6 @@
               <transition name="slide-fade" >
                 <p v-if="movie" >Sciences fictions, comédies.</p>
               </transition>
-              <p class="gsmTxt">Sciences fictions, comédies.</p>
 
             </div>
         </div>
@@ -162,12 +159,7 @@ h2 {
       width: 90%;
     }
   }
-  .gsmTxt {
-    text-align: center;
-    @media (min-width: 800px) {
-      display: none;
-    }
-  }
+
   .slide-fade-enter-active {
     transition: all .3s ease;
   }

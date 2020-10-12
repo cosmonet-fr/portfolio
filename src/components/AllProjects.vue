@@ -116,7 +116,7 @@
   </div>
 
 
-  <transition name="loadingModaleWindow">
+  <!--<transition name="loadingModaleWindow">
     <modale_cv v-if="reveleCv" v-bind:reveleCv="reveleCv" v-bind:toggleModaleCv="toggleModaleCv"></modale_cv>
   </transition>
   <div class="oneProject cv" @click="toggleModaleCv" @mouseover="cv = true" @mouseleave="cv = false">
@@ -130,7 +130,7 @@
       <h2>Curriculum vitae</h2>
       <p>Réalisation de mon CV en ligne.</p>
     </div>
-  </div>
+  </div>-->
 
 
   <transition name="loadingModaleWindow">

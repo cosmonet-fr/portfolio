@@ -14,7 +14,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="html" >Le HTML est le langage de balisage à l'orgine du web. Il est utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="html" >Le HTML est le langage de balisage à l'orgine du web. Il est utilisé pour afficher le contenu d'une page.</p>
           </transition>
         </div>
       </div>
@@ -46,7 +46,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="js" >Le JavaScript est le langage de programation intégré dans les navigateurs web moderne. Il permet entre autre le developpement du front-end d'un site web.</p>
+            <p v-if="js" >Le JavaScript est le langage de programmation intégré dans les navigateurs web modernes et utilisé pour le front-end.</p>
           </transition>
         </div>
       </div>
@@ -62,7 +62,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="node" >Node.js permet d'exécuter du code JavaScript du coté serveur. Il peux être utilisé pour créer une API.</p>
+            <p v-if="node" >Node.js permet d'exécuter du code JavaScript du côté serveur. Il peut être utilisé pour créer une API.</p>
           </transition>
         </div>
       </div>
@@ -94,7 +94,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="php" >PHP est un language de programation utilisé pour produire des pages web dynamiques.</p>
+            <p v-if="php" >PHP est un langage de programmation utilisé pour produire des pages web dynamiques.</p>
           </transition>
         </div>
       </div>
@@ -174,7 +174,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="photoshop" >Adobe Photoshop est la référance en matière de retouche d'image.</p>
+            <p v-if="photoshop" >Adobe Photoshop est la référence en matière de retouche d'images.</p>
           </transition>
         </div>
       </div>
@@ -241,6 +241,9 @@
   }
   .skill {
     margin-bottom: 3rem;
+    @media (max-width: 800px) {
+      margin-bottom: 4rem;
+    }
   }
   .gaugeBox {
     display: flex;
@@ -289,6 +292,9 @@
   .def {
     margin-left: 5rem;
     position: absolute;
+    @media (max-width: 800px) {
+      font-size: 11px;
+    }
   }
   img {
     margin: 0 1em;
