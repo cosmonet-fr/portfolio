@@ -88,7 +88,7 @@
           <img src="../assets/php-brands.svg" alt="CSS">
           <div class="gauge" >
             <div class="p25">
-              <p class="technology" v-if="php">PHP 7</p>
+              <p class="technology" v-if="php">PHP</p>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@
           <img class="ps" src="../assets/ps-icon.png" alt="CSS">
           <div class="gauge" >
             <div class="p65">
-              <p class="technology" v-if="photoshop">Adobe Photoshop</p>
+              <p class="technology" v-if="photoshop">Photoshop</p>
             </div>
           </div>
         </div>
