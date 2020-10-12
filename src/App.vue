@@ -7,6 +7,7 @@
       </h1>
       <nav>
         <ul>
+          <li> <a href="#app">Présentation</a> </li>
           <li> <a href="#hardSkills">Compétences</a> </li>
           <li> <a href="#course">Parcours</a> </li>
           <li> <a href="#allSoftSkills">Soft skills</a> </li>
@@ -26,6 +27,7 @@
             <img src="./assets/arrow_right.svg"/>
           </div>
           <ul>
+            <li @click="menuGsm = !menuGsm" > <a href="#app">Présentation</a> </li>
             <li @click="menuGsm = !menuGsm" > <a href="#hardSkills">Compétences</a> </li>
             <li @click="menuGsm = !menuGsm" > <a href="#course">Parcours</a> </li>
             <li @click="menuGsm = !menuGsm" > <a href="#allSoftSkills">Soft skills</a> </li>
