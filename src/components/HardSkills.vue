@@ -46,7 +46,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="js" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="js" >Le JavaScript est le langage de programation intégré dans les navigateurs web moderne. Il permet entre autre le developpement du front-end d'un site web.</p>
           </transition>
         </div>
       </div>
@@ -62,7 +62,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="node" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="node" >Node.js permet d'exécuter du code JavaScript du coté serveur. Il peux être utilisé pour créer une API.</p>
           </transition>
         </div>
       </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="vue" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="vue" >Vue.js, est un framework JavaScript open-source utilisé pour construire des interfaces utilisateur et des applications web.</p>
           </transition>
         </div>
       </div>
@@ -94,7 +94,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="php" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="php" >PHP est un language de programation utilisé pour produire des pages web dynamiques.</p>
           </transition>
         </div>
       </div>
@@ -110,7 +110,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="wordPress" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="wordPress" >WordPress est le CMS le plus utilisé au monde.</p>
           </transition>
         </div>
       </div>
@@ -126,7 +126,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="sass" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="sass" >Sass est un préprocesseur CSS. C'est un langage de description compilé en CSS.</p>
           </transition>
         </div>
       </div>
@@ -142,7 +142,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="gnuLinux" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="gnuLinux" >GNU/Linux est un système d'exploitation libre proche d'Unix, très utilisé sur les serveurs.</p>
           </transition>
         </div>
       </div>
@@ -158,7 +158,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="git" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="git" >Git est un logiciel de gestion de versions.</p>
           </transition>
         </div>
       </div>
@@ -174,7 +174,7 @@
         </div>
         <div class="def">
           <transition name="slide-fade" >
-            <p v-if="photoshop" >Le langage de balisage à l'orgine du web. Utiliseé pour afficher le comtenu d'une page.</p>
+            <p v-if="photoshop" >Adobe Photoshop est la référance en matière de retouche d'image.</p>
           </transition>
         </div>
       </div>
@@ -223,6 +223,9 @@
     h2 {
       text-align: center;
     }
+    @media (max-width: 800px) {
+      margin: 5em 0;
+    }
   }
   .hardSkillsBox {
     display: flex;
@@ -232,6 +235,9 @@
       color: #ffffff;
     }
     margin: 10em;
+    @media (max-width: 800px) {
+      margin: 2em;
+    }
   }
   .skill {
     margin-bottom: 3rem;
@@ -242,6 +248,9 @@
   .gauge, .def {
     width: 30rem;
     //cursor: help;
+    @media (max-width: 800px) {
+      width: 10rem;
+    }
   }
   .gauge {
     margin: .5em 0;

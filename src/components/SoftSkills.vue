@@ -39,8 +39,9 @@
           <img @mouseover="bow = true" @mouseleave="bow = false" src="../assets/bow.svg" alt="Bow" />
             <div class="hobbiesTxt">
               <transition name="slide-fade" >
-                <p v-if="bow" >Pratiqué en club.</p>
+                <p v-if="bow">Pratiqué en club.</p>
               </transition>
+              <p class="gsmTxt" >Pratiqué en club.</p>
             </div>
         </div>
 
@@ -50,6 +51,7 @@
               <transition name="slide-fade" >
                 <p v-if="game" >Jeux de stratégies et jeux d’aventures.</p>
               </transition>
+              <p class="gsmTxt" >Jeux de stratégies et jeux d’aventures.</p>
             </div>
         </div>
 
@@ -59,6 +61,8 @@
               <transition name="slide-fade" >
                 <p v-if="movie" >Sciences fictions, comédies.</p>
               </transition>
+              <p class="gsmTxt">Sciences fictions, comédies.</p>
+
             </div>
         </div>
 
@@ -84,18 +88,32 @@
 </script>
 
 <style scoped lang="scss">
+h2 {
+  margin: 1.3em;
+  text-align: center;
+}
   .boxTemplate {
     display: flex;
     justify-content: space-around;
     //background-color: #000000cc;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
   }
   .allSoftSkills, .hobbies {
-    margin: 9em;
-    width: 40%;
+    @media (min-width: 800px) {
+      margin: 9em;
+      width: 40%;
+    }
+
   }
   .softSkillsBox {
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
   .softSkill {
     p {
@@ -129,12 +147,25 @@
       font-size: 2rem;
       color: white;
     }
+    @media (max-width: 530px) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
   .hobbiesTxt {
     width: 150px;
     margin-left: 1em;
     p {
       text-align: center;
+    }
+    @media (max-width: 530px) {
+      width: 90%;
+    }
+  }
+  .gsmTxt {
+    text-align: center;
+    @media (min-width: 800px) {
+      display: none;
     }
   }
   .slide-fade-enter-active {

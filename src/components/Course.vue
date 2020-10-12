@@ -86,6 +86,9 @@ export default  {
   h2 {
     cursor: pointer;
     padding: 1em;
+    @media (max-width: 540px) {
+      font-size: 1em;
+    }
   }
   .active {
     background-color: #333333;
@@ -96,6 +99,9 @@ export default  {
     justify-content: space-around;
     padding: 10em 2em;
     background-color: #016a87;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
   }
   .experience, .training {
     margin: 3em 0;
@@ -104,11 +110,17 @@ export default  {
     }
   }
   .all {
-    width: 40%;
+    @media (min-width: 800px) {
+      width: 40%;
+    }
   }
-  //.menu {
+  .menu {
   //  width: 20%;
-  //}
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
   .slide-fade-enter-active {
     transition: all .3s ease;
   }

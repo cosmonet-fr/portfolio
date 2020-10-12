@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-scroll="toggleModaleEnterScroll">
-    <header>
+    <header class="desk" >
       <h1>
         Stéphane BILLOIS<br />
         <span>Développeur web full stack</span>
@@ -15,6 +15,26 @@
         </ul>
       </nav>
     </header>
+
+
+    <div class="menuGsmBtn" v-show="!menuGsm" @click="menuGsm = !menuGsm"><img src="./assets/bars-solid.svg"></div>
+    <div class="gsm" v-show="menuGsm">
+
+      <nav>
+        <div class="headMenu" @click="menuGsm = !menuGsm">
+          <img src="./assets/arrow_right.svg"/>
+        </div>
+        <ul>
+          <li> <a href="#hardSkills">Compétences</a> </li>
+          <li> <a href="#course">Parcours</a> </li>
+          <li> <a href="#allSoftSkills">Soft skills</a> </li>
+          <li> <a href="#portfolio">Portfolio</a> </li>
+          <li> <a href="#contact">Contact</a> </li>
+        </ul>
+      </nav>
+
+    </div>
+
     <transition name="intro">
       <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter" v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll"></modale_enter>
     </transition>
@@ -60,6 +80,7 @@ export default {
   data: function () {
     return {
       reveleEnter: true,
+      menuGsm: false
     }
   },
   name: 'App',
@@ -117,7 +138,12 @@ export default {
 h2 {
   font-size: 3em;
   color: white;
-
+  @media (max-width: 800px) {
+    font-size: 2em;
+  }
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   background-color: #3f3f3f;
@@ -151,6 +177,7 @@ header {
       font-size: .6em;
       color: white;
     }
+
   }
   nav {
     margin-top: auto;
@@ -172,6 +199,48 @@ header {
     }
   }
 }
+header .desk{
+  background-color: white;
+}
+.desk {
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+.gsm, .menuGsmBtn {
+  @media (min-width: 800px) {
+    display: none;
+  }
+  position: fixed;
+  right: 0;
+}
+.headMenu {
+  display: flex;
+  justify-content: right;
+}
+.gsm {
+  width: 12rem;
+  padding: 1em;
+  background-color: #333333ee;
+  li {
+    margin: 1em 0;
+  }
+  a {
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+  }
+  img {
+    width: 32px;
+    cursor: pointer;
+  }
+}
+
+.menuGsmBtn {
+  width: 32px;
+  margin: .5em;
+}
+
 .about, #allSoftSkills {
   background-color: #00000055;
 }
@@ -183,6 +252,9 @@ header {
 }
 .avatar, .aboutText {
   margin: 1em 10em;
+  @media (max-width: 800px) {
+    margin: 1em;
+  }
 }
 .avatar {
   text-align: center;
@@ -199,6 +271,9 @@ header {
     color: white;
   }
   padding: 3em;
+  @media (max-width: 800px) {
+    padding: 0;
+  }
 }
 .modaleScreen {
   position: fixed;
@@ -347,6 +422,14 @@ footer {
   }
   img {
     width: 32px;
+  }
+  @media (max-width: 530px) {
+    flex-direction: column;
+    text-align: center;
+    * {
+      margin: 1em 0;
+      font-size: 1em;
+    }
   }
 }
 

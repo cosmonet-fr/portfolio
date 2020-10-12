@@ -233,13 +233,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
 
   .portfolio {
-    margin: 5em 4em;
     h2 {
+      margin-top: 2em;
       text-align: center;
     }
   }
   .allProjects {
     z-index: 0;
+    margin: 5em 4em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
