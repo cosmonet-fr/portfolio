@@ -8,6 +8,12 @@
       </div>
     </div>
 
+
+    <img src="../assets/device+gesture+handheld+swipe+tablet+touchscreen+icon-1320183551442104786_0.svg" class="touch" />
+
+
+
+
   </div>
 </template>
 
@@ -31,6 +37,10 @@ h1 {
   animation: title .6s;
   font-size: 5em;
   letter-spacing: 1.5rem;
+  @media (max-width: 800px) {
+    font-size: 2rem;
+    letter-spacing: 0em;
+  }
 }
 @keyframes title {
   0% { transform: translateY(-.1em); opacity: 0}
@@ -39,6 +49,9 @@ h1 {
 h2 {
   animation: titleH2 .6s;
   font-size: 3em;
+  @media (max-width: 800px) {
+    font-size: 1.5rem;
+  }
 }
 @keyframes titleH2 {
   0% { transform: translateY(-.1em); opacity: 0}
@@ -66,6 +79,9 @@ h2 {
 .scroll-downs {
   width :34px;
   height: 55px;
+  @media (max-width: 800px) {
+    display: none;
+  }
 }
 .mousey {
   animation: mouseLoad 1s;
@@ -88,6 +104,13 @@ h2 {
   animation-iteration-count: infinite;
 }
 
+.touch {
+  width: 96px;
+  @media (min-width: 800px) {
+    display: none;
+  }
+}
+
 @keyframes mouseLoad {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -98,4 +121,5 @@ h2 {
   50% { transform: translateY(8px);}
   100% { transform: translateY(0);}
 }
+
 </style>

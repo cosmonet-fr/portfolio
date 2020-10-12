@@ -18,22 +18,25 @@
 
 
     <div class="menuGsmBtn" v-show="!menuGsm" @click="menuGsm = !menuGsm"><img src="./assets/bars-solid.svg"></div>
-    <div class="gsm" v-show="menuGsm">
 
-      <nav>
-        <div class="headMenu" @click="menuGsm = !menuGsm">
-          <img src="./assets/arrow_right.svg"/>
-        </div>
-        <ul>
-          <li> <a href="#hardSkills">Compétences</a> </li>
-          <li> <a href="#course">Parcours</a> </li>
-          <li> <a href="#allSoftSkills">Soft skills</a> </li>
-          <li> <a href="#portfolio">Portfolio</a> </li>
-          <li> <a href="#contact">Contact</a> </li>
-        </ul>
-      </nav>
+    <transition name="loadingMenu">
+      <div class="gsm" v-show="menuGsm">
+        <nav>
+          <div class="headMenu" @click="menuGsm = !menuGsm">
+            <img src="./assets/arrow_right.svg"/>
+          </div>
+          <ul>
+            <li @click="menuGsm = !menuGsm" > <a href="#hardSkills">Compétences</a> </li>
+            <li @click="menuGsm = !menuGsm" > <a href="#course">Parcours</a> </li>
+            <li @click="menuGsm = !menuGsm" > <a href="#allSoftSkills">Soft skills</a> </li>
+            <li @click="menuGsm = !menuGsm" > <a href="#portfolio">Portfolio</a> </li>
+            <li @click="menuGsm = !menuGsm" > <a href="#contact">Contact</a> </li>
+          </ul>
+        </nav>
 
-    </div>
+      </div>
+    </transition>
+
 
     <transition name="intro">
       <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter" v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll"></modale_enter>
@@ -238,7 +241,7 @@ header .desk{
 
 .menuGsmBtn {
   width: 32px;
-  margin: .5em;
+  margin: 1.5em;
 }
 
 .about, #allSoftSkills {
@@ -269,6 +272,9 @@ header .desk{
     font-size: 2rem;
     text-align: justify;
     color: white;
+    @media (max-width: 500px) {
+      font-size: 1.2rem;
+    }
   }
   padding: 3em;
   @media (max-width: 800px) {
@@ -452,6 +458,18 @@ footer {
 }
 @keyframes loadingEnterWindow {
   0% { transform: translateY(-100%);}
+  100% { transform: translateY(0);}
+}
+
+.loadingMenu-enter-active {
+  animation: loadingMenu 400ms;
+}
+.loadingMenu-leave-active {
+  animation: loadingMenu 400ms reverse;
+}
+
+@keyframes loadingMenu {
+  0% { transform: translateX(100%);}
   100% { transform: translateY(0);}
 }
 

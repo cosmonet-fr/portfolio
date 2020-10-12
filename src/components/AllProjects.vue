@@ -139,12 +139,12 @@
   <div class="oneProject michelin" @click="toggleModaleMichelin" @mouseover="michelin = true" @mouseleave="michelin = false">
     <transition name="slide-fade">
       <div class="text mi" v-show="michelin">
-        <h2>Michelin</h2>
+        <h2>AudioSoft</h2>
         <p>Réalisation d'un prototype d'une web app pour un musée.</p>
       </div>
     </transition>
     <div class="menuGsm mi">
-      <h2>Michelin</h2>
+      <h2>AudioSoft</h2>
       <p>Réalisation d'un prototype d'une web app pour un musée.</p>
     </div>
   </div>
@@ -270,7 +270,7 @@
   .babm { background-image: url(../assets/babm.jpg); /*filter: saturate(0);*/}
   .chouette { background-image: url(../assets/chouette.jpg); }
   .cv { background-image: url(../assets/moi.jpg); }
-  .michelin { background-image: url(../assets/michelin.jpg); }
+  .michelin { background-image: url(../assets/AudioSoft.png); }
 
   .menuGsm {
     @media (min-width: 800px) {

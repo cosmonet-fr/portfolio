@@ -5,7 +5,7 @@
     </div>
     <div class="modaleBox">
       <div class="menuBtn">
-        <h2>Michelin</h2>
+        <h2>AudioSoft</h2>
         <div class="btn" @click="toggleModaleMichelin">X</div>
       </div>
 
