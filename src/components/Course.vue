@@ -11,7 +11,7 @@
           <div class="experience" v-if="course === 'experience'" >
             <h3>OpenStudio - Clermont-Ferrrand (63)</h3>
             <p> <span>Mars 2020 — Développeur web</span> </p>
-            <p>Réalisation d’une web app pour contrôler le lancement de vidéos dans un musée. Le projet a été réalisé à partir de zéro en utilisant HTML5 et CSS3.</p>
+            <p>Réalisation de tests fonctionnels automatisés et manuels sur des sites web complexes (technologie type Selenium).</p>
           </div>
         </transition>
 
@@ -19,15 +19,7 @@
           <div class="experience" v-if="course === 'experience'" >
             <h3>Développeur Web Indépendant - Romagnat (63)</h3>
             <p> <span>Mars 2020 — Développeur web</span> </p>
-            <p>Réalisation d’une web app pour contrôler le lancement de vidéos dans un musée. Le projet a été réalisé à partir de zéro en utilisant HTML5 et CSS3.</p>
-          </div>
-        </transition>
-
-        <transition name="slide-fade" >
-          <div class="experience" v-if="course === 'experience'" >
-            <h3>AudioSoft - St-Maurice (63)</h3>
-            <p> <span>Novembre 2020 à aujourd’hui — Qualiticien</span> </p>
-            <p>Réalisation de tests fonctionnels automatisés et manuels sur des sites web complexes (technologie type Selenium).</p>
+            <p>Travail autour de plusieurs projets web à l’aide de diverses technologies, notamment Node.js, Maria DB et Vue.js.</p>
           </div>
         </transition>
 
