@@ -55,7 +55,7 @@
         <div class="gaugeBox">
           <img src="../assets/node-brands.svg" alt="CSS">
           <div class="gauge" >
-            <div class="p65">
+            <div class="p75">
               <p class="technology" v-if="node">Node.js</p>
             </div>
           </div>
@@ -71,7 +71,7 @@
         <div class="gaugeBox">
           <img src="../assets/vuejs-brands.svg" alt="CSS">
           <div class="gauge" >
-            <div class="p50">
+            <div class="p75">
               <p class="technology" v-if="vue">Vue.js</p>
             </div>
           </div>

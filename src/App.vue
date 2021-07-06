@@ -48,15 +48,14 @@
         <img src="./assets/moi2.png" alt="Mon avatar">
       </div>
       <div class="aboutText">
-        <p>Après plusieurs expériences
-          dans le milieu de la photographie,
-          de la sérigraphie puis de la gravure
-          laser, j’ai engagé ma reconversion
-          professionnelle dans le développement
-          web, domaine qui me passionne depuis toujours.
-          Désormais certifié au métier de développeur web, je
-          suis motivé à mettre mes compétences au service de votre
-          entreprise.</p>
+        <p>Après plusieurs expériences dans le
+          milieu de la photographie, de la sérigraphie
+          puis de la gravure laser, j’ai décidé d’évoluer
+          dans le développement web. Diplômé et certifié
+          dans ce domaine, je m’épanouis depuis plus d’un an
+          dans les métiers du web en tant que développeur et
+          qualiticien et souhaite désormais mettre mes compétences au
+          service de votre entreprise.</p>
       </div>
     </div>
 

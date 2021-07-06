@@ -165,7 +165,7 @@
   import ModaleOhmyfood from './ModaleOhmyfood.vue'
   import ModaleBabm from './ModaleBabm.vue'
   import ModaleChouette from './ModaleChouette.vue'
-  import ModaleCv from './ModaleCv.vue'
+  //import ModaleCv from './ModaleCv.vue'
   import ModaleMichelin from './ModaleMichelin.vue'
   export default {
     data: function () {
@@ -197,7 +197,7 @@
       'modale_ohmyfood': ModaleOhmyfood,
       'modale_babm': ModaleBabm,
       'modale_chouette': ModaleChouette,
-      'modale_cv': ModaleCv,
+      //'modale_cv': ModaleCv,
       'modale_michelin': ModaleMichelin
     },
     methods: {
@@ -219,9 +219,9 @@
       toggleModaleChouette: function() {
         this.reveleChouette = !this.reveleChouette
       },
-      toggleModaleCv: function() {
-        this.reveleCv = !this.reveleCv
-      },
+      //toggleModaleCv: function() {
+      //  this.reveleCv = !this.reveleCv
+      //},
       toggleModaleMichelin: function() {
         this.reveleMichelin = !this.reveleMichelin
       }
