@@ -62,6 +62,8 @@
                 <li>Express</li>
                 <li>MariaDB</li>
                 <li>Vue.js</li>
+                <li>Vue CLI</li>
+                <li>Vue Router</li>
                 <li>Sass</li>
               </ul>
             </p>

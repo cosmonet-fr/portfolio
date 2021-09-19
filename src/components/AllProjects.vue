@@ -3,8 +3,37 @@
     <h2>Portfolio</h2>
     <div class="allProjects">
 
+      <transition name="loadingModaleWindow">
+        <modale_audio_soft v-if="reveleAudioSoft" v-bind:reveleAudioSoft="reveleAudioSoft" v-bind:toggleModaleAudioSoft="toggleModaleAudioSoft"></modale_audio_soft>
+      </transition>
+      <div class="oneProject audio_soft"  @click="toggleModaleAudioSoft" @mouseover="audio_soft = true" @mouseleave="audio_soft = false">
+        <transition name="slide-fade">
+          <div class="text" v-show="audio_soft">
+            <h2>AudioSoft</h2>
+            <p>Réalisation d'un site vitrine.</p>
+          </div>
+        </transition>
+        <div class="menuGsm">
+          <h2>AudioSoft</h2>
+          <p>Réalisation d'un site vitrine.</p>
+        </div>
+      </div>
 
-
+      <transition name="loadingModaleWindow">
+        <modale_aureos v-if="reveleAureos" v-bind:reveleAureos="reveleAureos" v-bind:toggleModaleAureos="toggleModaleAureos"></modale_aureos>
+      </transition>
+      <div class="oneProject aureos"  @click="toggleModaleAureos" @mouseover="aureos = true" @mouseleave="aureos = false">
+        <transition name="slide-fade">
+          <div class="text" v-show="aureos">
+            <h2>Aureos</h2>
+            <p>Réalisation d'un site vitrine.</p>
+          </div>
+        </transition>
+        <div class="menuGsm">
+          <h2>Aureos</h2>
+          <p>Réalisation d'un site vitrine.</p>
+        </div>
+      </div>
 
       <transition name="loadingModaleWindow">
         <modale_orinoco v-if="reveleOrinoco" v-bind:reveleOrinoco="reveleOrinoco" v-bind:toggleModaleOrinoco="toggleModaleOrinoco"></modale_orinoco>
@@ -159,6 +188,8 @@
 </template>
 
 <script>
+  import ModaleAudioSoft from './ModaleAudioSoft.vue'
+  import ModaleAureos from './ModaleAureos.vue'
   import ModaleOrinoco from './ModaleOrinoco.vue'
   import ModaleGroupomania from './ModaleGroupomania.vue'
   import ModalePiquante from './ModalePiquante.vue'
@@ -170,6 +201,8 @@
   export default {
     data: function () {
       return {
+        audio_soft: false,
+        aureos: false,
         orinoco: false,
         orinocoGsm: false,
         groupomania: false,
@@ -179,6 +212,8 @@
         chouette: false,
         cv: false,
         michelin: false,
+        reveleAudioSoft: false,
+        reveleAureos: false,
         reveleOrinoco: false,
         reveleGroupomania: false,
         revelePiquante: false,
@@ -191,6 +226,8 @@
     },
     name: 'portfolio',
     components: {
+      'modale_audio_soft': ModaleAudioSoft,
+      'modale_aureos': ModaleAureos,
       'modale_orinoco': ModaleOrinoco,
       'modale_groupomania': ModaleGroupomania,
       'modale_piquante': ModalePiquante,
@@ -201,6 +238,12 @@
       'modale_michelin': ModaleMichelin
     },
     methods: {
+      toggleModaleAudioSoft: function() {
+        this.reveleAudioSoft = !this.reveleAudioSoft
+      },
+      toggleModaleAureos: function() {
+        this.reveleAureos = !this.reveleAureos
+      },
       toggleModaleOrinoco: function() {
         this.reveleOrinoco = !this.reveleOrinoco
       },
@@ -263,6 +306,8 @@
       height: 15rem;
     }
   }
+  .audio_soft { background-image: url(../assets/AudioSoft.png); }
+  .aureos { background-image: url(../assets/Aureos.jpg); }
   .orinoco { background-image: url(../assets/orinoco.jpg); }
   .groupomania { background-image: url(../assets/groupomania.jpg); }
   .sauce { background-image: url(../assets/piquante.jpg); }
@@ -270,7 +315,7 @@
   .babm { background-image: url(../assets/babm.jpg); /*filter: saturate(0);*/}
   .chouette { background-image: url(../assets/chouette.jpg); }
   .cv { background-image: url(../assets/moi.jpg); }
-  .michelin { background-image: url(../assets/AudioSoft.png); }
+  .michelin { background-image: url(../assets/michelin.jpg); }
 
   .menuGsm {
     @media (min-width: 800px) {
