@@ -65,7 +65,6 @@
     <AllProjects id="portfolio" ></AllProjects>
     <footer>
       <div id="contact" class="contact">
-        <p><a href="mailto:stephane.billois@hotmail.com">stephane.billois@hotmail.com</a></p>
         <p>06 61 33 05 28</p>
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg" alt="Linkdin"> </a>
       </div>
