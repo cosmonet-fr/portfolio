@@ -1,0 +1,92 @@
+[
+    {
+        "name": "HTML 5",
+        "imgSrc": "html5-brands.svg",
+        "description": "Le HTML est le langage de balisage à l'origine du web. Il est utilisé pour afficher le contenu d'une page.",
+        "percentage": 90
+    },
+    {
+        "name": "CSS 3",
+        "imgSrc": "css3-alt-brands.svg",
+        "description": "Le CSS est le langage permettant la mise en forme des fichiers HTML.",
+        "percentage": 90
+    },
+    {
+        "name": "JavaScript",
+        "imgSrc": "js-brands.svg",
+        "description": "Le JavaScript est le langage de programmation intégré dans les navigateurs web modernes et utilisé pour le front-end.",
+        "percentage": 90
+    },
+    {
+        "name": "Node.js",
+        "imgSrc": "node-brands.svg",
+        "description": "Node.js permet d'exécuter du code JavaScript du côté serveur. Il peut être utilisé pour créer une API.",
+        "percentage": 90
+    },
+    {
+        "name": "Bun",
+        "imgSrc": "bun-icon.svg",
+        "description": "Bun est un autre runtime Javascript concurrent de Node.js. Il propose son propre package manager et peut exécuter du Rust.",
+        "percentage": 65
+    },
+    {
+        "name": "Rust",
+        "imgSrc": "rust-brands-solid.svg",
+        "description": "Rust est un langage de programmation compilé multi-paradigme, champion de la performance et de la sécurité !",
+        "percentage": 35
+    },
+    {
+        "name": "Vue.js",
+        "imgSrc": "vuejs-brands.svg",
+        "description": "Vue.js est un framework JavaScript open-source utilisé pour construire des interfaces utilisateur et des applications web.",
+        "percentage": 90
+    },
+    {
+        "name": "React Native",
+        "imgSrc": "react-brands-solid.svg",
+        "description": "React Native est un framework d'applications principalement mobile. Il permet de créer des applications natives à partir de code Javascript.",
+        "percentage": 35
+    },
+    {
+        "name": "Cypress",
+        "imgSrc": "cypress-io-logo-round-flat.svg",
+        "description": "Cypress est un framework de test automatisé (end-to-end) conçu pour tester des applications web.",
+        "percentage": 50
+    },
+    {
+        "name": "PHP",
+        "imgSrc": "php-brands.svg",
+        "description": "PHP est un langage de programmation utilisé pour produire des pages web dynamiques.",
+        "percentage": 25
+    },
+    {
+        "name": "Wordpress",
+        "imgSrc": "wordpress-brands.svg",
+        "description": "WordPress est le CMS le plus utilisé au monde.",
+        "percentage": 75
+    },
+    {
+        "name": "Sass",
+        "imgSrc": "sass-brands.svg",
+        "description": "Sass est un préprocesseur CSS. C'est un langage de description compilé en CSS.",
+        "percentage": 65
+    },
+    {
+        "name": "GNU/Linux",
+        "imgSrc": "linux-brands.svg",
+        "description": "GNU/Linux est un système d'exploitation libre proche d'Unix, très utilisé sur les serveurs.",
+        "percentage": 75
+    },
+    {
+        "name": "Git",
+        "imgSrc": "git-alt-brands.svg",
+        "description": "Git est un logiciel de gestion de versions.",
+        "percentage": 65
+    },
+    {
+        "name": "Photoshop",
+        "imgSrc": "ps-icon.png",
+        "description": "Adobe Photoshop est la référence en matière de retouche d'images.",
+        "percentage": 65
+    }
+]
