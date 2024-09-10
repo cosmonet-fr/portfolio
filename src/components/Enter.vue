@@ -1,7 +1,7 @@
 <template>
   <div class="modaleScreenEnter" v-if="reveleEnter" @click="toggleModaleEnter" v-on:keyup.enter="toggleModaleEnter">
     <h1>Stéphane BILLOIS</h1>
-    <h2>Développeur web full stack</h2>
+    <h2>Développeur</h2>
     <div class="scroll-downs">
       <div class="mousey">
         <div class="scroller"></div>
@@ -71,7 +71,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: #292929;
-  background-image: url(../assets/wallpaper_enter.jpg);
+  background-image: url(../assets/wallpaper_enter6.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }

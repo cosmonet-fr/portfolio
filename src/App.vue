@@ -3,7 +3,7 @@
     <header class="desk" >
       <h1>
         Stéphane BILLOIS<br />
-        <span>Développeur web full stack</span>
+        <span>Développeur</span>
       </h1>
       <nav>
         <ul>
