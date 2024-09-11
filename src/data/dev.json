@@ -18,6 +18,12 @@
         "percentage": 90
     },
     {
+        "name": "TypeScript",
+        "imgSrc": "ts-logo-256.svg",
+        "description": "TypeScript est un surensemble de JavaScript, ajoutant un typage statique pour améliorer la robustesse et la maintenabilité.",
+        "percentage": 25
+    },
+    {
         "name": "Node.js",
         "imgSrc": "node-brands.svg",
         "description": "Node.js permet d'exécuter du code JavaScript du côté serveur. Il peut être utilisé pour créer une API.",
@@ -36,6 +42,12 @@
         "percentage": 35
     },
     {
+        "name": "Python",
+        "imgSrc": "python-brands-solid.svg",
+        "description": "Python est un langage de programmation polyvalent, utilisé pour le développement web, l'analyse de données, et l'automatisation.",
+        "percentage": 15
+    },
+    {
         "name": "Vue.js",
         "imgSrc": "vuejs-brands.svg",
         "description": "Vue.js est un framework JavaScript open-source utilisé pour construire des interfaces utilisateur et des applications web.",
@@ -48,22 +60,16 @@
         "percentage": 35
     },
     {
-        "name": "Cypress",
-        "imgSrc": "cypress-io-logo-round-flat.svg",
-        "description": "Cypress est un framework de test automatisé (end-to-end) conçu pour tester des applications web.",
-        "percentage": 50
-    },
-    {
         "name": "PHP",
         "imgSrc": "php-brands.svg",
         "description": "PHP est un langage de programmation utilisé pour produire des pages web dynamiques.",
-        "percentage": 25
+        "percentage": 15
     },
     {
         "name": "Wordpress",
         "imgSrc": "wordpress-brands.svg",
         "description": "WordPress est le CMS le plus utilisé au monde.",
-        "percentage": 75
+        "percentage": 65
     },
     {
         "name": "Sass",
@@ -72,21 +78,9 @@
         "percentage": 65
     },
     {
-        "name": "GNU/Linux",
-        "imgSrc": "linux-brands.svg",
-        "description": "GNU/Linux est un système d'exploitation libre proche d'Unix, très utilisé sur les serveurs.",
-        "percentage": 75
-    },
-    {
         "name": "Git",
         "imgSrc": "git-alt-brands.svg",
         "description": "Git est un logiciel de gestion de versions.",
-        "percentage": 65
-    },
-    {
-        "name": "Photoshop",
-        "imgSrc": "ps-icon.png",
-        "description": "Adobe Photoshop est la référence en matière de retouche d'images.",
         "percentage": 65
     }
 ]

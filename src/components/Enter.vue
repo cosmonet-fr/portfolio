@@ -71,7 +71,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: #292929;
-  background-image: url(../assets/wallpaper_enter6.jpg);
+  background-image: url(../assets/wallpaper_enter.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }

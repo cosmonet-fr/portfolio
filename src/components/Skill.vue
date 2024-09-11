@@ -64,6 +64,12 @@ export default {
     height: 2rem;
     background-color: gray;
 }
+  .p15 {
+      animation: gauge15 2s;
+      width: 15%;
+      height: 2rem;
+      background-color: #04617b;
+  }
 
   .p25 {
       animation: gauge25 2s;
@@ -73,7 +79,7 @@ export default {
   }
 
   .p35 {
-      animation: gauge25 2s;
+      animation: gauge35 2s;
       width: 35%;
       height: 2rem;
       background-color: #04617b;
@@ -106,7 +112,75 @@ export default {
       height: 2rem;
       background-color: #04617b;
   }
+  @keyframes gauge15 {
+      0% {
+          width: 0;
+      }
 
+      100% {
+          width: 15%;
+      }
+  }
+
+  @keyframes gauge25 {
+      0% {
+          width: 0;
+      }
+
+      100% {
+          width: 25%;
+      }
+  }
+
+  @keyframes gauge35 {
+      0% {
+          width: 0;
+      }
+
+      100% {
+          width: 35%;
+      }
+  }
+
+  @keyframes gauge50 {
+      0% {
+          width: 0;
+      }
+
+      100% {
+          width: 50%;
+      }
+  }
+
+  @keyframes gauge65 {
+      0% {
+          width: 0;
+      }
+
+      100% {
+          width: 65%;
+      }
+  }
+
+  @keyframes gauge75 {
+      0% {
+          width: 0;
+      }
+
+      100% {
+          width: 75%;
+      }
+  }
+
+  @keyframes gauge90 {
+      0% {
+          width: 0;
+      }
+
+      100% {
+          width: 90%;
+      }
+  }
 .technology {
     padding-left: 1em;
     padding-top: 0.5em;

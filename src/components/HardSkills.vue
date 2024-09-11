@@ -1,8 +1,28 @@
 <template>
   <div class="hardSkills">
     <h2>Compétences</h2>
-    <div class="hardSkillsBox">
-      <Skill v-for="(skill, index) in skills" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
+    <nav>
+      <ul>
+        <li v-bind:class=" {active: mode === 'dev'}" @click=" mode='dev'">Développement</li>
+        <li v-bind:class=" {active: mode==='devops' }" @click="mode = 'devops'">DevOps</li>
+        <li v-bind:class=" {active: mode === 'qa'}" @click=" mode='qa'">Qualité</li>
+        <li v-bind:class="{ active: mode === 'others' }" @click="mode = 'others'">Autres</li>
+      </ul>
+    </nav>
+    <div id="dev" class="hardSkillsBox" v-if="mode === 'dev'">
+      <Skill v-for="(skill, index) in skillsDev" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
+        :description="skill.description" :percentage="skill.percentage" />
+    </div>
+    <div id="devops" class="hardSkillsBox" v-if="mode === 'devops'">
+      <Skill v-for="(skill, index) in skillsDevops" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
+        :description="skill.description" :percentage="skill.percentage" />
+    </div>
+    <div id="qa" class="hardSkillsBox" v-if="mode === 'qa'">
+      <Skill v-for="(skill, index) in skillsQa" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
+        :description="skill.description" :percentage="skill.percentage" />
+    </div>
+    <div id="others" class="hardSkillsBox" v-if="mode === 'others'">
+      <Skill v-for="(skill, index) in skillsOthers" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
         :description="skill.description" :percentage="skill.percentage" />
     </div>
   </div>
@@ -10,7 +30,10 @@
 
 <script>
 import Skill from './Skill.vue';
-import skillsData from '../data/dev.json';
+import skillsDataDev from '../data/dev.json';
+import skillsDataDevops from '../data/devops.json';
+import skillsDataQa from '../data/qa.json';
+import skillsDataOthers from '../data/others.json';
 
 export default {
   components: {
@@ -18,7 +41,11 @@ export default {
   },
   data() {
     return {
-      skills: skillsData
+      skillsDev: skillsDataDev,
+      skillsDevops: skillsDataDevops,
+      skillsQa: skillsDataQa,
+      skillsOthers: skillsDataOthers,
+      mode: 'dev'
     };
   },
   methods: {
@@ -43,16 +70,39 @@ export default {
   }
 }
 
+nav {
+  margin: 3em 5.5em;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.active {
+  background: #04617b;
+
+}
+li {
+  cursor: pointer;
+  color: white;
+  background: #333333;
+  padding: 2rem;
+  &:hover{
+    background: white;
+    color: black;
+  } 
+}
 .hardSkillsBox {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
   * {
     color: #ffffff;
   }
 
-  margin: 10em;
+  margin: 0 10em;
 
   @media (max-width: 800px) {
     margin: 2em;

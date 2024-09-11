@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Cypress",
+        "imgSrc": "cypress-io-logo-round-flat.svg",
+        "description": "Cypress est un framework de test automatisé (end-to-end) conçu pour tester des applications web.",
+        "percentage": 65
+    },
+    {
+        "name": "Selenium",
+        "imgSrc": "selenium.svg",
+        "description": "Selenium est un outil d'automatisation pour tester les applications web à travers différents navigateurs et environnements.",
+        "percentage": 35
+    },
+    {
+        "name": "Tahiers de recette",
+        "imgSrc": "book-solid.svg",
+        "description": "La rédaction de cahiers de recettes définit les scénarios de tests pour valider le bon fonctionnement d'une application.",
+        "percentage": 90
+    },
+    {
+        "name": "Tests manuels",
+        "imgSrc": "computer-mouse-solid.svg",
+        "description": "Les tests fonctionnels manuels vérifient que chaque fonctionnalité d'une application répond aux exigences spécifiées.",
+        "percentage": 90
+    }
+]
