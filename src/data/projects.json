@@ -1,0 +1,53 @@
+[
+    {
+        "id": "audio_soft",
+        "title": "AudioSoft",
+        "description": "Réalisation d'un site vitrine.",
+        "image": "AudioSoft.png",
+        "hoverTitle": "AudioSoft",
+        "hoverText": "Réalisation d'un site vitrine.",
+        "modal": {
+            "mission": "Le site devait être 100% administrable via un espace d'administration.",
+            "warning": null,
+            "backend": "Le back-end est développé en JavaScript et tourne sur le run time Node.js.",
+            "frontend": "Le front-end est développé avec Vue.js.",
+            "technologies": [
+                "HTML",
+                "Sass (SCSS)",
+                "Node.js",
+                "MariaDB",
+                "Vue.js 3",
+                "Vue CLI",
+                "Vue Router"
+            ],
+            "images": [
+                "apercu_audio_soft.jpg"
+            ],
+            "url": "https://www.audiosoft.fr/"
+        }
+    },
+    {
+        "id": "aureos",
+        "title": "Aureos",
+        "description": "Réalisation d'un site vitrine.",
+        "image": "Aureos.jpg",
+        "hoverTitle": "Aureos",
+        "hoverText": "Réalisation d'un site vitrine.",
+        "modal": {
+            "mission": "Le site vitrine pour la société Aureos.",
+            "warning": null,
+            "backend": "Back-end développé avec Python et Django.",
+            "frontend": "Front-end développé avec React.js.",
+            "technologies": [
+                "HTML",
+                "Sass (SCSS)",
+                "Vue.js"
+            ],
+            "images": [
+                "apercu_aureos.jpg",
+                "apercu_cv.jpg"
+            ],
+            "url": null
+        }
+    }
+]

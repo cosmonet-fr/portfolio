@@ -2,274 +2,49 @@
   <div class="portfolio">
     <h2>Portfolio</h2>
     <div class="allProjects">
+      <div v-for="(project, index) in projects" :key="index" class="oneProject" :class="project.id"
+        @click="toggleModal(project.id)" @mouseover="hoveredProject = project.id" @mouseleave="hoveredProject = null">
 
-      <transition name="loadingModaleWindow">
-        <modale_audio_soft v-if="reveleAudioSoft" v-bind:reveleAudioSoft="reveleAudioSoft" v-bind:toggleModaleAudioSoft="toggleModaleAudioSoft"></modale_audio_soft>
-      </transition>
-      <div class="oneProject audio_soft"  @click="toggleModaleAudioSoft" @mouseover="audio_soft = true" @mouseleave="audio_soft = false">
         <transition name="slide-fade">
-          <div class="text" v-show="audio_soft">
-            <h2>AudioSoft</h2>
-            <p>Réalisation d'un site vitrine.</p>
+          <div class="text" v-show="hoveredProject === project.id">
+            <h2>{{ project.hoverTitle }}</h2>
+            <p>{{ project.hoverText }}</p>
           </div>
         </transition>
         <div class="menuGsm">
-          <h2>AudioSoft</h2>
-          <p>Réalisation d'un site vitrine.</p>
+          <h2>{{ project.hoverTitle }}</h2>
+          <p>{{ project.hoverText }}</p>
         </div>
       </div>
 
       <transition name="loadingModaleWindow">
-        <modale_aureos v-if="reveleAureos" v-bind:reveleAureos="reveleAureos" v-bind:toggleModaleAureos="toggleModaleAureos"></modale_aureos>
+        <Modale v-if="revealedProject" :project="revealedProject" @close="toggleModal(null)" />
       </transition>
-      <div class="oneProject aureos"  @click="toggleModaleAureos" @mouseover="aureos = true" @mouseleave="aureos = false">
-        <transition name="slide-fade">
-          <div class="text" v-show="aureos">
-            <h2>Aureos</h2>
-            <p>Réalisation d'un site vitrine.</p>
-          </div>
-        </transition>
-        <div class="menuGsm">
-          <h2>Aureos</h2>
-          <p>Réalisation d'un site vitrine.</p>
-        </div>
-      </div>
-
-      <transition name="loadingModaleWindow">
-        <modale_orinoco v-if="reveleOrinoco" v-bind:reveleOrinoco="reveleOrinoco" v-bind:toggleModaleOrinoco="toggleModaleOrinoco"></modale_orinoco>
-      </transition>
-      <div class="oneProject orinoco"  @click="toggleModaleOrinoco" @mouseover="orinoco = true" @mouseleave="orinoco = false">
-        <transition name="slide-fade">
-          <div class="text" v-show="orinoco">
-            <h2>Orinoco</h2>
-            <p>Réalisation d'un site de e-commerce.</p>
-          </div>
-        </transition>
-        <div class="menuGsm">
-          <h2>Orinoco</h2>
-          <p>Réalisation d'un site de e-commerce.</p>
-        </div>
-      </div>
-
-
-      <transition name="loadingModaleWindow">
-        <modale_groupomania v-if="reveleGroupomania" v-bind:reveleGroupomania="reveleGroupomania" v-bind:toggleModaleGroupomania="toggleModaleGroupomania"></modale_groupomania>
-      </transition>
-      <div class="oneProject groupomania" @click="toggleModaleGroupomania" @mouseover="groupomania = true" @mouseleave="groupomania = false">
-        <transition name="slide-fade">
-          <div class="text" v-show="groupomania">
-            <!--<h2>Groupomania</h2>-->
-            <h2>Social<br /><span>Network</span></h2>
-            <p>Réalisation d'un réseau social d'entreprise.</p>
-          </div>
-        </transition>
-        <div class="menuGsm">
-          <!--<h2>Groupomania</h2>-->
-          <h2>Social<br /><span>Network</span></h2>
-          <p>Réalisation d'un réseau social d'entreprise.</p>
-        </div>
-      </div>
-
-
-      <transition name="loadingModaleWindow">
-        <modale_piquante v-if="revelePiquante" v-bind:revelePiquante="revelePiquante" v-bind:toggleModalePiquante="toggleModalePiquante"></modale_piquante>
-      </transition>
-      <div class="oneProject sauce" @click="toggleModalePiquante" @mouseover="sauce = true" @mouseleave="sauce = false">
-        <transition name="slide-fade">
-          <div class="text pi" v-show="sauce">
-            <h2>Piquante</h2>
-            <p>Réalisation d'une API de notation de sauces.</p>
-          </div>
-        </transition>
-        <div class="menuGsm pi">
-          <h2>Piquante</h2>
-          <p>Réalisation d'une API de notation de sauces.</p>
-        </div>
-      </div>
-
-
-      <transition name="loadingModaleWindow">
-        <modale_ohmyfood v-if="reveleOhmyfood" v-bind:reveleOhmyfood="reveleOhmyfood" v-bind:toggleModaleOhmyfood="toggleModaleOhmyfood"></modale_ohmyfood>
-      </transition>
-      <div class="oneProject ohmyfood" @click="toggleModaleOhmyfood" @mouseover="ohmyfood = true" @mouseleave="ohmyfood = false">
-        <transition name="slide-fade">
-          <div class="text oh" v-show="ohmyfood">
-            <h2>ohmyfood</h2>
-            <!--<div class="">
-            <img src="../assets/oh.png" alt="BABM">
-          </div>-->
-          <p>Réalisation d'un site référençant les menus de restaurants.</p>
-        </div>
-      </transition>
-      <div class="menuGsm oh">
-        <h2>ohmyfood</h2>
-        <!--<div class="">
-        <img src="../assets/oh.png" alt="BABM">
-      </div>-->
-      <p>Réalisation d'un site référençant les menus de restaurants.</p>
     </div>
   </div>
-
-
-  <transition name="loadingModaleWindow">
-    <modale_babm v-if="reveleBabm" v-bind:reveleBabm="reveleBabm" v-bind:toggleModaleBabm="toggleModaleBabm"></modale_babm>
-  </transition>
-  <div class="oneProject babm" @click="toggleModaleBabm" @mouseover="babm = true" @mouseleave="babm = false">
-    <transition name="slide-fade">
-      <div class="text" v-show="babm">
-        <img src="../assets/logo_babm.png" alt="BABM">
-        <p>Réalisation d'un site de présentation d'un événement.</p>
-      </div>
-    </transition>
-    <div class="menuGsm">
-      <img src="../assets/logo_babm.png" alt="BABM">
-      <p>Réalisation d'un site de présentation d'un événement.</p>
-    </div>
-  </div>
-
-
-  <transition name="loadingModaleWindow">
-    <modale_chouette v-if="reveleChouette" v-bind:reveleChouette="reveleChouette" v-bind:toggleModaleChouette="toggleModaleChouette"></modale_chouette>
-  </transition>
-  <div class="oneProject chouette" @click="toggleModaleChouette" @mouseover="chouette = true" @mouseleave="chouette = false">
-    <transition name="slide-fade">
-      <div class="text ch" v-show="chouette">
-        <h2>La chouette agence</h2>
-        <p>Optimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
-      </div>
-    </transition>
-    <div class="menuGsm ch">
-      <h2>La chouette agence</h2>
-      <p>Optimisation de l'accessibilité et du SEO pour le site d'une agence de communication.</p>
-    </div>
-  </div>
-
-
-  <!--<transition name="loadingModaleWindow">
-    <modale_cv v-if="reveleCv" v-bind:reveleCv="reveleCv" v-bind:toggleModaleCv="toggleModaleCv"></modale_cv>
-  </transition>
-  <div class="oneProject cv" @click="toggleModaleCv" @mouseover="cv = true" @mouseleave="cv = false">
-    <transition name="slide-fade">
-      <div class="text" v-show="cv">
-        <h2>Curriculum vitae</h2>
-        <p>Réalisation de mon CV en ligne.</p>
-      </div>
-    </transition>
-    <div class="menuGsm">
-      <h2>Curriculum vitae</h2>
-      <p>Réalisation de mon CV en ligne.</p>
-    </div>
-  </div>-->
-
-
-  <transition name="loadingModaleWindow">
-    <modale_michelin v-if="reveleMichelin" v-bind:reveleMichelin="reveleMichelin" v-bind:toggleModaleMichelin="toggleModaleMichelin"></modale_michelin>
-  </transition>
-  <div class="oneProject michelin" @click="toggleModaleMichelin" @mouseover="michelin = true" @mouseleave="michelin = false">
-    <transition name="slide-fade">
-      <div class="text mi" v-show="michelin">
-        <h2>AudioSoft</h2>
-        <p>Réalisation d'un prototype d'une web app pour un musée.</p>
-      </div>
-    </transition>
-    <div class="menuGsm mi">
-      <h2>AudioSoft</h2>
-      <p>Réalisation d'un prototype d'une web app pour un musée.</p>
-    </div>
-  </div>
-
-
-</div>
-
-  </div>
-
-
-
 </template>
 
 <script>
-  import ModaleAudioSoft from './ModaleAudioSoft.vue'
-  import ModaleAureos from './ModaleAureos.vue'
-  import ModaleOrinoco from './ModaleOrinoco.vue'
-  import ModaleGroupomania from './ModaleGroupomania.vue'
-  import ModalePiquante from './ModalePiquante.vue'
-  import ModaleOhmyfood from './ModaleOhmyfood.vue'
-  import ModaleBabm from './ModaleBabm.vue'
-  import ModaleChouette from './ModaleChouette.vue'
-  //import ModaleCv from './ModaleCv.vue'
-  import ModaleMichelin from './ModaleMichelin.vue'
-  export default {
-    data: function () {
-      return {
-        audio_soft: false,
-        aureos: false,
-        orinoco: false,
-        orinocoGsm: false,
-        groupomania: false,
-        sauce: false,
-        ohmyfood: false,
-        babm: false,
-        chouette: false,
-        cv: false,
-        michelin: false,
-        reveleAudioSoft: false,
-        reveleAureos: false,
-        reveleOrinoco: false,
-        reveleGroupomania: false,
-        revelePiquante: false,
-        reveleOhmyfood: false,
-        reveleBabm: false,
-        reveleChouette: false,
-        reveleCv: false,
-        reveleMichelin: false
-      }
-    },
-    name: 'portfolio',
-    components: {
-      'modale_audio_soft': ModaleAudioSoft,
-      'modale_aureos': ModaleAureos,
-      'modale_orinoco': ModaleOrinoco,
-      'modale_groupomania': ModaleGroupomania,
-      'modale_piquante': ModalePiquante,
-      'modale_ohmyfood': ModaleOhmyfood,
-      'modale_babm': ModaleBabm,
-      'modale_chouette': ModaleChouette,
-      //'modale_cv': ModaleCv,
-      'modale_michelin': ModaleMichelin
-    },
-    methods: {
-      toggleModaleAudioSoft: function() {
-        this.reveleAudioSoft = !this.reveleAudioSoft
-      },
-      toggleModaleAureos: function() {
-        this.reveleAureos = !this.reveleAureos
-      },
-      toggleModaleOrinoco: function() {
-        this.reveleOrinoco = !this.reveleOrinoco
-      },
-      toggleModaleGroupomania: function() {
-        this.reveleGroupomania = !this.reveleGroupomania
-      },
-      toggleModalePiquante: function() {
-        this.revelePiquante = !this.revelePiquante
-      },
-      toggleModaleOhmyfood: function() {
-        this.reveleOhmyfood = !this.reveleOhmyfood
-      },
-      toggleModaleBabm: function() {
-        this.reveleBabm = !this.reveleBabm
-      },
-      toggleModaleChouette: function() {
-        this.reveleChouette = !this.reveleChouette
-      },
-      //toggleModaleCv: function() {
-      //  this.reveleCv = !this.reveleCv
-      //},
-      toggleModaleMichelin: function() {
-        this.reveleMichelin = !this.reveleMichelin
-      }
+import Modale from './Modale.vue';
+import projectsData from '../data/projects.json';
+
+export default {
+  data() {
+    return {
+      projects: projectsData,
+      hoveredProject: null,
+      revealedProject: null
+    };
+  },
+  methods: {
+    toggleModal(projectId) {
+      this.revealedProject = this.projects.find(project => project.id === projectId) || null;
     }
+  },
+  components: {
+    Modale
   }
+};
 </script>
 
 <style scoped lang="scss">
