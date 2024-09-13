@@ -90,7 +90,10 @@ export default {
   .babm { background-image: url(../assets/babm.jpg); /*filter: saturate(0);*/}
   .chouette { background-image: url(../assets/chouette.jpg); }
   .cv { background-image: url(../assets/moi.jpg); }
-  .michelin { background-image: url(../assets/michelin.jpg); }
+  .michelin { background-image: url(../assets/michelin.jpg);}
+  .scrapeur { background-image: url(../assets/scrapeur.jpg); }
+  .addon {background-image: url(../assets/addon.webp);}
+  .ecoindex {background-image: url(../assets/ecoindex1.webp);}
 
   .menuGsm {
     @media (min-width: 800px) {

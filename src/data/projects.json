@@ -1,5 +1,51 @@
 [
     {
+        "id": "addon",
+        "title": "WebExtension",
+        "description": null,
+        "image": "WebExt1.png",
+        "hoverTitle": "WebExtension",
+        "hoverText": "Réalisation d'une extention de navigateur.",
+        "modal": {
+            "mission": "Réalisation d'une WebExtention pour avoir dans un menu du navigateur, toutes les pages nécessaires au travail des collaborateurs. Les liens et les icones sont paramétrables, les icones de fontawesome peuvent êtres utilisées.",
+            "warning": null,
+            "backend": "",
+            "frontend": null,
+            "technologies": [
+                "React"
+            ],
+            "images": [
+                "WebExt1.png",
+                "WebExt2.png",
+                "WebExt3.png"
+            ],
+            "url": null
+        }
+    },
+    {
+        "id": "ecoindex",
+        "title": "EcoIndex",
+        "description": null,
+        "image": "WebExt1.png",
+        "hoverTitle": "EcoIndex",
+        "hoverText": "UI pour un outils de contrôle W3C Lighthouse et Ecoindex",
+        "modal": {
+            "mission": "Réalisation d'une interface en Vue.js pour afficher les résultats d'une API qui récupère les scores W3C Lighthouse et Ecoindex d'une page demandé.",
+            "warning": null,
+            "backend": "",
+            "frontend": null,
+            "technologies": [
+                "Vue.js",
+                "Vite"
+            ],
+            "images": [
+                "eco2.png",
+                "eco3.png"
+            ],
+            "url": null
+        }
+    },
+    {
         "id": "audio_soft",
         "title": "AudioSoft",
         "description": "Réalisation d'un site vitrine.",
@@ -51,11 +97,11 @@
     },
     {
         "id": "michelin",
-        "title": "Aureos",
+        "title": "Michelin",
         "description": "Il m’a été demandé de réaliser une web app basée sur les technologies web pour contrôler le lancement de vidéos dans le musée “L’Aventure Michelin”. L’application devait tourner sur un IPad avec le navigateur Google Chrome.",
         "image": "Aureos.jpg",
-        "hoverTitle": "Aureos",
-        "hoverText": "Réalisation d'un site vitrine.",
+        "hoverTitle": "Michelin",
+        "hoverText": null,
         "modal": {
             "mission": "Il m’a été demandé de réaliser une web app basée sur les technologies web pour contrôler le lancement de vidéos dans le musée “L’Aventure Michelin”. L’application devait tourner sur un IPad avec le navigateur Google Chrome.",
             "warning": null,
@@ -70,5 +116,84 @@
             ],
             "url": null
         }
+    },
+    {
+        "id": "scrapeur",
+        "title": "Scrapeur de données",
+        "description": null,
+        "image": "Aureos.jpg",
+        "hoverTitle": "Outil de contrôle vérification",
+        "hoverText": "Réalisation d'un outil pour le service QA.",
+        "modal": {
+            "mission": "Réaliser un outil en ligne de commande pour automatiser le contrôle des balises title et meta description d'un grand nombre de pages.",
+            "warning": null,
+            "backend": "Le script charge des données CSV avec dans une collone, les URL à tester, une 2ème colonne avec le titre souhaité, et une 3ème avec la meta description souhaitée. Le script génère ensuite un rapport au format CSV avec le résultat des tests.",
+            "frontend": null,
+            "technologies": [
+                "Python",
+                "BeautifulSoup",
+                "CSV"
+            ],
+            "images": [
+                "scraping.webp"
+            ],
+            "url": null
+        }
+    },
+    {
+        "id": "babm",
+        "title": "BABM",
+        "description": "Belles Autos, Belles Motos",
+        "image": "Aureos.jpg",
+        "hoverTitle": "BABM",
+        "hoverText": "Belles Autos, Belles Motos.",
+        "modal": {
+            "mission": "Au cours d’un stage d’immersion professionnelle dans la société OpenStudio, j’ai reçu la mission de réaliser en autonomie le site babm.fr à partir d’une maquette graphique.",
+            "warning": null,
+            "backend": null,
+            "frontend": null,
+            "technologies": [
+                "HTML",
+                "CSS",
+                "WordPress",
+                "Plugin ACF (Pour WordPress)",
+                "php"
+            ],
+            "images": [
+                "apercu_babm.jpg",
+                "babm_screenshot.png"
+            ],
+            "url": "https://www.babm.fr"
+        }
+    },
+    {
+        "id": "groupomania",
+        "title": "Groupomania",
+        "description": "Réseau sociale d'entreprise",
+        "image": "Aureos.jpg",
+        "hoverTitle": "Groupomania",
+        "hoverText": "Réseau sociale d'entreprise",
+        "modal": {
+            "mission": "Au cours d’un stage d’immersion professionnelle dans la société OpenStudio, j’ai reçu la mission de réaliser en autonomie le site babm.fr à partir d’une maquette graphique.",
+            "warning": null,
+            "backend": null,
+            "frontend": null,
+            "technologies": [
+                "HTML",
+                "CSS",
+                "WordPress",
+                "Plugin ACF (Pour WordPress)",
+                "php"
+            ],
+            "images": [
+                "apercu_roupomania.jpg",
+                "groupomania_screenshot.jpg",
+                "groupomania_screenshot2.png",
+                "groupomania_screenshot3.png",
+                "groupomania_screenshot4.jpg"
+            ],
+            "url": null
+        }
     }
+
 ]

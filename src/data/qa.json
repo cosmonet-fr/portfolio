@@ -12,7 +12,7 @@
         "percentage": 35
     },
     {
-        "name": "Tahiers de recette",
+        "name": "Cahiers de recette",
         "imgSrc": "book-solid.svg",
         "description": "La rédaction de cahiers de recettes définit les scénarios de tests pour valider le bon fonctionnement d'une application.",
         "percentage": 90

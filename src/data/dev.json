@@ -39,7 +39,7 @@
         "name": "Rust",
         "imgSrc": "rust-brands-solid.svg",
         "description": "Rust est un langage de programmation compilé multi-paradigme, champion de la performance et de la sécurité !",
-        "percentage": 35
+        "percentage": 25
     },
     {
         "name": "Python",
@@ -57,7 +57,7 @@
         "name": "React Native",
         "imgSrc": "react-brands-solid.svg",
         "description": "React Native est un framework d'applications principalement mobile. Il permet de créer des applications natives à partir de code Javascript.",
-        "percentage": 35
+        "percentage": 25
     },
     {
         "name": "PHP",
