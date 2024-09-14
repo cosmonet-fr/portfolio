@@ -7,7 +7,7 @@
                 <div class="btn" @click="$emit('close')">X</div>
             </div>
 
-            <div class="page">
+            <div class="">
                 <div class="content">
                     <div class="screenshot">
                         <!-- Splide Slider -->
@@ -62,10 +62,11 @@ export default {
   },
   mounted() {
     new Splide(this.$refs.splideElement, {
-    //   type       : 'loop',
+        type: 'loop',
       heightRatio: 0.5,
       pagination : true,
-      arrows     : true,
+      arrows     : true
+    //   autoplay: true
     }).mount();
   },
 };
@@ -90,9 +91,22 @@ export default {
       margin: .5em 0;
   }
 .modaleBox{
+    padding: 2rem;
     @media (max-width: 800px) {
         
     }
+}
+
+img {
+    height: 361.917px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.splide__slide {
+    text-align: center;
+
 }
 .screenshot {
     position: relative;

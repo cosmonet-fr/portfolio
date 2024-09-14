@@ -81,7 +81,7 @@ export default {
       height: 15rem;
     }
   }
-  .audio_soft { background-image: url(../assets/AudioSoft.png); }
+  .audio_soft { background-image: url(../assets/audiosoft.webp); }
   .aureos { background-image: url(../assets/Aureos.jpg); }
   .orinoco { background-image: url(../assets/orinoco.jpg); }
   .groupomania { background-image: url(../assets/groupomania.jpg); }
@@ -92,8 +92,8 @@ export default {
   .cv { background-image: url(../assets/moi.jpg); }
   .michelin { background-image: url(../assets/michelin.jpg);}
   .scrapeur { background-image: url(../assets/scrapeur.jpg); }
-  .addon {background-image: url(../assets/addon.webp);}
-  .ecoindex {background-image: url(../assets/ecoindex1.webp);}
+  .addon {background-image: url(../assets/addonM.jpg);}
+  .ecoindex {background-image: url(../assets/ecoindexM.jpg);}
 
   .menuGsm {
     @media (min-width: 800px) {

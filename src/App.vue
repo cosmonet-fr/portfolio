@@ -72,7 +72,7 @@
         <p>sbillois@protonmail.com</p>
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
             alt="Linkdin"> </a>
-        <p><a href="http://">Télécharger mon CV (PDF)</a></p>
+        <p><a href="https://www.billois.org/cv_sbillois.pdf">Télécharger mon CV</a></p>
       </div>
     </footer>
   </div>
@@ -367,7 +367,7 @@ header .desk{
   // overflow-y: scroll;
   // overflow-x: hidden;
   position: fixed;
-  top: 10%;
+  // top: 10%;
   z-index: 2;
   background-color: #000000cc;
   color: #333;
@@ -392,7 +392,7 @@ header .desk{
   align-items: center;
   cursor: pointer;
   //background-color: #e74c3c;
-  color: red;
+  color: white;
   font-weight: bold;
 }
 .page {
@@ -456,7 +456,7 @@ header .desk{
   }
   .btn {
     z-index: 900;
-    color: red;
+    color: white;
     font-size: 1.5em;
     position: fixed;
     right: 0;
@@ -489,6 +489,7 @@ footer {
   background-color: #016a87;
   a {
     text-decoration: underline;
+    font-family: "Ubuntu Light";
   }
 }
 .contact {
