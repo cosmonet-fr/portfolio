@@ -156,6 +156,9 @@ $globale-gsm-padding: 0 1rem;
 * {
   font-family: "Ubuntu Regular";
 }
+p {
+  font-family: "Ubuntu Light";
+}
 h2 {
   font-size: 3em;
   color: white;
@@ -305,6 +308,7 @@ header .desk{
   }
   p {
     margin-bottom: 1em;
+    line-height: 1.5;
   }
   a {
     color: #016a87;

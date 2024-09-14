@@ -56,7 +56,7 @@
     {
         "name": "React",
         "imgSrc": "react-brands-solid.svg",
-        "description": "React Native est un framework d'applications principalement mobile. Il permet de créer des applications natives à partir de code Javascript.",
+        "description": "React est une bibliothèque JavaScript pour créer des interfaces utilisateur interactives et dynamiques sur le web.",
         "percentage": 25
     },
     {

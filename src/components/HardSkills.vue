@@ -89,16 +89,12 @@ ul {
   background: #04617b;
 
 }
-li {
 
-
-}
 .hardSkillsBox {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 60vh;
   * {
     color: #ffffff;
   }

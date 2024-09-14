@@ -52,7 +52,7 @@ export default {
 
   .portfolio {
     h2 {
-      margin-top: 2em;
+      margin: 1.5em 0;
       text-align: center;
     }
   }
@@ -105,6 +105,7 @@ export default {
     width: 100%;
     height: 100%;
     background-color: #00000099;
+    padding: 1em;
     * {
       text-align: center;
       color: white;
@@ -123,6 +124,7 @@ export default {
     }
   }
   .text {
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

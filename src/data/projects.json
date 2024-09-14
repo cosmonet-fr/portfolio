@@ -122,7 +122,7 @@
         "title": "Scrapeur de données",
         "description": null,
         "image": "Aureos.jpg",
-        "hoverTitle": "Outil de contrôle vérification",
+        "hoverTitle": "Outil de contrôle",
         "hoverText": "Réalisation d'un outil pour le service QA",
         "modal": {
             "mission": "Réaliser un outil en ligne de commande pour automatiser le contrôle des balises title et meta description d'un grand nombre de pages.",
