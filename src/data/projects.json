@@ -5,7 +5,7 @@
         "description": null,
         "image": "WebExt1.png",
         "hoverTitle": "WebExtension",
-        "hoverText": "Réalisation d'une extention de navigateur.",
+        "hoverText": "Réalisation d'une extention de navigateur",
         "modal": {
             "mission": "Réalisation d'une WebExtention pour avoir dans un menu du navigateur, toutes les pages nécessaires au travail des collaborateurs. Les liens et les icones sont paramétrables, les icones de fontawesome peuvent êtres utilisées.",
             "warning": null,
@@ -48,10 +48,10 @@
     {
         "id": "audio_soft",
         "title": "AudioSoft",
-        "description": "Réalisation d'un site vitrine.",
+        "description": "Réalisation d'un site vitrine",
         "image": "AudioSoft.png",
         "hoverTitle": "AudioSoft",
-        "hoverText": "Réalisation d'un site vitrine.",
+        "hoverText": "Réalisation d'un site vitrine",
         "modal": {
             "mission": "Le site devait être 100% administrable via un espace d'administration.",
             "warning": null,
@@ -75,10 +75,10 @@
     {
         "id": "aureos",
         "title": "Aureos",
-        "description": "Réalisation d'un site vitrine.",
+        "description": "Réalisation d'un site vitrine",
         "image": "Aureos.jpg",
         "hoverTitle": "Aureos",
-        "hoverText": "Réalisation d'un site vitrine.",
+        "hoverText": "Réalisation d'un site vitrine",
         "modal": {
             "mission": "Le site est un site vitrine statique pour promouvoir le travail d'une graphiste illustratrice.",
             "warning": null,
@@ -101,7 +101,7 @@
         "description": "Il m’a été demandé de réaliser une web app basée sur les technologies web pour contrôler le lancement de vidéos dans le musée “L’Aventure Michelin”. L’application devait tourner sur un IPad avec le navigateur Google Chrome.",
         "image": "Aureos.jpg",
         "hoverTitle": "Michelin",
-        "hoverText": null,
+        "hoverText": "Un outil pour un musée",
         "modal": {
             "mission": "Il m’a été demandé de réaliser une web app basée sur les technologies web pour contrôler le lancement de vidéos dans le musée “L’Aventure Michelin”. L’application devait tourner sur un IPad avec le navigateur Google Chrome.",
             "warning": null,
@@ -123,7 +123,7 @@
         "description": null,
         "image": "Aureos.jpg",
         "hoverTitle": "Outil de contrôle vérification",
-        "hoverText": "Réalisation d'un outil pour le service QA.",
+        "hoverText": "Réalisation d'un outil pour le service QA",
         "modal": {
             "mission": "Réaliser un outil en ligne de commande pour automatiser le contrôle des balises title et meta description d'un grand nombre de pages.",
             "warning": null,
@@ -146,7 +146,7 @@
         "description": "Belles Autos, Belles Motos",
         "image": "Aureos.jpg",
         "hoverTitle": "BABM",
-        "hoverText": "Belles Autos, Belles Motos.",
+        "hoverText": "Belles Autos, Belles Motos",
         "modal": {
             "mission": "Au cours d’un stage d’immersion professionnelle dans la société OpenStudio, j’ai reçu la mission de réaliser en autonomie le site babm.fr à partir d’une maquette graphique.",
             "warning": null,

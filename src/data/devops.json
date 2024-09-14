@@ -16,5 +16,35 @@
         "imgSrc": "docker-brands-solid.svg",
         "description": "Docker est une plateforme de virtualisation légère qui permet de déployer des applications dans des conteneurs isolés.",
         "percentage": 50
+    },
+    {
+        "name": "Apache - httpd",
+        "imgSrc": "apache.svg",
+        "description": "Le serveur HTTP le plus populaire du World Wide Web Jusqu'en 2019.",
+        "percentage": 35
+    },
+    {
+        "name": "NGINX",
+        "imgSrc": "nginx.svg",
+        "description": "Nginx est un serveur web léger, performant, utilisé pour servir des sites.",
+        "percentage": 50
+    },
+    {
+        "name": "Caddy",
+        "imgSrc": "caddy.svg",
+        "description": "Caddy est un serveur web en HTTPS par défaut, simple à configurer et performant pour divers usages.",
+        "percentage": 50
+    },
+    {
+        "name": "MariaDB",
+        "imgSrc": "mariadb.svg",
+        "description": "MariaDB est un système de gestion de base de données open-source, et compatible avec MySQL.",
+        "percentage": 50
+    },
+    {
+        "name": "PostgreSQL",
+        "imgSrc": "postgresql.svg",
+        "description": "PostgreSQL est un système de gestion de bases de données avancé, open-source, supportant SQL, extensible et hautement concurrentiel (gère efficacement de nombreuses transactions simultanées sans conflits ou pertes de performance).",
+        "percentage": 50
     }
 ]

@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-scroll="toggleModaleEnterScroll">
-    <header class="desk" >
+    <header class="desk">
       <h1>
         Stéphane BILLOIS<br />
         <span>Développeur</span>
@@ -24,15 +24,15 @@
       <div class="gsm" v-show="menuGsm">
         <nav>
           <div class="headMenu" @click="menuGsm = !menuGsm">
-            <img src="./assets/arrow_right.svg"/>
+            <img src="./assets/arrow_right.svg" />
           </div>
           <ul>
-            <li @click="menuGsm = !menuGsm" > <a href="#app">Présentation</a> </li>
-            <li @click="menuGsm = !menuGsm" > <a href="#hardSkills">Compétences</a> </li>
-            <li @click="menuGsm = !menuGsm" > <a href="#course">Parcours</a> </li>
-            <li @click="menuGsm = !menuGsm" > <a href="#allSoftSkills">Soft skills</a> </li>
-            <li @click="menuGsm = !menuGsm" > <a href="#portfolio">Portfolio</a> </li>
-            <li @click="menuGsm = !menuGsm" > <a href="#contact">Contact</a> </li>
+            <li @click="menuGsm = !menuGsm"> <a href="#app">Présentation</a> </li>
+            <li @click="menuGsm = !menuGsm"> <a href="#hardSkills">Compétences</a> </li>
+            <li @click="menuGsm = !menuGsm"> <a href="#course">Parcours</a> </li>
+            <li @click="menuGsm = !menuGsm"> <a href="#allSoftSkills">Soft skills</a> </li>
+            <li @click="menuGsm = !menuGsm"> <a href="#portfolio">Portfolio</a> </li>
+            <li @click="menuGsm = !menuGsm"> <a href="#contact">Contact</a> </li>
           </ul>
         </nav>
 
@@ -41,32 +41,35 @@
 
 
     <transition name="intro">
-      <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter" v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll"></modale_enter>
+      <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter"
+        v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll"></modale_enter>
     </transition>
     <div class="about">
       <div class="avatar">
         <img src="./assets/moi2.png" alt="Mon avatar">
       </div>
       <div class="aboutText">
-        <p>Après plusieurs expériences dans le
-          milieu de la photographie, de la sérigraphie
-          puis de la gravure laser, j’ai décidé d’évoluer
-          dans le développement web. Diplômé et certifié
-          dans ce domaine, je m’épanouis depuis plus d’un an
-          dans les métiers du web en tant que développeur et
-          qualiticien et souhaite désormais mettre mes compétences au
-          service de votre entreprise.</p>
+        <p>Je m'appelle Stéphane BILLOIS, j'ai {{ age }} ans.</p>
+        <p>Développeur en freelance et qualiticien depuis 4 ans chez <a href="https://www.openstudio.fr/"
+            target="_blank">OpenStudio</a>, je
+          suis passionné par
+          les nouvelles technologies, et par le logiciel
+          libre. Très curieux par nature, j'aime me tenir informé sur les nouvelles technologies et apprendre de nouveaux
+          langages.</p>
+        <p>Je vous laisse découvrir un aperçu de mes compétences et expériences juste en-dessous.</p>
+        <p>Pour en savoir plus, je me ferai un plaisir d'échanger avec vous.</p>
       </div>
     </div>
 
-    <hardSkills id="hardSkills" ></hardSkills>
-    <course id="course" ></course>
-    <softSkills id="allSoftSkills" ></softSkills>
-    <AllProjects id="portfolio" ></AllProjects>
+    <hardSkills id="hardSkills"></hardSkills>
+    <course id="course"></course>
+    <softSkills id="allSoftSkills"></softSkills>
+    <AllProjects id="portfolio"></AllProjects>
     <footer>
       <div id="contact" class="contact">
         <p>06 61 33 05 28</p>
-        <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg" alt="Linkdin"> </a>
+        <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
+            alt="Linkdin"> </a>
       </div>
     </footer>
   </div>
@@ -83,7 +86,8 @@ export default {
   data: function () {
     return {
       reveleEnter: true,
-      menuGsm: false
+      menuGsm: false,
+      age: null
     }
   },
   name: 'App',
@@ -128,8 +132,17 @@ export default {
       }
       return window.scrollY > 100;
     },
-
+    getAge() {
+      const year = new Date().getFullYear();
+      const age = year + 10;
+      return age.toString().slice(-2);
+    }
+    
   },
+  mounted() {
+    // Appel de getAge() au montage du composant
+    this.age = this.getAge();
+  }
 }
 </script>
 
@@ -250,30 +263,42 @@ header .desk{
 .about {
   min-height: 95vh;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 .avatar, .aboutText {
-  margin: 1em 10em;
   @media (max-width: 800px) {
     margin: 1em;
   }
 }
 .avatar {
+  margin: 1em 2em 1em 15em;
   text-align: center;
-  min-width: 20%;
+  min-width: 25%;
   img {
     text-align: center;
     border-radius: 50%;
   }
 }
 .aboutText {
+  margin: 1em 15em 1em 2em;
   * {
-    font-size: 2rem;
-    text-align: justify;
+    font-size: 1.5rem;
+    // text-align: justify;
     color: white;
     @media (max-width: 500px) {
       font-size: 1.2rem;
+    }
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  a {
+    color: #016a87;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
   padding: 3em;

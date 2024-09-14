@@ -56,7 +56,7 @@ export default {
     },
     goTo(url, event) {
         event.preventDefault();  // Empêche le comportement par défaut du bouton
-        window.location.replace(url);  // Ou utiliser window.open(url, '_blank') pour ouvrir dans un nouvel onglet
+        window.open(url, '_blank');
     }
 
   },
