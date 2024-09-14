@@ -1,12 +1,12 @@
 <template>
-  <div class="hardSkills">
+  <div class="hardSkills page">
     <h2>Compétences</h2>
     <nav>
       <ul>
-        <li v-bind:class=" {active: mode === 'dev'}" @click=" mode='dev'">Développement</li>
-        <li v-bind:class=" {active: mode==='devops' }" @click="mode = 'devops'">DevOps</li>
-        <li v-bind:class=" {active: mode === 'qa'}" @click=" mode='qa'">Qualité</li>
-        <li v-bind:class="{ active: mode === 'others' }" @click="mode = 'others'">Autres</li>
+        <li class="button" v-bind:class=" {active: mode === 'dev'}" @click=" mode='dev'">Développement</li>
+        <li class="button" v-bind:class=" {active: mode==='devops' }" @click="mode = 'devops'">DevOps</li>
+        <li class="button" v-bind:class=" {active: mode === 'qa'}" @click=" mode='qa'">Qualité</li>
+        <!-- <li class="button" v-bind:class="{ active: mode === 'others' }" @click="mode = 'others'">Autres</li> -->
       </ul>
     </nav>
     <div id="dev" class="hardSkillsBox" v-if="mode === 'dev'">
@@ -21,10 +21,10 @@
       <Skill v-for="(skill, index) in skillsQa" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
         :description="skill.description" :percentage="skill.percentage" />
     </div>
-    <div id="others" class="hardSkillsBox" v-if="mode === 'others'">
+    <!-- <div id="others" class="hardSkillsBox" v-if="mode === 'others'">
       <Skill v-for="(skill, index) in skillsOthers" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
         :description="skill.description" :percentage="skill.percentage" />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -59,25 +59,30 @@ export default {
 
 <style scoped lang="scss">
 .hardSkills {
-  margin: 5em;
+  // margin: 5em;
 
   h2 {
     text-align: center;
+    margin-top: 2em;
   }
 
   @media (max-width: 800px) {
-    margin: 5em 0;
+    // margin: 5em 0;
   }
 }
 
 nav {
-  margin: 3em 5.5em;
+   margin: 3em 0;
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  @media (max-width: 800px) {
+    justify-content: space-around;
+    
+  }
 }
 
 .active {
@@ -85,27 +90,23 @@ ul {
 
 }
 li {
-  cursor: pointer;
-  color: white;
-  background: #333333;
-  padding: 2rem;
-  &:hover{
-    background: white;
-    color: black;
-  } 
+
+
 }
 .hardSkillsBox {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
+  min-height: 60vh;
   * {
     color: #ffffff;
   }
 
-  margin: 0 10em;
+  // margin: 0 10em;
 
   @media (max-width: 800px) {
-    margin: 2em;
+    // margin: 2em;
   }
 }
 

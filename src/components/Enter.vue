@@ -2,14 +2,14 @@
   <div class="modaleScreenEnter" v-if="reveleEnter" @click="toggleModaleEnter" v-on:keyup.enter="toggleModaleEnter">
     <h1>Stéphane BILLOIS</h1>
     <h2>Développeur</h2>
-    <div class="scroll-downs">
+    <div class="scroll-downs bottom">
       <div class="mousey">
         <div class="scroller"></div>
       </div>
     </div>
 
 
-    <img src="../assets/device+gesture+handheld+swipe+tablet+touchscreen+icon-1320183551442104786_0.svg" class="touch" />
+    <img src="../assets/arrow-down-svgrepo-com.svg" class="touch bottom" />
 
 
 
@@ -21,13 +21,17 @@
 export default {
   props: ['reveleEnter', 'toggleModaleEnter', 'toggleModaleEnterScroll'],
   mounted () {
-   setTimeout(this.toggleModaleEnter, 6000);
+   setTimeout(this.toggleModaleEnter, 60000);
  }
 }
 
 </script>
 
 <style scoped lang="scss">
+.bottom {
+  position: fixed;
+  bottom: 5em;
+}
 h1, h2 {
   margin: 1em;
   color: #016a87;

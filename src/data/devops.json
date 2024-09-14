@@ -18,9 +18,9 @@
         "percentage": 50
     },
     {
-        "name": "Apache - httpd",
+        "name": "httpd",
         "imgSrc": "apache.svg",
-        "description": "Le serveur HTTP le plus populaire du World Wide Web Jusqu'en 2019.",
+        "description": "Le serveur HTTP (de la fondation Apache) le plus populaire du World Wide Web Jusqu'en 2019.",
         "percentage": 35
     },
     {

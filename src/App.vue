@@ -44,7 +44,7 @@
       <modale_enter v-if="reveleEnter" v-bind:reveleEnter="reveleEnter" v-bind:toggleModaleEnter="toggleModaleEnter"
         v-bind:toggleModaleEnterScroll="toggleModaleEnterScroll"></modale_enter>
     </transition>
-    <div class="about">
+    <div class="about page">
       <div class="avatar">
         <img src="./assets/moi2.png" alt="Mon avatar">
       </div>
@@ -54,7 +54,8 @@
             target="_blank">OpenStudio</a>, je
           suis passionné par
           les nouvelles technologies, et par le logiciel
-          libre. Très curieux par nature, j'aime me tenir informé sur les nouvelles technologies et apprendre de nouveaux
+          libre. Très curieux par nature, j'aime me tenir informé sur les nouvelles technologies et apprendre de
+          nouveaux
           langages.</p>
         <p>Je vous laisse découvrir un aperçu de mes compétences et expériences juste en-dessous.</p>
         <p>Pour en savoir plus, je me ferai un plaisir d'échanger avec vous.</p>
@@ -68,8 +69,10 @@
     <footer>
       <div id="contact" class="contact">
         <p>06 61 33 05 28</p>
+        <p>sbillois@protonmail.com</p>
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
             alt="Linkdin"> </a>
+        <p><a href="http://">Télécharger mon CV (PDF)</a></p>
       </div>
     </footer>
   </div>
@@ -147,6 +150,8 @@ export default {
 </script>
 
 <style lang="scss">
+$globale-padding: 0 10rem;
+$globale-gsm-padding: 0 1rem;
 
 * {
   font-family: "Ubuntu Regular";
@@ -168,24 +173,20 @@ body {
 }
 #app {
   min-height: 2000px;
-  //font-family: Avenir, Helvetica, Arial, sans-serif;
-  //-webkit-font-smoothing: antialiased;
-  //-moz-osx-font-smoothing: grayscale;
-  //text-align: center;
-  //color: #2c3e50;
-  //margin-top: 60px;
+
 }
 header {
+  padding: $globale-padding;
+  padding-top: 1em;
+  padding-bottom: 1em;
   display: flex;
   justify-content: space-between;
   min-height: 5vh;
   position: sticky;
   top: 0px;
-  padding: 1em;
-  background-color: #333333ee;
+  background-color: #333333;
   h1 {
     font-family: "Ubuntu Bold";
-    cursor: pointer;
     font-weight: normal;
     color: #016a87;
     span {
@@ -236,8 +237,16 @@ header .desk{
 }
 .gsm {
   width: 12rem;
+  height: 100vh;
   padding: 1em;
-  background-color: #333333ee;
+  background-color: #333333;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    margin-left: 1em;
+  }
   li {
     margin: 1em 0;
   }
@@ -263,9 +272,12 @@ header .desk{
 .about {
   min-height: 95vh;
   display: flex;
-  // flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+  }
 }
 .avatar, .aboutText {
   @media (max-width: 800px) {
@@ -273,7 +285,7 @@ header .desk{
   }
 }
 .avatar {
-  margin: 1em 2em 1em 15em;
+  // margin: 1em 2em 1em 15em;
   text-align: center;
   min-width: 25%;
   img {
@@ -282,7 +294,7 @@ header .desk{
   }
 }
 .aboutText {
-  margin: 1em 15em 1em 2em;
+  // margin: 1em 15em 1em 2em;
   * {
     font-size: 1.5rem;
     // text-align: justify;
@@ -306,6 +318,29 @@ header .desk{
     padding: 0;
   }
 }
+
+.button {
+  font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    background: #333333;
+    padding: 2rem;
+    text-align: center;
+    transition: all .8s;
+    @media (min-width: 801px) {
+      margin: 20px;
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+    @media (max-width: 800px) {
+        // width: 150px;
+        font-size: 1em;
+        margin-top: 15px;
+      }
+    
+}
 .modaleScreen {
   position: fixed;
   top: 0;
@@ -325,16 +360,19 @@ header .desk{
   right: 0;
 }
 .modaleBox {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 80%;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
   position: fixed;
   top: 10%;
   z-index: 2;
-  width: 80%;
   background-color: #000000cc;
   color: #333;
   //border-left: solid .5rem #519183;
+  @media (min-width: 801px) {
+    width: 80vw;
+    max-height: 80vh;
+    
+  }
 }
 .menuBtn {
   display: flex;
@@ -350,15 +388,21 @@ header .desk{
   align-items: center;
   cursor: pointer;
   //background-color: #e74c3c;
-  color: white;
+  color: red;
   font-weight: bold;
 }
 .page {
-  margin: 1em;
+  padding: $globale-padding;
+  min-height: 100vh;
+  @media (max-width: 800px) {
+    max-width: 100vw;
+    padding: $globale-gsm-padding;
+  }
 }
 .content {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .screenshot {
   @media (min-width: 800px) {
@@ -392,12 +436,13 @@ header .desk{
   .modaleBox {
     overflow: scroll;
     position: fixed;
-    width: 100%;
-    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0;
     bottom: 0;
     left: 0;
-    //right: 0;
+    right: 0;
+    padding-top: 4em;
   }
   .content {
     flex-direction: column;
@@ -406,6 +451,8 @@ header .desk{
     width: 100%;
   }
   .btn {
+    z-index: 900;
+    color: red;
     font-size: 1.5em;
     position: fixed;
     right: 0;
@@ -436,6 +483,9 @@ header .desk{
 
 footer {
   background-color: #016a87;
+  a {
+    text-decoration: underline;
+  }
 }
 .contact {
   display: flex;
@@ -464,17 +514,6 @@ footer {
   }
 }
 
-/*.slide-pics-enter-active {
-  transition: all .4s ease;
-}
-.slide-pics-leave-active {
-  transition: all 0s;
-}
-.slide-pics-enter, .slide-pics-leave-to {
-  transform: translateX(100%);
-  opacity: 0
-} */
-
 .intro-enter-active {
   animation: loadingEnterWindow 200ms;
 }
@@ -497,5 +536,4 @@ footer {
   0% { transform: translateX(100%);}
   100% { transform: translateY(0);}
 }
-
 </style>

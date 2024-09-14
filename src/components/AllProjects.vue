@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio">
+  <div class="portfolio page">
     <h2>Portfolio</h2>
     <div class="allProjects">
       <div v-for="(project, index) in projects" :key="index" class="oneProject" :class="project.id"
@@ -58,12 +58,12 @@ export default {
   }
   .allProjects {
     z-index: 0;
-    margin: 5em 4em;
+    // margin: 5em 4em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     @media (max-width: 800px) {
-      margin: 3em 2em;
+      // margin: 3em 2em;
     }
   }
   .oneProject {
@@ -104,7 +104,7 @@ export default {
     justify-content: space-around;
     width: 100%;
     height: 100%;
-    background-color: #99999955;
+    background-color: #00000099;
     * {
       text-align: center;
       color: white;
@@ -128,7 +128,7 @@ export default {
     justify-content: space-around;
     width: 100%;
     height: 100%;
-    background-color: #9999;
+    background-color: #00000099;
     * {
       text-align: center;
       color: white;

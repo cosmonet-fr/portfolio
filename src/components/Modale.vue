@@ -89,7 +89,11 @@ export default {
   p {
       margin: .5em 0;
   }
-
+.modaleBox{
+    @media (max-width: 800px) {
+        
+    }
+}
 .screenshot {
     position: relative;
 }

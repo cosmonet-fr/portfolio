@@ -48,6 +48,9 @@ export default {
 
 .gaugeBox {
     display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gauge,
@@ -55,7 +58,7 @@ export default {
     width: 30rem;
 
     @media (max-width: 800px) {
-        width: 10rem;
+         width: 20rem;
     }
 }
 
