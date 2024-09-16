@@ -17,7 +17,7 @@ FROM nginx:stable as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
 # Configuration Nginx pour le mode 'history' de Vue Router
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
