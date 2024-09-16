@@ -9,7 +9,7 @@
     </div>
 
 
-    <img src="../assets/arrow-down-svgrepo-com.svg" class="touch bottom" />
+    <img src="../assets/arrow-down-1-svgrepo-com.svg" class="touch bottom" />
 
 
 
@@ -109,7 +109,7 @@ h2 {
 }
 
 .touch {
-  width: 96px;
+  width: 58px;
   @media (min-width: 800px) {
     display: none;
   }
