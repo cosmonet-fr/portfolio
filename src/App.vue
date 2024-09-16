@@ -69,7 +69,7 @@
     <footer>
       <div id="contact" class="contact">
         <p>06 61 33 05 28</p>
-        <p>sbillois@protonmail.com</p>
+        <p>stephane.billois@hotmail.com</p>
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
             alt="Linkdin"> </a>
         <p><a href="https://www.billois.org/cv_sbillois.pdf">Télécharger mon CV</a></p>
