@@ -6,6 +6,7 @@
         <li class="button" v-bind:class=" {active: mode === 'dev'}" @click=" mode='dev'">Développement</li>
         <li class="button" v-bind:class=" {active: mode==='devops' }" @click="mode = 'devops'">DevOps</li>
         <li class="button" v-bind:class=" {active: mode === 'qa'}" @click=" mode='qa'">Qualité</li>
+        <li class="button" v-bind:class=" {active: mode === 'accessibility'}" @click=" mode='accessibility'">Accessibilité</li>
         <!-- <li class="button" v-bind:class="{ active: mode === 'others' }" @click="mode = 'others'">Autres</li> -->
       </ul>
     </nav>
@@ -21,6 +22,10 @@
       <Skill v-for="(skill, index) in skillsQa" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
         :description="skill.description" :percentage="skill.percentage" />
     </div>
+    <div id="accessibility" class="hardSkillsBox" v-if="mode === 'accessibility'">
+      <Skill v-for="(skill, index) in skillsAccessibility" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
+        :description="skill.description" :percentage="skill.percentage" />
+    </div>
     <!-- <div id="others" class="hardSkillsBox" v-if="mode === 'others'">
       <Skill v-for="(skill, index) in skillsOthers" :key="index" :name="skill.name" :imgSrc="getImage(skill.imgSrc)"
         :description="skill.description" :percentage="skill.percentage" />
@@ -33,6 +38,7 @@ import Skill from './Skill.vue';
 import skillsDataDev from '../data/dev.json';
 import skillsDataDevops from '../data/devops.json';
 import skillsDataQa from '../data/qa.json';
+import skillsDataAccessibility from '../data/accessibility.json';
 import skillsDataOthers from '../data/others.json';
 
 export default {
@@ -44,6 +50,7 @@ export default {
       skillsDev: skillsDataDev,
       skillsDevops: skillsDataDevops,
       skillsQa: skillsDataQa,
+      skillsAccessibility: skillsDataAccessibility,
       skillsOthers: skillsDataOthers,
       mode: 'dev'
     };

@@ -91,8 +91,9 @@ export default {
   .chouette { background-image: url(../assets/chouette.jpg); }
   .cv { background-image: url(../assets/moi.jpg); }
   .michelin { background-image: url(../assets/michelin.jpg);}
-  .scrapeur { background-image: url(../assets/scrapeur.jpg); }
+  .scrapeur { background-image: url(../assets/images/terminal.webp); }
   .addon {background-image: url(../assets/addonM.jpg);}
+  .framaddon {background-image: url(../assets/images/logo_framasoft.png);}
   .ecoindex {background-image: url(../assets/ecoindexM.jpg);}
 
   .menuGsm {

@@ -50,7 +50,7 @@
       </div>
       <div class="aboutText">
         <p>Je m'appelle Stéphane BILLOIS, j'ai {{ age }} ans.</p>
-        <p>Développeur en freelance et qualiticien depuis 4 ans chez <a href="https://www.openstudio.fr/"
+        <p>Développeur en freelance et qualiticien depuis 5 ans chez <a href="https://www.openstudio.fr/"
             target="_blank">OpenStudio</a>, je
           suis passionné par
           les nouvelles technologies, et par le logiciel

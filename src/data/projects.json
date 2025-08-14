@@ -1,5 +1,27 @@
 [
     {
+        "id": "framaddon",
+        "title": "Framaddon",
+        "description": null,
+        "image": "logo_framasoft.png",
+        "hoverTitle": "Framaddon",
+        "hoverText": "Réalisation d'une extention Firefox, pour garder les services framasoft sous la main.",
+        "modal": {
+            "mission": "Réalisation d'une WebExtension pour avoir dans un menu du navigateur, tous les services de Framasoft.",
+            "warning": null,
+            "backend": "",
+            "frontend": null,
+            "technologies": [
+                "JavaScript"
+            ],
+            "images": [
+                "framadon.png"
+            ],
+            "url": null
+        }
+    },
+    
+    {
         "id": "addon",
         "title": "WebExtension",
         "description": null,
@@ -7,7 +29,7 @@
         "hoverTitle": "WebExtension",
         "hoverText": "Réalisation d'une extention de navigateur",
         "modal": {
-            "mission": "Réalisation d'une WebExtention pour avoir dans un menu du navigateur, toutes les pages nécessaires au travail des collaborateurs. Les liens et les icones sont paramétrables, les icones de fontawesome peuvent êtres utilisées.",
+            "mission": "Réalisation d'une WebExtension pour avoir dans un menu du navigateur, toutes les pages nécessaires au travail des collaborateurs. Les liens et les icônes sont paramétrables, les icônes de fontawesome peuvent êtres utilisées.",
             "warning": null,
             "backend": "",
             "frontend": null,
@@ -127,9 +149,9 @@
         "hoverTitle": "Outil de contrôle",
         "hoverText": "Réalisation d'un outil pour le service QA",
         "modal": {
-            "mission": "Réaliser un outil en ligne de commande pour automatiser le contrôle des balises title et meta description d'un grand nombre de pages.",
+            "mission": "Réalisation d'un outil en ligne de commande pour automatiser le contrôle des balises title et meta description d'un grand nombre de pages.",
             "warning": null,
-            "backend": "Le script charge des données CSV avec dans une collone, les URL à tester, une 2ème colonne avec le titre souhaité, et une 3ème avec la meta description souhaitée. Le script génère ensuite un rapport au format CSV avec le résultat des tests.",
+            "backend": "Le script charge des données CSV avec dans une colonne, les URL à tester, une 2ème colonne avec le titre souhaité, et une 3ème avec la meta description souhaitée. Le script génère ensuite un rapport au format CSV avec le résultat des tests.",
             "frontend": null,
             "technologies": [
                 "Python",
@@ -137,7 +159,7 @@
                 "CSV"
             ],
             "images": [
-                "scraping.webp"
+                "terminal.webp"
             ],
             "url": null
         }
