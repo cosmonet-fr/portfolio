@@ -12,6 +12,7 @@
           <li> <a href="#course">Parcours</a> </li>
           <li> <a href="#allSoftSkills">Soft skills</a> </li>
           <li> <a href="#portfolio">Portfolio</a> </li>
+          <li> <a href="#podcast">Podcast</a> </li>
           <li> <a href="#contact">Contact</a> </li>
         </ul>
       </nav>
@@ -66,6 +67,7 @@
     <course id="course"></course>
     <softSkills id="allSoftSkills"></softSkills>
     <AllProjects id="portfolio"></AllProjects>
+    <Podcast id="podcast"></Podcast>
     <footer>
       <div id="contact" class="contact">
         <p>06 61 33 05 28</p>
@@ -84,6 +86,7 @@ import HardSkills from './components/HardSkills.vue'
 import Course from './components/Course.vue'
 import SoftSkills from './components/SoftSkills.vue'
 import AllProjects from './components/AllProjects.vue'
+import Podcast from './components/Podcast.vue'
 
 export default {
   data: function () {
@@ -99,7 +102,8 @@ export default {
     'course': Course,
     'softSkills': SoftSkills,
     'hardSkills': HardSkills,
-    AllProjects
+    AllProjects,
+    Podcast
   },
   directives: {
     //Scroll to close the modal enter window
