@@ -47,7 +47,7 @@ export default {
   methods: {
     async playVideo(videoId) {
       try {
-        const response = await fetch(`http://billois.org:8585/audience/${videoId}`);
+        const response = await fetch(`https://api.billois.org:8585/audience/${videoId}`);
         if (!response.ok) {
           throw new Error(`Erreur HTTP! statut: ${response.status}`);
         }

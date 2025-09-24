@@ -69,10 +69,9 @@
     <softSkills id="allSoftSkills"></softSkills>
     <AllProjects id="portfolio"></AllProjects>
     <Podcast id="podcast"></Podcast>
+    <ContactForm id="contact"></ContactForm>
     <footer>
-      <div id="contact" class="contact">
-        <p>06 61 33 05 28</p>
-        <p>stephane.billois@hotmail.com</p>
+      <div class="footer">
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
             alt="Linkdin"> </a>
         <p><a href="https://www.billois.org/cv_sbillois.pdf">Télécharger mon CV</a></p>
@@ -88,6 +87,7 @@ import Course from './components/Course.vue'
 import SoftSkills from './components/SoftSkills.vue'
 import AllProjects from './components/AllProjects.vue'
 import Podcast from './components/Podcast.vue'
+import ContactForm from './components/ContactForm.vue'
 
 export default {
   data: function () {
@@ -104,7 +104,8 @@ export default {
     'softSkills': SoftSkills,
     'hardSkills': HardSkills,
     AllProjects,
-    Podcast
+    Podcast,
+    ContactForm
   },
   directives: {
     //Scroll to close the modal enter window
@@ -498,7 +499,7 @@ footer {
     font-family: "Ubuntu Light";
   }
 }
-.contact {
+.footer {
   display: flex;
   justify-content: space-around;
   padding: 4em;
