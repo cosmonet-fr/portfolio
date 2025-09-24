@@ -5,7 +5,7 @@
       <div class="textContainer">
         <h3>Entretien avec <a href="https://fr.wikipedia.org/wiki/Richard_Stallman" target="_blank">Richard Stallman</a>↗</h3>
         <p>
-          Le 4 octobre 2025, la Free Software Foundation (FSF) fêtera ses 40 ans ! Pour revenir sur ces 40 ans de combat en faveur du logiciel libre, j'ai eu la chance de pouvoir avoir un entretien avec Richard Stallman (RMS), fondateur du projet GNU, de la FSF, et l’initiateur du mouvement du logiciel libre. 
+          Le 4 octobre 2025, la <a href="https://www.fsf.org/" target="_blank">Free Software Foundation (FSF)</a>↗ fêtera ses 40 ans ! Pour revenir sur ces 40 ans de combat en faveur du logiciel libre, j'ai eu la chance de pouvoir avoir un entretien avec Richard Stallman (RMS), fondateur du projet <a href="https://www.gnu.org/" target="_blank">GNU</a>↗, de la FSF, et l’initiateur du mouvement du logiciel libre. 
         </p>
       </div>
       <div class="videoContainer">
@@ -47,7 +47,7 @@ export default {
   methods: {
     async playVideo(videoId) {
       try {
-        const response = await fetch(`https://api.billois.org:8585/audience/${videoId}`);
+        const response = await fetch(`https://api.billois.org/audience/${videoId}`);
         if (!response.ok) {
           throw new Error(`Erreur HTTP! statut: ${response.status}`);
         }

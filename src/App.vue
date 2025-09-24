@@ -53,7 +53,7 @@
       <div class="aboutText">
         <p>Je m'appelle Stéphane BILLOIS, j'ai {{ age }} ans.</p>
         <p>Développeur en freelance et qualiticien depuis 5 ans chez <a href="https://www.openstudio.fr/"
-            target="_blank">OpenStudio</a>, je
+            target="_blank">OpenStudio</a>↗, je
           suis passionné par
           les nouvelles technologies, et par le logiciel
           libre. Très curieux par nature, j'aime me tenir informé sur les nouvelles technologies et apprendre de
@@ -74,7 +74,7 @@
       <div class="footer">
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
             alt="Linkdin"> </a>
-        <p><a href="https://www.billois.org/cv_sbillois.pdf">Télécharger mon CV</a></p>
+        <p @click="audiance(4)" ><a href="https://www.billois.org/cv_sbillois.pdf">Télécharger mon CV</a></p>
       </div>
     </footer>
   </div>
@@ -145,12 +145,26 @@ export default {
       const year = new Date().getFullYear();
       const age = year + 10;
       return age.toString().slice(-2);
+    },
+      async audiance(id) {
+      try {
+        const response = await fetch(`https://api.billois.org/audience/${id}`);
+        if (!response.ok) {
+          throw new Error(`Erreur HTTP! statut: ${response.status}`);
+        }
+        const data = await response.json();
+        this.urlVideo = data.url;
+        this.video = true;
+      } catch (error) {
+        console.error("Erreur lors de la récupération de la vidéo :", error);
+      }
     }
     
   },
   mounted() {
     // Appel de getAge() au montage du composant
     this.age = this.getAge();
+    this.audiance(5);
   }
 }
 </script>
@@ -185,6 +199,7 @@ body {
 
 }
 header {
+  z-index: 3;
   padding: $globale-padding;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -219,6 +234,13 @@ header {
       color: white;
       text-decoration: none;
       padding: 1em;
+      span {
+        font-size: 0.8rem;
+        color: white;
+        background-color: red;
+        position: relative;
+        // bottom: 5px; right: 15px;
+      }
       &:hover {
         background-color: #016a87;
       }
@@ -245,7 +267,7 @@ header .desk{
   justify-content: right;
 }
 .gsm {
-  z-index: 100;
+  z-index: 3;
   width: 12rem;
   height: 100vh;
   padding: 1em;
@@ -462,7 +484,7 @@ header .desk{
     width: 100%;
   }
   .btn {
-    z-index: 900;
+    // z-index: 900;
     color: white;
     font-size: 1.5em;
     position: fixed;
