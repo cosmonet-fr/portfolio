@@ -33,6 +33,7 @@
             <li @click="menuGsm = !menuGsm"> <a href="#course">Parcours</a> </li>
             <li @click="menuGsm = !menuGsm"> <a href="#allSoftSkills">Soft skills</a> </li>
             <li @click="menuGsm = !menuGsm"> <a href="#portfolio">Portfolio</a> </li>
+            <li @click="menuGsm = !menuGsm"> <a href="#podcast">Podcast</a> </li>
             <li @click="menuGsm = !menuGsm"> <a href="#contact">Contact</a> </li>
           </ul>
         </nav>
@@ -243,6 +244,7 @@ header .desk{
   justify-content: right;
 }
 .gsm {
+  z-index: 100;
   width: 12rem;
   height: 100vh;
   padding: 1em;
