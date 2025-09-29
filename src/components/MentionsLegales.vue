@@ -62,6 +62,8 @@ export default {
 h1 {
     font-size: 4rem;
     text-align: center;
+    background-color: #016a87;
+    padding: .3rem 2rem;
 }
 .legales {
     background-color: #292929;
