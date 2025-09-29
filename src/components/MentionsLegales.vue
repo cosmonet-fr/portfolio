@@ -11,7 +11,7 @@
                 Stéphane BILLOIS
             </p>
             <p>
-                Contactez-moi via le formulaire de contacte du site.
+                <a @click="close" href="#contact">Contactez-moi via le formulaire de contacte du site.</a>
             </p>
         </div>
         <div>
@@ -22,7 +22,7 @@
                 OVH sas <br>
                 2 rue Kellermann, 59100 Roubaix, France <br>
                 +33 (0)9 72 10 10 07 <br>
-                <a href="http://www.ovhcloud.com" target="_blank">Site d'OVH</a>
+                <a href="http://www.ovhcloud.com" target="_blank">Site d'OVH</a>↗
                 
             </p>
 
@@ -31,8 +31,8 @@
             <h2>
                 Code source
             </h2>
-            <p>Le code source est disponible sous Licence <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public License V3</a> .</p>
-            <p>Il peut être téléchargé sur <a href="https://codeberg.org/kosmonet" target="_blank">codeberg</a>.</p>
+            <p>Le code source est disponible sous Licence <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public License V3</a>↗ .</p>
+            <p>Il peut être téléchargé sur <a href="https://codeberg.org/kosmonet" target="_blank">codeberg</a>↗.</p>
 
         </div>
         <div class="close" @click="close" >
@@ -64,7 +64,10 @@ h1 {
     text-align: center;
 }
 .legales {
-    background-color: #016a87;
+    background-color: #292929;
+    background-image: url(../assets/wallpaper_enter.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -83,6 +86,7 @@ h1 {
     P {
         font-size: 3rem;
         font-weight: bolder;
+        color: #ff4d4d;
 
     }
 }

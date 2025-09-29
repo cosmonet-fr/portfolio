@@ -70,12 +70,14 @@
     <AllProjects id="portfolio"></AllProjects>
     <Podcast id="podcast"></Podcast>
     <ContactForm id="contact"></ContactForm>
-    <MentionsLegales v-if="legales" @close="getLegales" ></MentionsLegales>
+    <transition name="intro">
+      <MentionsLegales v-if="legales" @close="getLegales" ></MentionsLegales>
+    </transition>
     <footer>
       <div class="footer">
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
             alt="Linkdin"> </a>
-            <p class="a" @click="getLegales()" >Mentions légales</p>
+            <p role="link" class="a" @click="getLegales()" >Mentions légales</p>
         <p @click="audiance(4)" ><a href="https://www.billois.org/cv_sbillois.pdf">Télécharger mon CV</a></p>
       </div>
     </footer>
