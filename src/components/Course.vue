@@ -48,6 +48,14 @@
 
       <transition name="slide-fade">
         <div class="training" v-if="course === 'training'">
+          <h3><a href="https://www.temesis.com/" target="_blank">Temesis</a>↗</h3>
+          <p><span>Formation : Conduire un Audit d’Accessibilité selon le RGAA</span></p>
+          <p>Avril 2025</p>
+        </div>
+      </transition>
+
+      <transition name="slide-fade">
+        <div class="training" v-if="course === 'training'">
           <h3>Openclassrooms</h3>
           <p><span>Certificat RNCP développeur web (bac+2)</span></p>
           <p>Février 2020 à septembre 2020</p>

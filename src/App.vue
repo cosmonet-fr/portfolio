@@ -3,7 +3,7 @@
     <header class="desk">
       <h1>
         Stéphane BILLOIS<br />
-        <span>Développeur</span>
+        <span>Développeur / QA Tester</span>
       </h1>
       <nav>
         <ul>
@@ -70,10 +70,12 @@
     <AllProjects id="portfolio"></AllProjects>
     <Podcast id="podcast"></Podcast>
     <ContactForm id="contact"></ContactForm>
+    <MentionsLegales v-if="legales" @close="getLegales" ></MentionsLegales>
     <footer>
       <div class="footer">
         <a href="https://www.linkedin.com/in/stephanebillois/"> <img src="./assets/linkedin-in-brands.svg"
             alt="Linkdin"> </a>
+            <p class="a" @click="getLegales()" >Mentions légales</p>
         <p @click="audiance(4)" ><a href="https://www.billois.org/cv_sbillois.pdf">Télécharger mon CV</a></p>
       </div>
     </footer>
@@ -88,13 +90,15 @@ import SoftSkills from './components/SoftSkills.vue'
 import AllProjects from './components/AllProjects.vue'
 import Podcast from './components/Podcast.vue'
 import ContactForm from './components/ContactForm.vue'
+import MentionsLegales from './components/MentionsLegales.vue'
 
 export default {
   data: function () {
     return {
       reveleEnter: true,
       menuGsm: false,
-      age: null
+      age: null,
+      legales: false
     }
   },
   name: 'App',
@@ -105,7 +109,8 @@ export default {
     'hardSkills': HardSkills,
     AllProjects,
     Podcast,
-    ContactForm
+    ContactForm,
+    MentionsLegales
   },
   directives: {
     //Scroll to close the modal enter window
@@ -158,6 +163,9 @@ export default {
       } catch (error) {
         console.error("Erreur lors de la récupération de la vidéo :", error);
       }
+    },
+    getLegales() {
+      this.legales = !this.legales
     }
     
   },
@@ -526,13 +534,14 @@ footer {
   justify-content: space-around;
   padding: 4em;
   * {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: white;
   }
-  a {
+  a, .a {
     text-decoration: none;
     &:hover {
       text-decoration: underline;
+      cursor: pointer;
     }
   }
   img {

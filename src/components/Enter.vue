@@ -1,7 +1,7 @@
 <template>
   <div class="modaleScreenEnter" v-if="reveleEnter" @click="toggleModaleEnter" v-on:keyup.enter="toggleModaleEnter">
     <h1>Stéphane BILLOIS</h1>
-    <h2>Développeur</h2>
+    <h2>Développeur / QA Tester</h2>
     <div class="scroll-downs bottom">
       <div class="mousey">
         <div class="scroller"></div>
@@ -34,7 +34,9 @@ export default {
 }
 h1, h2 {
   margin: 1em;
-  color: #016a87;
+  color: #fff;
+  background-color: #016a87;
+  padding: .3rem 2rem;
 }
 h1 {
   font-family: "Ubuntu Medium";

@@ -66,127 +66,26 @@ export default {
 }
 
 .gauge {
-    margin: 0.5em 0;
-    height: 2rem;
-    background-color: gray;
+  margin: 0.5em 0;
+  height: 2rem;
+  background-color: gray;
 }
-  .p15 {
-      animation: gauge15 2s;
-      width: 15%;
-      height: 2rem;
-      background-color: #04617b;
+
+@for $i from 0 through 100 {
+  .p#{$i} {
+    animation: gauge#{$i} 2s;
+    width: #{$i + '%'};
+    height: 2rem;
+    background-color: #04617b;
   }
 
-  .p25 {
-      animation: gauge25 2s;
-      width: 25%;
-      height: 2rem;
-      background-color: #04617b;
+  @keyframes gauge#{$i} {
+    0% { width: 0; }
+    100% { width: #{$i + '%'}; }
   }
+}
 
-  .p35 {
-      animation: gauge35 2s;
-      width: 35%;
-      height: 2rem;
-      background-color: #04617b;
-  }
 
-  .p50 {
-      animation: gauge50 2s;
-      width: 50%;
-      height: 2rem;
-      background-color: #04617b;
-  }
-
-  .p65 {
-      animation: gauge65 2s;
-      width: 65%;
-      height: 2rem;
-      background-color: #04617b;
-  }
-
-  .p75 {
-      animation: gauge75 2s;
-      width: 75%;
-      height: 2rem;
-      background-color: #04617b;
-  }
-
-  .p90 {
-      animation: gauge90 2s;
-      width: 90%;
-      height: 2rem;
-      background-color: #04617b;
-  }
-  @keyframes gauge15 {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 15%;
-      }
-  }
-
-  @keyframes gauge25 {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 25%;
-      }
-  }
-
-  @keyframes gauge35 {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 35%;
-      }
-  }
-
-  @keyframes gauge50 {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 50%;
-      }
-  }
-
-  @keyframes gauge65 {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 65%;
-      }
-  }
-
-  @keyframes gauge75 {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 75%;
-      }
-  }
-
-  @keyframes gauge90 {
-      0% {
-          width: 0;
-      }
-
-      100% {
-          width: 90%;
-      }
-  }
 .technology {
     padding-left: 1em;
     padding-top: 0.5em;

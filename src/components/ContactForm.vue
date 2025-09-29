@@ -2,16 +2,20 @@
   <div class="contact page">
     <h2>Contact</h2>
     <form @submit.prevent="submitContact">
-      <label for="nom">Votre nom:</label>
-      <input id="nom" type="text" v-model="name" required>
+      <em>
+        <p>Les champs avec "<span>*</span>" sont obligatoires.</p>
+
+      </em>
+      <label for="e-mail">Votre e-mail:<span>*</span></label>
+      <input class="litleInput" type="email" v-model="email" required>
+
+      <label for="nom">Votre nom:<span>*</span></label>
+      <input class="litleInput" id="nom" type="text" v-model="name" required>
 
       <label for="objet">Objet:</label>
-      <input id="objet" type="text" v-model="subject" required>
+      <input id="objet" type="text" v-model="subject">
 
-      <label for="e-mail">Votre e-mail:</label>
-      <input type="email" v-model="email" required>
-
-      <label for="message">Message:</label>
+      <label for="message">Message:<span>*</span></label>
       <textarea id="message" v-model="text" rows="8" required></textarea>
 
       <input class="submit" type="submit" value="Envoyer" />
@@ -84,18 +88,40 @@ export default {
 h2 {
     text-align: center;
 }
+p {
+  color: white;
+}
 .contact {
   background-color: #016a87;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 2rem 5rem;
-
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  @media (min-width: 850px) {
+    align-items: center;
+  
+  }
+  
   form {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    max-width: 850px;
+    @media (min-width: 850px) {
+      width: 850px;
+      
+    }
   }
+  
+.litleInput {
+    @media (min-width: 850px) {
+    width: 425px;
+    
+  }
+
+}
 
   label {
     color: white;
@@ -103,10 +129,13 @@ h2 {
     position: relative;
     top: 20px;
     left: 18px;
-    max-width: 115px;
+    max-width: 125px;
     padding: 0 10px;
   }
-
+  span {
+    color: #ff4d4d;
+  }
+  
   input, textarea {
     color: white;
     padding: 0.8rem 0.5rem;
@@ -125,6 +154,7 @@ h2 {
     font-size: 1.3rem;
     cursor: pointer;
     margin-top: 1rem;
+    max-width: 200px;
   }
 
   .success {

@@ -15,18 +15,18 @@
         "name": "Cahiers de recette",
         "imgSrc": "check.svg",
         "description": "La rédaction de cahiers de recettes définit les scénarios de tests pour valider le bon fonctionnement d'une application.",
-        "percentage": 90
+        "percentage": 98
     },
     {
         "name": "Tests manuels",
         "imgSrc": "computer-mouse-solid.svg",
         "description": "Les tests fonctionnels manuels vérifient que chaque fonctionnalité d'une application répond aux exigences spécifiées.",
-        "percentage": 90
+        "percentage": 98
     },
     {
         "name": "Documentation",
         "imgSrc": "book-solid.svg",
         "description": "Rédiger une documentation claire facilite la compréhension, la maintenance, la collaboration et l'évolution d'un projet de développement sur le long terme.",
-        "percentage": 90
+        "percentage": 98
     }
 ]
