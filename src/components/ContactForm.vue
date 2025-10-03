@@ -1,16 +1,16 @@
 <template>
   <div class="contact page">
     <h2>Contact</h2>
-    <form @submit.prevent="submitContact">
+    <form @submit.prevent="submitContact" name="contact">
       <em>
         <p>Les champs avec "<span>*</span>" sont obligatoires.</p>
 
       </em>
       <label for="e-mail">Votre e-mail:<span>*</span></label>
-      <input class="litleInput" type="email" v-model="email" required>
+      <input id="e-mail" class="litleInput" type="email" v-model="email" required>
 
       <label for="nom">Votre nom:<span>*</span></label>
-      <input class="litleInput" id="nom" type="text" v-model="name" required>
+      <input id="nom" class="litleInput" type="text" v-model="name" required>
 
       <label for="objet">Objet:</label>
       <input id="objet" type="text" v-model="subject">
@@ -18,7 +18,7 @@
       <label for="message">Message:<span>*</span></label>
       <textarea id="message" v-model="text" rows="8" required></textarea>
 
-      <input class="submit" type="submit" value="Envoyer" />
+      <input class="submit" type="submit" value="Envoyer" aria-label="Envoyer-moi votre message"/>
 
       <!-- Messages de feedback -->
       <p v-if="successMessage" class="success">{{ successMessage }}</p>
