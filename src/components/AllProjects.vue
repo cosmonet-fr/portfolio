@@ -97,9 +97,6 @@ export default {
   .ecoindex {background-image: url(../assets/ecoindexM.jpg);}
 
   .menuGsm {
-    @media (min-width: 800px) {
-      display: none;
-    }
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -107,6 +104,9 @@ export default {
     height: 100%;
     background-color: #00000099;
     padding: 1em;
+    @media (min-width: 800px) {
+      display: none;
+    }
     * {
       text-align: center;
       color: white;
