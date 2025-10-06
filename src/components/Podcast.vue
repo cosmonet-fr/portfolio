@@ -5,8 +5,40 @@
       <div class="textContainer">
         <h3>Entretien avec <a href="https://fr.wikipedia.org/wiki/Richard_Stallman" target="_blank">Richard Stallman</a>↗</h3>
         <p>
-          Le 4 octobre 2025, la <a href="https://www.fsf.org/" target="_blank">Free Software Foundation (FSF)</a>↗ fêtera ses 40 ans ! Pour revenir sur ces 40 ans de combat en faveur du logiciel libre, j'ai eu la chance de pouvoir avoir un entretien avec Richard Stallman (RMS), fondateur du projet <a href="https://www.gnu.org/" target="_blank">GNU</a>↗, de la FSF, et l’initiateur du mouvement du logiciel libre. 
+          Samedi 4 octobre 2025, la Free Software Foundation (FSF) a fêté ses 40 ans d'existence ! 4 décennies pour défendre les 4 libertés fondamentales sur lesquelles se fonde le logiciel libre. 
         </p>
+        <ul>
+          <li>
+            - la liberté d'exécuter le programme, pour tous les usages ;
+
+          </li>
+          <li>
+            - la liberté d'étudier le fonctionnement du programme et de l'adapter à ses besoins ;
+
+          </li>
+          <li>
+            - la liberté de redistribuer des copies du programme (ce qui implique la possibilité aussi bien de donner que de vendre des copies) ;
+
+          </li>
+          <li>
+            - la liberté d'améliorer le programme et de distribuer ces améliorations au public, pour en faire profiter toute la communauté.
+
+          </li>
+
+        </ul>
+
+        <p>
+          Pour revenir sur ces 40 ans de combat en faveur du logiciel libre, j'ai eu l’honneur de pouvoir avoir un entretien avec Richard Stallman (RMS), fondateur du projet GNU, de la FSF, et l’initiateur du mouvement du logiciel libre. 
+        </p>
+
+        <p>
+          Merci du fond du cœur à Richard pour sa gentillesse, sa patience et sa bienveillance pour cette interview qui était une première pour moi. Entre le stress et mes bégaiements, il fallait bien quelqu'un d'aussi cool que lui. 😅
+        </p>
+
+        <p>
+          Et un grand merci aussi à Aurore, la monteuse de cette vidéo, qui a réussi astucieusement à masquer ces fameux bégaiements ! 😉
+        </p>
+
       </div>
       <div class="videoContainer">
         <div class="video" v-if="video" >

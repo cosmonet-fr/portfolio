@@ -12,7 +12,7 @@
           <li> <a href="#course">Parcours</a> </li>
           <li> <a href="#allSoftSkills">Soft skills</a> </li>
           <li> <a href="#portfolio">Portfolio</a> </li>
-          <li> <a href="#podcast">Podcast</a> </li>
+          <!-- <li> <a href="#podcast">Podcast</a> </li> -->
           <li> <a href="#contact">Contact</a> </li>
         </ul>
       </nav>
@@ -33,7 +33,7 @@
             <li @click="menuGsm = !menuGsm"> <a href="#course">Parcours</a> </li>
             <li @click="menuGsm = !menuGsm"> <a href="#allSoftSkills">Soft skills</a> </li>
             <li @click="menuGsm = !menuGsm"> <a href="#portfolio">Portfolio</a> </li>
-            <li @click="menuGsm = !menuGsm"> <a href="#podcast">Podcast</a> </li>
+            <!-- <li @click="menuGsm = !menuGsm"> <a href="#podcast">Podcast</a> </li> -->
             <li @click="menuGsm = !menuGsm"> <a href="#contact">Contact</a> </li>
           </ul>
         </nav>
@@ -90,7 +90,7 @@ import HardSkills from './components/HardSkills.vue'
 import Course from './components/Course.vue'
 import SoftSkills from './components/SoftSkills.vue'
 import AllProjects from './components/AllProjects.vue'
-import Podcast from './components/Podcast.vue'
+// import Podcast from './components/Podcast.vue'
 import ContactForm from './components/ContactForm.vue'
 import MentionsLegales from './components/MentionsLegales.vue'
 
@@ -110,7 +110,7 @@ export default {
     'softSkills': SoftSkills,
     'hardSkills': HardSkills,
     AllProjects,
-    Podcast,
+    // Podcast,
     ContactForm,
     MentionsLegales
   },

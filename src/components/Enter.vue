@@ -35,7 +35,7 @@ export default {
 h1, h2 {
   margin: 1em;
   color: #fff;
-  background-color: #016a87;
+  // background-color: #016a87;
   padding: .3rem 2rem;
 }
 h1 {
